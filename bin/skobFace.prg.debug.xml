@@ -43,10 +43,10 @@
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="81" pc="268436246" symbol="onHide"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="87" pc="268436251" symbol="onExitSleep"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="91" pc="268436256" symbol="onEnterSleep"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="27" lineNum="24" pc="268438127" symbol="&lt;init&gt;"/>
-        <entry filename="Rez" id="33" lineNum="19" pc="268437796" symbol="WatchFace"/>
-        <entry filename="Rez" id="33" lineNum="22" pc="268437808" symbol="WatchFace"/>
-        <entry filename="Rez" id="33" lineNum="24" pc="268437966" symbol="WatchFace"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="27" lineNum="24" pc="268438178" symbol="&lt;init&gt;"/>
+        <entry filename="Rez" id="33" lineNum="19" pc="268437847" symbol="WatchFace"/>
+        <entry filename="Rez" id="33" lineNum="22" pc="268437859" symbol="WatchFace"/>
+        <entry filename="Rez" id="33" lineNum="24" pc="268438017" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="27" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBattery&gt;"/>
@@ -161,32 +161,32 @@
         <entry endPc="268436763" name="positionY" stackId="2" startPc="268436474"/>
         <entry endPc="268436763" name="positionX1" stackId="3" startPc="268436474"/>
         <entry arg="true" endPc="268436764" name="dc" stackId="1" startPc="268436470"/>
-        <entry endPc="268436941" name="steps" stackId="4" startPc="268436768"/>
-        <entry endPc="268436941" name="positionY" stackId="3" startPc="268436768"/>
-        <entry endPc="268436941" name="positionX" stackId="2" startPc="268436768"/>
-        <entry endPc="268436941" name="distanceField" stackId="5" startPc="268436768"/>
-        <entry arg="true" endPc="268436942" name="dc" stackId="1" startPc="268436764"/>
-        <entry endPc="268437079" name="batteryLevel" stackId="4" startPc="268436946"/>
-        <entry endPc="268437079" name="positionY" stackId="3" startPc="268436946"/>
-        <entry endPc="268437079" name="positionX" stackId="2" startPc="268436946"/>
-        <entry arg="true" endPc="268437080" name="dc" stackId="1" startPc="268436942"/>
-        <entry endPc="268437543" name="hours" stackId="9" startPc="268437084"/>
-        <entry endPc="268437543" name="positionXHours" stackId="3" startPc="268437084"/>
-        <entry endPc="268437543" name="xBias" stackId="2" startPc="268437084"/>
-        <entry endPc="268437543" name="positionY" stackId="6" startPc="268437084"/>
-        <entry endPc="268437543" name="clockTime" stackId="8" startPc="268437084"/>
-        <entry endPc="268437543" name="positionXMinutes" stackId="5" startPc="268437084"/>
-        <entry endPc="268437543" name="positionXSep" stackId="4" startPc="268437084"/>
-        <entry endPc="268437543" name="timeFormat" stackId="7" startPc="268437084"/>
-        <entry arg="true" endPc="268437544" name="dc" stackId="1" startPc="268437080"/>
-        <entry endPc="268437697" name="today" stackId="1" startPc="268437548"/>
-        <entry endPc="268437697" name="dateString" stackId="2" startPc="268437548"/>
-        <entry endPc="268437697" name="dayOfTheWeek" stackId="3" startPc="268437548"/>
-        <entry arg="true" endPc="268437721" name="number" stackId="1" startPc="268437698"/>
-        <entry endPc="268437795" name="battery" stackId="1" startPc="268437725"/>
-        <entry endPc="268437795" name="batteryDisplay" stackId="2" startPc="268437725"/>
-        <entry endPc="268437983" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268437808"/>
-        <entry arg="true" endPc="268437984" name="dc" stackId="1" startPc="268437796"/>
+        <entry endPc="268436992" name="positionY" stackId="3" startPc="268436768"/>
+        <entry endPc="268436992" name="positionX" stackId="2" startPc="268436768"/>
+        <entry endPc="268436992" name="distanceField" stackId="5" startPc="268436768"/>
+        <entry endPc="268436992" name="distance" stackId="4" startPc="268436768"/>
+        <entry arg="true" endPc="268436993" name="dc" stackId="1" startPc="268436764"/>
+        <entry endPc="268437130" name="batteryLevel" stackId="4" startPc="268436997"/>
+        <entry endPc="268437130" name="positionY" stackId="3" startPc="268436997"/>
+        <entry endPc="268437130" name="positionX" stackId="2" startPc="268436997"/>
+        <entry arg="true" endPc="268437131" name="dc" stackId="1" startPc="268436993"/>
+        <entry endPc="268437594" name="hours" stackId="9" startPc="268437135"/>
+        <entry endPc="268437594" name="positionXHours" stackId="3" startPc="268437135"/>
+        <entry endPc="268437594" name="xBias" stackId="2" startPc="268437135"/>
+        <entry endPc="268437594" name="positionY" stackId="6" startPc="268437135"/>
+        <entry endPc="268437594" name="clockTime" stackId="8" startPc="268437135"/>
+        <entry endPc="268437594" name="positionXMinutes" stackId="5" startPc="268437135"/>
+        <entry endPc="268437594" name="positionXSep" stackId="4" startPc="268437135"/>
+        <entry endPc="268437594" name="timeFormat" stackId="7" startPc="268437135"/>
+        <entry arg="true" endPc="268437595" name="dc" stackId="1" startPc="268437131"/>
+        <entry endPc="268437748" name="today" stackId="1" startPc="268437599"/>
+        <entry endPc="268437748" name="dateString" stackId="2" startPc="268437599"/>
+        <entry endPc="268437748" name="dayOfTheWeek" stackId="3" startPc="268437599"/>
+        <entry arg="true" endPc="268437772" name="number" stackId="1" startPc="268437749"/>
+        <entry endPc="268437846" name="battery" stackId="1" startPc="268437776"/>
+        <entry endPc="268437846" name="batteryDisplay" stackId="2" startPc="268437776"/>
+        <entry endPc="268438034" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268437859"/>
+        <entry arg="true" endPc="268438035" name="dc" stackId="1" startPc="268437847"/>
     </localVars>
     <annotations/>
     <dataEntryOffsetMappings>

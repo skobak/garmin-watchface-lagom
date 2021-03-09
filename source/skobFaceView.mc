@@ -129,9 +129,14 @@ class skobFaceView extends WatchUi.WatchFace {
     private function drawSteps(dc){
         var positionX = dc.getWidth()/2-25;
         var positionY = dc.getHeight()/2+85;
-       	var steps = (Mon.getInfo().steps/1000);
-        var distanceField = steps.format("%.1f")+"km";
- 
+       	var distance = Mon.getInfo().distance;
+       	var distanceField = "0km";
+       	if(distance!=null){
+	       	distance = (distance*100).toNumber().toFloat()/100/100000;
+	        distanceField = distance.format("%.2f")+"km";
+ 		}
+        
+
       	dc.setColor(accentColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX,positionY, customFontSuperSmall, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
     }
@@ -158,24 +163,15 @@ class skobFaceView extends WatchUi.WatchFace {
             if (hours > 12) {
                 hours = hours - 12;
             }
-        } else {
-            // if (Application.getApp().getProperty("UseMilitaryFormat")) {
-            //     timeFormat = "$1$$2$";
-            //     hours = hours.format("%02d");
-            // }
         }
-        // var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
-
-   	    // Hours
-
-           if(hours<10){
-              xBias= 20;
-           }
+        if(hours<10){
+            xBias= 20;
+        }
         dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionXHours, positionY, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
  	    // :
         dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionXSep-xBias-4, positionY-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(positionXSep-xBias-3, positionY-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
  	    // Minutes
         dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionXMinutes-xBias, positionY, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);

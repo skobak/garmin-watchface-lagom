@@ -1,8 +1,8 @@
 <properties>
     <property id="BackgroundColor" type="number">0x000000</property>
-    <property id="HoursColor" type="number">0xaaff00</property>
-    <property id="MinutesColor" type="number">0xffffff</property>
-    <property id="AccentColor" type="number">0xffaa00</property>
-    <property id="RestColor" type="number">0xffffff</property>
+    <property id="HoursColor" type="number">0x00FF00</property>
+    <property id="MinutesColor" type="number">0xFFFFFF</property>
+    <property id="AccentColor" type="number">0xFF5500</property>
+    <property id="RestColor" type="number">0xFFFFFF</property>
     <property id="HideIcons" type="boolean">false</property>
 </properties>
