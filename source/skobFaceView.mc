@@ -14,9 +14,13 @@ class skobFaceView extends WatchUi.WatchFace {
 	var customFontSmall = null;
 	var customFontSuperSmall = null;
 	var customIcons = null;
-	var bandColor = 0x555500;
-	var greenColor = 0x4C6329;
+    var hourColor = 0x55aa00;
+    var minutesColor = 0xffffff;
+    var restColor = 0xffffff;
+    var accentColor =0xffaa00;
+	var bgColor = 0x000000;
 	var globalDc=null;
+    var isHideIcons = false;
 	var weekdayArr = [
 "SUN",
 "MON",
@@ -37,6 +41,8 @@ class skobFaceView extends WatchUi.WatchFace {
       customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
       customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
       customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
+
+
       
       setLayout(Rez.Layouts.WatchFace(dc));
       globalDc = dc;
@@ -50,10 +56,21 @@ class skobFaceView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
+
+      hourColor = Application.getApp().getProperty("HoursColor");
+      minutesColor = Application.getApp().getProperty("MinutesColor");
+      restColor = Application.getApp().getProperty("RestColor");
+      accentColor =Application.getApp().getProperty("AccentColor");
+      bgColor=Application.getApp().getProperty("BackgroundColor");
+      isHideIcons =Application.getApp().getProperty("HideIcons"); 
+
+
         drawBg(dc);
         drawDate(dc);
         drawTime(dc);
-        drawIcons(dc);
+        if(!isHideIcons){
+            drawIcons(dc);
+        }
         drawSteps(dc);
  		drawBattery(dc);
     }
@@ -76,7 +93,7 @@ class skobFaceView extends WatchUi.WatchFace {
     
     
     private function drawBg(dc){
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.setColor(bgColor, bgColor);
         dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
     }
 
@@ -84,7 +101,7 @@ class skobFaceView extends WatchUi.WatchFace {
         var positionY = dc.getHeight()/2-108;
         var positionX = dc.getWidth()/2; // center
   		var dateString = getDateString();
- 		dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+ 		dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX, positionY, customFontSmall, dateString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -97,14 +114,14 @@ class skobFaceView extends WatchUi.WatchFace {
    	    if(System.getDeviceSettings().alarmCount>=1)
    	    {
        	    var alarmIcon ='A';
-    	    dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
             dc.drawText(positionX1,positionY, customIcons, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	    }
    	     	
    	    if(System.getDeviceSettings().doNotDisturb)
    	    {    
    	        var doNotDisturbIcon ='B';
-   	    	dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+   	    	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
             dc.drawText(positionX2, positionY, customIcons, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	    }
     }
@@ -115,7 +132,7 @@ class skobFaceView extends WatchUi.WatchFace {
        	var steps = (Mon.getInfo().steps/1000);
         var distanceField = steps.format("%.1f")+"km";
  
-      	dc.setColor(Graphics.COLOR_YELLOW,Graphics.COLOR_TRANSPARENT);
+      	dc.setColor(accentColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX,positionY, customFontSuperSmall, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -124,7 +141,7 @@ class skobFaceView extends WatchUi.WatchFace {
         var positionX = dc.getWidth()/2+25;
         var positionY = dc.getHeight()/2+85;
    	    var batteryLevel = getBatteryLevel();
-   	    dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+   	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX,positionY, customFontSuperSmall, batteryLevel, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -142,25 +159,25 @@ class skobFaceView extends WatchUi.WatchFace {
                 hours = hours - 12;
             }
         } else {
-            if (Application.getApp().getProperty("UseMilitaryFormat")) {
-                timeFormat = "$1$$2$";
-                hours = hours.format("%02d");
-            }
+            // if (Application.getApp().getProperty("UseMilitaryFormat")) {
+            //     timeFormat = "$1$$2$";
+            //     hours = hours.format("%02d");
+            // }
         }
-        var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
+        // var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
 
    	    // Hours
 
            if(hours<10){
               xBias= 20;
            }
-        dc.setColor(Graphics.COLOR_DK_GREEN,Graphics.COLOR_TRANSPARENT);
+        dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionXHours, positionY, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
  	    // :
-        dc.setColor(Graphics.COLOR_DK_GREEN,Graphics.COLOR_TRANSPARENT);
+        dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionXSep-xBias-4, positionY-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
  	    // Minutes
-        dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+        dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionXMinutes-xBias, positionY, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -176,7 +193,7 @@ class skobFaceView extends WatchUi.WatchFace {
     ]
     );
 
-    var dayOfTheWeek = getDayOfAWeekName(today.day_of_week);
+        var dayOfTheWeek = getDayOfAWeekName(today.day_of_week);
         return dayOfTheWeek+" "+dateString;
     }
     
@@ -190,9 +207,5 @@ class skobFaceView extends WatchUi.WatchFace {
 	    return battery.format("%d")+"%";	
     }
     
-    private function setStepCountDisplay() {
-        var stepCount = Mon.getInfo().steps.toString();		
-	    var stepCountDisplay = View.findDrawableById("StepCountDisplay");      
-	    stepCountDisplay.setText(stepCount);		
-    }
+ 
 }

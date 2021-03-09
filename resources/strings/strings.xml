@@ -1,16 +1,29 @@
 <strings>
 
     <string id="AppName">Lagom</string>
-
     <string id="BackgroundColorTitle">Background Color</string>
-    <string id="ForegroundColorTitle">Foreground Color</string>
-    <string id="MilitaryFormatTitle">Military Format for 24 Hour Time</string>
-
+    <string id="HoursColorTitle">Hours Color</string>
+    <string id="MinutesColorTitle">Minutes Color</string>
+    <string id="AccentColorTitle">Accent Color (steps)</string>
+    <string id="RestColorTitle">Basic Color(icons,date,battery)</string>
+    <string id="RestColor">Rest elements</string>
+    <string id="HideIconsTitle">Hide icons</string>
+    <string id="ColorOrange">Orange</string>
     <string id="ColorBlack">Black</string>
-    <string id="ColorDarkGray">Dark Gray</string>
-    <string id="ColorLightGray">Light Gray</string>
+    <string id="ColorGreen">Green</string>
+    <string id="ColorOlive">Olive</string>
     <string id="ColorWhite">White</string>
+    <string id="ColorDarkGray">Dark Gray</string>
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
+    <string id="ColorBlue">Blue</string>
+    <string id="ColorDarkRed">Dark Red</string>
+    <string id="ColorDarkGreen">Dark Green</string>
+    <string id="ColorDarkBlue">Dark Blue</string>
+    <string id="ColorOrange">Orange</string>
+    <string id="ColorPurple">Purple</string>
+    <string id="ColorPink">Pink</string>
+    <string id="ColorYellow">Yellow</string>
+    <string id="ColorLightGray">Light Gray</string>
 
 </strings>
