@@ -1,0 +1,6 @@
+<fonts>
+<font id="customFont" filename="custom-tall.fnt" filter="0123456789:"/>
+<font id="customFontSmall" filename="custom-small.fnt" />
+<font id="customFontSuperSmall" filename="custom-super-small.fnt" />
+<font id="customIcon" filename="custom-icons.fnt" />
+</fonts>

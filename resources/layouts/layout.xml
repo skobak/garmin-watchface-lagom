@@ -1,0 +1,5 @@
+
+<layout id="WatchFace">
+   <label id="DateDisplay" text="00/00/00" x="center" y="30" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />      
+  
+</layout>

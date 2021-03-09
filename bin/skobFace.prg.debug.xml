@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Users\askob\eclipse-workspace\skobFace\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="3" lineNum="6" pc="268435456" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="3" lineNum="7" pc="268435460" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="4" lineNum="11" pc="268435479" symbol="onStart"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="5" lineNum="15" pc="268435484" symbol="onStop"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="6" lineNum="19" pc="268435489" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="6" lineNum="20" pc="268435493" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="7" lineNum="24" pc="268435531" symbol="onSettingsChanged"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceApp.mc" id="7" lineNum="25" pc="268435535" symbol="onSettingsChanged"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="9" lineNum="7" pc="268435552" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="9" lineNum="8" pc="268435556" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="9" lineNum="12" pc="268435577" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="10" lineNum="15" pc="268435598" symbol="draw"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="10" lineNum="17" pc="268435602" symbol="draw"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="10" lineNum="18" pc="268435655" symbol="draw"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="12" lineNum="30" pc="268435668" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="12" lineNum="31" pc="268435672" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="35" pc="268435691" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="36" pc="268435695" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="37" pc="268435738" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="38" pc="268435781" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="39" pc="268435824" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="41" pc="268435867" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="42" pc="268435904" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="14" lineNum="48" pc="268435915" symbol="onShow"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="52" pc="268435920" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="53" pc="268435924" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="54" pc="268435938" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="55" pc="268435952" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="56" pc="268435966" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="57" pc="268435980" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="58" pc="268435994" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="64" pc="268436009" symbol="onHide"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="70" pc="268436014" symbol="onExitSleep"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="74" pc="268436019" symbol="onEnterSleep"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="28" lineNum="20" pc="268438118" symbol="&lt;init&gt;"/>
+        <entry filename="Rez" id="34" lineNum="19" pc="268437799" symbol="WatchFace"/>
+        <entry filename="Rez" id="34" lineNum="21" pc="268437811" symbol="WatchFace"/>
+        <entry filename="Rez" id="34" lineNum="23" pc="268437957" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="23" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBattery&gt;"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8389346" symbol="text"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="4" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="8389683" method="true" symbol="onSettingsChanged"/>
+        <entry field="true" id="35" symbol="ColorRed"/>
+        <entry field="true" id="39" symbol="MilitaryFormatTitle"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="9" object="true" symbol="skobFaceApp"/>
+        <entry field="true" id="34" symbol="ColorBlue"/>
+        <entry field="true" id="42" symbol="AppName"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="16" symbol="greenColor"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="15" symbol="bandColor"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8391489" module="true" symbol="Weather"/>
+        <entry id="24" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawTime&gt;"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="30" module="true" symbol="Menus"/>
+        <entry field="true" id="38" symbol="ColorDarkGray"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="17" symbol="globalDc"/>
+        <entry id="20" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawDate&gt;"/>
+        <entry field="true" id="41" symbol="ColorWhite"/>
+        <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+        <entry field="true" id="40" symbol="ColorBlack"/>
+        <entry id="22" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawSteps&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="11" symbol="customFont"/>
+        <entry field="true" id="13" symbol="customFontSuperSmall"/>
+        <entry id="21" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIcons&gt;"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="31" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="27" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getBatteryLevel&gt;"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="37" symbol="BackgroundColorTitle"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry id="26" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDayOfAWeekName&gt;"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="25" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDateString&gt;"/>
+        <entry id="19" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBg&gt;"/>
+        <entry field="true" id="33" symbol="ColorLightGray"/>
+        <entry field="true" id="14" symbol="customIcons"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389347" symbol="color"/>
+        <entry field="true" id="32" symbol="customIcon"/>
+        <entry field="true" id="36" symbol="ForegroundColorTitle"/>
+        <entry id="29" module="true" symbol="Layouts"/>
+        <entry id="10" object="true" symbol="skobFaceView"/>
+        <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+        <entry field="true" id="18" symbol="weekdayArr"/>
+        <entry id="28" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;setStepCountDisplay&gt;"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="12" symbol="customFontSmall"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435484" name="state" stackId="1" startPc="268435479"/>
+        <entry arg="true" endPc="268435489" name="state" stackId="1" startPc="268435484"/>
+        <entry endPc="268435597" name="dictionary" stackId="1" startPc="268435556"/>
+        <entry arg="true" endPc="268435668" name="dc" stackId="1" startPc="268435598"/>
+        <entry arg="true" endPc="268435915" name="dc" stackId="1" startPc="268435691"/>
+        <entry arg="true" endPc="268436009" name="dc" stackId="1" startPc="268435920"/>
+        <entry arg="true" endPc="268436109" name="dc" stackId="1" startPc="268436024"/>
+        <entry endPc="268436244" name="positionY" stackId="2" startPc="268436113"/>
+        <entry endPc="268436244" name="dateString" stackId="4" startPc="268436113"/>
+        <entry endPc="268436244" name="positionX" stackId="3" startPc="268436113"/>
+        <entry arg="true" endPc="268436245" name="dc" stackId="1" startPc="268436109"/>
+        <entry endPc="268436435" name="alarmIcon" stackId="5" startPc="268436354"/>
+        <entry endPc="268436543" name="doNotDisturbIcon" stackId="6" startPc="268436462"/>
+        <entry endPc="268436546" name="positionX2" stackId="4" startPc="268436249"/>
+        <entry endPc="268436546" name="positionY" stackId="2" startPc="268436249"/>
+        <entry endPc="268436546" name="positionX1" stackId="3" startPc="268436249"/>
+        <entry arg="true" endPc="268436547" name="dc" stackId="1" startPc="268436245"/>
+        <entry endPc="268436728" name="steps" stackId="4" startPc="268436551"/>
+        <entry endPc="268436728" name="positionY" stackId="3" startPc="268436551"/>
+        <entry endPc="268436728" name="positionX" stackId="2" startPc="268436551"/>
+        <entry endPc="268436728" name="distanceField" stackId="5" startPc="268436551"/>
+        <entry arg="true" endPc="268436729" name="dc" stackId="1" startPc="268436547"/>
+        <entry endPc="268436870" name="batteryLevel" stackId="4" startPc="268436733"/>
+        <entry endPc="268436870" name="positionY" stackId="3" startPc="268436733"/>
+        <entry endPc="268436870" name="positionX" stackId="2" startPc="268436733"/>
+        <entry arg="true" endPc="268436871" name="dc" stackId="1" startPc="268436729"/>
+        <entry endPc="268437471" name="timeString" stackId="10" startPc="268436875"/>
+        <entry endPc="268437471" name="positionXMinutes" stackId="5" startPc="268436875"/>
+        <entry endPc="268437471" name="clockTime" stackId="8" startPc="268436875"/>
+        <entry endPc="268437471" name="timeFormat" stackId="7" startPc="268436875"/>
+        <entry endPc="268437471" name="xBias" stackId="2" startPc="268436875"/>
+        <entry endPc="268437471" name="positionY" stackId="6" startPc="268436875"/>
+        <entry endPc="268437471" name="positionXSep" stackId="4" startPc="268436875"/>
+        <entry endPc="268437471" name="positionXHours" stackId="3" startPc="268436875"/>
+        <entry endPc="268437471" name="hours" stackId="9" startPc="268436875"/>
+        <entry arg="true" endPc="268437472" name="dc" stackId="1" startPc="268436871"/>
+        <entry endPc="268437625" name="today" stackId="1" startPc="268437476"/>
+        <entry endPc="268437625" name="dateString" stackId="2" startPc="268437476"/>
+        <entry endPc="268437625" name="dayOfTheWeek" stackId="3" startPc="268437476"/>
+        <entry arg="true" endPc="268437649" name="number" stackId="1" startPc="268437626"/>
+        <entry endPc="268437723" name="battery" stackId="1" startPc="268437653"/>
+        <entry endPc="268437723" name="batteryDisplay" stackId="2" startPc="268437653"/>
+        <entry endPc="268437798" name="stepCountDisplay" stackId="2" startPc="268437728"/>
+        <entry endPc="268437798" name="stepCount" stackId="1" startPc="268437728"/>
+        <entry endPc="268437974" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268437811"/>
+        <entry arg="true" endPc="268437975" name="dc" stackId="1" startPc="268437799"/>
+    </localVars>
+    <annotations/>
+    <dataEntryOffsetMappings>
+        <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry offset="158" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry offset="213" parentId="globals" symbolId="skobFaceView" type="class"/>
+        <dataEntry offset="452" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry offset="531" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="570" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="601" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="664" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="703" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="734" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry offset="845" parentId="globals" symbolId="skobFaceApp" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="initialize" parent="skobFaceApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="skobFaceApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="skobFaceApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="skobFaceApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onSettingsChanged" parent="skobFaceApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="Background">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="draw" parent="Background">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onExitSleep" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onEnterSleep" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;drawBg&gt;" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;drawDate&gt;" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;drawIcons&gt;" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;drawSteps&gt;" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;drawBattery&gt;" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;drawTime&gt;" parent="skobFaceView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;getDateString&gt;" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;getDayOfAWeekName&gt;" parent="skobFaceView">
+            <param id="number"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;getBatteryLevel&gt;" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;setStepCountDisplay&gt;" parent="skobFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="WatchFace" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
