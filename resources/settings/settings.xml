@@ -95,7 +95,11 @@
     </setting>
 
     <setting propertyKey="@Properties.HideIcons" title="@Strings.HideIconsTitle">
-        <settingConfig type="boolean" />
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.IconsHideTitle</listEntry>
+            <listEntry value="1">@Strings.IconsBigTitle</listEntry>
+            <listEntry value="2">@Strings.IconsSmallTitle</listEntry>
+        </settingConfig>
     </setting>
 
 </settings>

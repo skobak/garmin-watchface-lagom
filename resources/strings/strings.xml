@@ -24,4 +24,8 @@
     <string id="ColorYellow">Yellow</string>
     <string id="ColorLightGray">Light Gray</string>
 
+    <string id="IconsBigTitle">Big Icons/Small Battery and Distance</string>
+    <string id="IconsSmallTitle">Small Icons/Big Battery and Distance</string>
+    <string id="IconsHideTitle">Hide Icons/Big Battery and Distance</string>
+
 </strings>

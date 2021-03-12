@@ -13,14 +13,16 @@ class skobFaceView extends WatchUi.WatchFace {
 	var customFont = null;
 	var customFontSmall = null;
 	var customFontSuperSmall = null;
+	var customFontMiddle = null;
 	var customIcons = null;
-    var hourColor = 0x55aa00;
-    var minutesColor = 0xffffff;
-    var restColor = 0xffffff;
-    var accentColor =0xffaa00;
+	var customIconsSmall = null;
+    var hourColor = 0x00FF00;
+    var minutesColor = 0xFFFFFF;
+    var restColor = 0xFFFFFF;
+    var accentColor =0xFF5500;
 	var bgColor = 0x000000;
 	var globalDc=null;
-    var isHideIcons = false;
+    var isHideIcons = 0;
 	var weekdayArr = [
 "SUN",
 "MON",
@@ -30,6 +32,11 @@ class skobFaceView extends WatchUi.WatchFace {
 "FRI",
 "SAT",
 ];
+   
+   var bias1=0;
+   var bias2=0;
+   var bias3= 0;
+   var bias4= 0;
     
     function initialize() {
         WatchFace.initialize();
@@ -40,7 +47,9 @@ class skobFaceView extends WatchUi.WatchFace {
       customFont = WatchUi.loadResource(Rez.Fonts.customFont);
       customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
       customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
+      customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
       customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
+      customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmall);
 
 
       
@@ -68,11 +77,15 @@ class skobFaceView extends WatchUi.WatchFace {
         drawBg(dc);
         drawDate(dc);
         drawTime(dc);
-        if(!isHideIcons){
+        
+        if(isHideIcons == 1){
             drawIcons(dc);
+        } else if(isHideIcons == 2){
+            drawIconsSmall(dc);
         }
-        drawSteps(dc);
- 		drawBattery(dc);
+        
+        drawSteps(dc,isHideIcons);
+ 		drawBattery(dc,isHideIcons);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -125,10 +138,36 @@ class skobFaceView extends WatchUi.WatchFace {
             dc.drawText(positionX2, positionY, customIcons, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	    }
     }
+    
+    private function drawIconsSmall(dc){
+        var positionY = dc.getHeight()/2-90;
+        var positionX1 = dc.getWidth()/2-68; // center
+        var positionX2 = dc.getWidth()/2+68; // center
+        
+   	    if(System.getDeviceSettings().alarmCount>=1)
+   	    {
+       	    var alarmIcon ='A';
+    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(positionX1,positionY, customIconsSmall, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
+   	    }
+   	     	
+   	    if(System.getDeviceSettings().doNotDisturb)
+   	    {    
+   	        var doNotDisturbIcon ='B';
+   	    	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(positionX2, positionY, customIconsSmall, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
+   	    }
+    }
 
-    private function drawSteps(dc){
+    private function drawSteps(dc,isHideIcons){
         var positionX = dc.getWidth()/2-25;
         var positionY = dc.getHeight()/2+85;
+        var font = customFontSuperSmall;
+        if(isHideIcons == 0 || isHideIcons == 1){
+            positionY=positionY-35;
+            positionX=positionX-10;
+            font = customFontMiddle;
+        }
        	var distance = Mon.getInfo().distance;
        	var distanceField = "0km";
        	if(distance!=null){
@@ -138,16 +177,22 @@ class skobFaceView extends WatchUi.WatchFace {
         
 
       	dc.setColor(accentColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionX,positionY, customFontSuperSmall, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(positionX,positionY, font, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
 
-    private function drawBattery(dc){
+    private function drawBattery(dc,isHideIcons){
         var positionX = dc.getWidth()/2+25;
         var positionY = dc.getHeight()/2+85;
    	    var batteryLevel = getBatteryLevel();
+        var font = customFontSuperSmall;
+        if(isHideIcons == 0 || isHideIcons == 1){
+            positionY=positionY-35;
+            positionX=positionX+15;
+            font = customFontMiddle;
+        }
    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionX,positionY, customFontSuperSmall, batteryLevel, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(positionX,positionY, font, batteryLevel, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawTime(dc) {
