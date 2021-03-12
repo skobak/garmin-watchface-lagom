@@ -7,7 +7,7 @@
     <string id="AccentColorTitle">Accent Color (steps)</string>
     <string id="RestColorTitle">Basic Color(icons,date,battery)</string>
     <string id="RestColor">Rest elements</string>
-    <string id="HideIconsTitle">Hide icons</string>
+    <string id="HideIconsTitle">Icons/Distance and Battery</string>
     <string id="ColorOrange">Orange</string>
     <string id="ColorBlack">Black</string>
     <string id="ColorGreen">Green</string>
@@ -23,9 +23,10 @@
     <string id="ColorPink">Pink</string>
     <string id="ColorYellow">Yellow</string>
     <string id="ColorLightGray">Light Gray</string>
+    
+   <string id="IconsHideTitle">Hide Icons/Big Battery and Distance</string>
 
     <string id="IconsBigTitle">Big Icons/Small Battery and Distance</string>
     <string id="IconsSmallTitle">Small Icons/Big Battery and Distance</string>
-    <string id="IconsHideTitle">Hide Icons/Big Battery and Distance</string>
-
+ 
 </strings>

@@ -163,7 +163,7 @@ class skobFaceView extends WatchUi.WatchFace {
         var positionX = dc.getWidth()/2-25;
         var positionY = dc.getHeight()/2+85;
         var font = customFontSuperSmall;
-        if(isHideIcons == 0 || isHideIcons == 1){
+        if(isHideIcons == 0 || isHideIcons == 2){
             positionY=positionY-35;
             positionX=positionX-10;
             font = customFontMiddle;
@@ -186,7 +186,7 @@ class skobFaceView extends WatchUi.WatchFace {
         var positionY = dc.getHeight()/2+85;
    	    var batteryLevel = getBatteryLevel();
         var font = customFontSuperSmall;
-        if(isHideIcons == 0 || isHideIcons == 1){
+        if(isHideIcons == 0 || isHideIcons == 2){
             positionY=positionY-35;
             positionX=positionX+15;
             font = customFontMiddle;
