@@ -5,6 +5,7 @@
     <string id="HoursColorTitle">Hours Color</string>
     <string id="MinutesColorTitle">Minutes Color</string>
     <string id="AccentColorTitle">Accent Color (steps)</string>
+
     <string id="RestColorTitle">Basic Color(icons,date,battery)</string>
     <string id="RestColor">Rest elements</string>
     <string id="HideIconsTitle">Icons/Distance and Battery</string>
@@ -23,10 +24,34 @@
     <string id="ColorPink">Pink</string>
     <string id="ColorYellow">Yellow</string>
     <string id="ColorLightGray">Light Gray</string>
-    
-   <string id="IconsHideTitle">Hide Icons/Big Battery and Distance</string>
+
+    <string id="IconsHideTitle">Hide Icons/Big Battery and Distance</string>
 
     <string id="IconsBigTitle">Big Icons/Small Battery and Distance</string>
     <string id="IconsSmallTitle">Small Icons/Big Battery and Distance</string>
- 
+
+    <string id="StepFieldTitle">Distance/Week Distance/Steps</string>
+    <string id="DayilyDistanceTitle">Distance,km.(daily)</string>
+    <string id="WeeklyDistanceTitle">Distance,km.(weekly,BETA)</string>
+    <string id="StepsTitle">Steps(daily)</string>
+
+
+               <string id="Granite">Band Color: Granite Blue</string>
+            <string id="Berry">Band Color: Berry</string>
+            <string id="Sea">Band Color: Sea Foam</string>
+            <string id="Sandstone">Band Color: Sandstone</string>
+            <string id="Sand">Band Color: Light Sand</string>
+            <string id="Powder">Band Color: Powder Gray</string>
+            <string id="Moss">Band Color: Moss(Same as Olive)</string>
+            <string id="Sandstone2">Band Color: Sandstone</string>
+            <string id="Cerise">Band Color: Cerise</string>
+            <string id="Aqua">Band Color: Aqua</string>
+            <string id="Blush">Band Color: Blush Pink</string>
+            <string id="Tan">Band Color: Tan Suede</string>
+            <string id="Dark">Band Color: Dark Brown</string>
+            <string id="TanI">Band Color: Tan Italian Leather </string>
+            <string id="LSI">Band Color: Light Sand Italian </string>
+            <string id="Navy">Band Color: Navy</string>
+            <string id="Orchid">Band Color: Orchid</string>
+
 </strings>

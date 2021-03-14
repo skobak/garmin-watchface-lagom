@@ -7,6 +7,7 @@ using Toybox.Application;
 using Toybox.Time.Gregorian as Date;
 using Toybox.System as Sys;
 using Toybox.ActivityMonitor as Mon;
+using Toybox.Application.Storage as Storage;
 
 
 class skobFaceView extends WatchUi.WatchFace {
@@ -23,6 +24,7 @@ class skobFaceView extends WatchUi.WatchFace {
 	var bgColor = 0x000000;
 	var globalDc=null;
     var isHideIcons = 0;
+    var stepField = 0;
 	var weekdayArr = [
 "SUN",
 "MON",
@@ -37,6 +39,7 @@ class skobFaceView extends WatchUi.WatchFace {
    var bias2=0;
    var bias3= 0;
    var bias4= 0;
+   var weeklyDistance = 0;
     
     function initialize() {
         WatchFace.initialize();
@@ -62,9 +65,89 @@ class skobFaceView extends WatchUi.WatchFace {
     // loading resources into memory.
     function onShow() {
     }
+    
+    function storeWeeklyDistance(){
+ 
+    // Get current distnace
+       var dist = Mon.getInfo().distance;
+       
+       var today = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+    
+    // Store data for each day
+     var currentDistance = Application.Storage.getValue("weeklyDistance_"+today.day_of_week);
+//	 if(currentDistance==null || currentDistance==0){
+	    Application.Storage.setValue("weeklyDistance_"+today.day_of_week,dist);
+//	  }
+	  // day_of_week== 2 is monday, day_of_week [1-sun...7]
+	 if (today.day_of_week==2 && dist!=null && currentDistance>dist){
+	  	// Reset all params if monday distance less that already exists (meaning new data statrs)
+	 resetWeeklyDistance();
+	  }
+	  
+
+	  
+    }
+    
+    function resetWeeklyDistance(){
+    Application.Storage.setValue("weeklyDistance_0",0);
+     Application.Storage.setValue("weeklyDistance_1",0);
+      Application.Storage.setValue("weeklyDistance_2",0);
+       Application.Storage.setValue("weeklyDistance_3",0);
+        Application.Storage.setValue("weeklyDistance_4",0);
+         Application.Storage.setValue("weeklyDistance_5",0);
+          Application.Storage.setValue("weeklyDistance_6",0);
+         
+    }
+    
+        function getWeeklyDistance(){
+        var distanceSumm = 0;
+    var sunDistance = Application.Storage.getValue("weeklyDistance_0");
+    if(sunDistance!=null){
+    distanceSumm=distanceSumm+sunDistance;
+    }
+    
+      var monDistance = Application.Storage.getValue("weeklyDistance_1");
+    if(monDistance!=null){
+    distanceSumm=distanceSumm+monDistance;
+    }
+    
+    
+        var tueDistance = Application.Storage.getValue("weeklyDistance_2");
+    if(tueDistance!=null){
+    distanceSumm=distanceSumm+tueDistance;
+    }
+    
+            var wedDistance = Application.Storage.getValue("weeklyDistance_3");
+    if(wedDistance!=null){
+    distanceSumm=distanceSumm+wedDistance;
+    }
+    
+    
+            var thuDistance = Application.Storage.getValue("weeklyDistance_4");
+    if(thuDistance!=null){
+    distanceSumm=distanceSumm+thuDistance;
+    }
+    
+    
+    
+            var friDistance = Application.Storage.getValue("weeklyDistance_5");
+    if(friDistance!=null){
+    distanceSumm=distanceSumm+friDistance;
+    }
+    
+                var satDistance = Application.Storage.getValue("weeklyDistance_6");
+    if(satDistance!=null){
+    distanceSumm=distanceSumm+satDistance;
+    }
+    
+    
+    return distanceSumm;
+    }
 
     // Update the view
     function onUpdate(dc) {
+    
+ 
 
       hourColor = Application.getApp().getProperty("HoursColor");
       minutesColor = Application.getApp().getProperty("MinutesColor");
@@ -72,7 +155,10 @@ class skobFaceView extends WatchUi.WatchFace {
       accentColor =Application.getApp().getProperty("AccentColor");
       bgColor=Application.getApp().getProperty("BackgroundColor");
       isHideIcons =Application.getApp().getProperty("HideIcons"); 
+      stepField =Application.getApp().getProperty("StepField"); 
 
+
+storeWeeklyDistance();
 
         drawBg(dc);
         drawDate(dc);
@@ -84,7 +170,7 @@ class skobFaceView extends WatchUi.WatchFace {
             drawIconsSmall(dc);
         }
         
-        drawSteps(dc,isHideIcons);
+        drawSteps(dc,isHideIcons,stepField);
  		drawBattery(dc,isHideIcons);
     }
 
@@ -159,7 +245,10 @@ class skobFaceView extends WatchUi.WatchFace {
    	    }
     }
 
-    private function drawSteps(dc,isHideIcons){
+/*
+stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
+*/
+    private function drawSteps(dc,isHideIcons,stepField){
         var positionX = dc.getWidth()/2-25;
         var positionY = dc.getHeight()/2+85;
         var font = customFontSuperSmall;
@@ -168,12 +257,24 @@ class skobFaceView extends WatchUi.WatchFace {
             positionX=positionX-10;
             font = customFontMiddle;
         }
+
+
        	var distance = Mon.getInfo().distance;
        	var distanceField = "0km";
+       	
+       	if(stepField==1){
+       	distance = getWeeklyDistance();
+       	
+       	}
+       	
        	if(distance!=null){
 	       	distance = (distance*100).toNumber().toFloat()/100/100000;
 	        distanceField = distance.format("%.2f")+"km";
  		}
+
+        if(stepField== 2){
+            distanceField= Mon.getInfo().steps;
+        }
         
 
       	dc.setColor(accentColor,Graphics.COLOR_TRANSPARENT);

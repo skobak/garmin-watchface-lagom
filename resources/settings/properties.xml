@@ -5,4 +5,5 @@
     <property id="AccentColor" type="number">0xFF5500</property>
     <property id="RestColor" type="number">0xFFFFFF</property>
     <property id="HideIcons" type="number">0</property>
+    <property id="StepField" type="number">0</property>
 </properties>

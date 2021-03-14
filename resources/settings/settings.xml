@@ -16,6 +16,25 @@
             <listEntry value="0xFFFF00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+            <listEntry value="0x484e57">@Strings.Granite</listEntry>
+            <listEntry value="0x663349">@Strings.Berry</listEntry>
+            <listEntry value="0x9BADB4">@Strings.Sea</listEntry>
+            <listEntry value="0x969185">@Strings.Sandstone</listEntry>
+            <listEntry value="0xBAB2AB">@Strings.Sand</listEntry>
+            <listEntry value="0xA7A7A7">@Strings.Powder</listEntry>
+            <listEntry value="0x60614C">@Strings.Moss</listEntry>
+            <listEntry value="0x8F8674">@Strings.Sandstone2</listEntry>
+            <listEntry value="0x842B4B">@Strings.Cerise</listEntry>
+            <listEntry value="0x65BEBD">@Strings.Aqua</listEntry>
+            <listEntry value="0xF2D6C1">@Strings.Blush</listEntry>
+            <listEntry value="0xA98A67">@Strings.Tan</listEntry>
+            <listEntry value="0x3E3530">@Strings.Dark</listEntry>
+            <listEntry value="0x915734">@Strings.TanI</listEntry>
+            <listEntry value="0xC4B39F">@Strings.LSI</listEntry>
+            <listEntry value="0x383F5A">@Strings.Navy</listEntry>
+            <listEntry value="0xABA0AB">@Strings.Orchid</listEntry>
+     
+
         </settingConfig>
     </setting>
 
@@ -35,6 +54,7 @@
             <listEntry value="0xFFFF00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+
         </settingConfig>
     </setting>
 
@@ -54,6 +74,7 @@
             <listEntry value="0xFFFF00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+ 
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.AccentColor" title="@Strings.AccentColorTitle">
@@ -72,6 +93,7 @@
             <listEntry value="0xFFFF00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+
         </settingConfig>
     </setting>
 
@@ -99,6 +121,14 @@
             <listEntry value="0">@Strings.IconsHideTitle</listEntry>
             <listEntry value="1">@Strings.IconsBigTitle</listEntry>
             <listEntry value="2">@Strings.IconsSmallTitle</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.StepField" title="@Strings.StepFieldTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.DayilyDistanceTitle</listEntry>
+            <listEntry value="1">@Strings.WeeklyDistanceTitle</listEntry>
+            <listEntry value="2">@Strings.StepsTitle</listEntry>
         </settingConfig>
     </setting>
 
