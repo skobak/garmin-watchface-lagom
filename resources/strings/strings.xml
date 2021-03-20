@@ -53,5 +53,8 @@
             <string id="LSI">Band Color: Light Sand Italian </string>
             <string id="Navy">Band Color: Navy</string>
             <string id="Orchid">Band Color: Orchid</string>
+            <string id="MetricsTitle">Metrics</string>
+            <string id="KmTitle">km</string>
+            <string id="MilesTitle">mil</string>
 
 </strings>

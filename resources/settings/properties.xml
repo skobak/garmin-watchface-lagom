@@ -6,4 +6,5 @@
     <property id="RestColor" type="number">0xFFFFFF</property>
     <property id="HideIcons" type="number">0</property>
     <property id="StepField" type="number">0</property>
+    <property id="Metrics" type="number">0</property>
 </properties>

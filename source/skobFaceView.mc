@@ -40,6 +40,7 @@ class skobFaceView extends WatchUi.WatchFace {
    var bias3= 0;
    var bias4= 0;
    var weeklyDistance = 0;
+   var metrics = 0;
     
     function initialize() {
         WatchFace.initialize();
@@ -67,79 +68,93 @@ class skobFaceView extends WatchUi.WatchFace {
     }
     
     function storeWeeklyDistance(){
- 
+    
+ try {
     // Get current distnace
        var dist = Mon.getInfo().distance;
+       
+       if(dist == null){
+       dist = 0;
+       }
        
        var today = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
     
     // Store data for each day
      var currentDistance = Application.Storage.getValue("weeklyDistance_"+today.day_of_week);
-//	 if(currentDistance==null || currentDistance==0){
+
 	    Application.Storage.setValue("weeklyDistance_"+today.day_of_week,dist);
-//	  }
+
 	  // day_of_week== 2 is monday, day_of_week [1-sun...7]
-	 if (today.day_of_week==2 && dist!=null && currentDistance>dist){
+	 if (today.day_of_week==2 && dist!=null && currentDistance!=null && currentDistance>dist){
 	  	// Reset all params if monday distance less that already exists (meaning new data statrs)
 	 resetWeeklyDistance();
 	  }
-	  
+	         }  catch( ex ) {
+
+}
 
 	  
     }
     
     function resetWeeklyDistance(){
-    Application.Storage.setValue("weeklyDistance_0",0);
+try {
      Application.Storage.setValue("weeklyDistance_1",0);
       Application.Storage.setValue("weeklyDistance_2",0);
        Application.Storage.setValue("weeklyDistance_3",0);
         Application.Storage.setValue("weeklyDistance_4",0);
          Application.Storage.setValue("weeklyDistance_5",0);
           Application.Storage.setValue("weeklyDistance_6",0);
+          Application.Storage.setValue("weeklyDistance_7",0);
+         } catch( ex ) {
+
+}
          
     }
     
         function getWeeklyDistance(){
         var distanceSumm = 0;
-    var sunDistance = Application.Storage.getValue("weeklyDistance_0");
+        try {
+    var sunDistance = Application.Storage.getValue("weeklyDistance_1");
     if(sunDistance!=null){
     distanceSumm=distanceSumm+sunDistance;
     }
     
-      var monDistance = Application.Storage.getValue("weeklyDistance_1");
+      var monDistance = Application.Storage.getValue("weeklyDistance_2");
     if(monDistance!=null){
     distanceSumm=distanceSumm+monDistance;
     }
     
     
-        var tueDistance = Application.Storage.getValue("weeklyDistance_2");
+        var tueDistance = Application.Storage.getValue("weeklyDistance_3");
     if(tueDistance!=null){
     distanceSumm=distanceSumm+tueDistance;
     }
     
-            var wedDistance = Application.Storage.getValue("weeklyDistance_3");
+            var wedDistance = Application.Storage.getValue("weeklyDistance_4");
     if(wedDistance!=null){
     distanceSumm=distanceSumm+wedDistance;
     }
     
     
-            var thuDistance = Application.Storage.getValue("weeklyDistance_4");
+            var thuDistance = Application.Storage.getValue("weeklyDistance_5");
     if(thuDistance!=null){
     distanceSumm=distanceSumm+thuDistance;
     }
     
     
     
-            var friDistance = Application.Storage.getValue("weeklyDistance_5");
+            var friDistance = Application.Storage.getValue("weeklyDistance_6");
     if(friDistance!=null){
     distanceSumm=distanceSumm+friDistance;
     }
     
-                var satDistance = Application.Storage.getValue("weeklyDistance_6");
+                var satDistance = Application.Storage.getValue("weeklyDistance_7");
     if(satDistance!=null){
     distanceSumm=distanceSumm+satDistance;
     }
-    
+           } catch( ex ) {
+
+}
     
     return distanceSumm;
     }
@@ -156,6 +171,7 @@ class skobFaceView extends WatchUi.WatchFace {
       bgColor=Application.getApp().getProperty("BackgroundColor");
       isHideIcons =Application.getApp().getProperty("HideIcons"); 
       stepField =Application.getApp().getProperty("StepField"); 
+      metrics =Application.getApp().getProperty("Metrics"); 
 
 
 storeWeeklyDistance();
@@ -251,6 +267,10 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
     private function drawSteps(dc,isHideIcons,stepField){
         var positionX = dc.getWidth()/2-25;
         var positionY = dc.getHeight()/2+85;
+        var prefix = "km";
+        if(metrics==1){
+            prefix="mil";
+        }
         var font = customFontSuperSmall;
         if(isHideIcons == 0 || isHideIcons == 2){
             positionY=positionY-35;
@@ -260,7 +280,13 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
 
 
        	var distance = Mon.getInfo().distance;
-       	var distanceField = "0km";
+
+        if(metrics==1){
+            distance=distance*0.62137;
+        }
+       	var steps = Mon.getInfo().steps;
+
+       	var distanceField = "0"+prefix;
        	
        	if(stepField==1){
        	distance = getWeeklyDistance();
@@ -269,11 +295,15 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
        	
        	if(distance!=null){
 	       	distance = (distance*100).toNumber().toFloat()/100/100000;
-	        distanceField = distance.format("%.2f")+"km";
+	        distanceField = distance.format("%.2f")+prefix;
  		}
 
         if(stepField== 2){
-            distanceField= Mon.getInfo().steps;
+        if(steps==null){
+        distanceField="0";
+        }else{
+            distanceField= steps;
+            }
         }
         
 

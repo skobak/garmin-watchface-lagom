@@ -200,5 +200,10 @@
             <listEntry value="2">@Strings.StepsTitle</listEntry>
         </settingConfig>
     </setting>
-
+  <setting propertyKey="@Properties.Metrics" title="@Strings.MetricsTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.KmTitle</listEntry>
+            <listEntry value="1">@Strings.MilesTitle</listEntry>
+        </settingConfig>
+    </setting>
 </settings>
