@@ -206,4 +206,16 @@
             <listEntry value="1">@Strings.MilesTitle</listEntry>
         </settingConfig>
     </setting>
+
+    <setting propertyKey="@Properties.DateFormat" title="@Strings.DateFormatTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.Date1</listEntry>
+            <listEntry value="1">@Strings.Date2</listEntry>
+            <listEntry value="2">@Strings.Date3</listEntry>
+            <listEntry value="3">@Strings.Date4</listEntry>
+            <listEntry value="4">@Strings.Date5</listEntry>
+            <listEntry value="5">@Strings.Date6</listEntry>
+            <listEntry value="6">@Strings.Date7</listEntry>
+        </settingConfig>
+    </setting>
 </settings>

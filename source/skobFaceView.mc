@@ -41,6 +41,7 @@ class skobFaceView extends WatchUi.WatchFace {
    var bias4= 0;
    var weeklyDistance = 0;
    var metrics = 0;
+   var dateFormat = 0;
     
     function initialize() {
         WatchFace.initialize();
@@ -172,7 +173,7 @@ try {
       isHideIcons =Application.getApp().getProperty("HideIcons"); 
       stepField =Application.getApp().getProperty("StepField"); 
       metrics =Application.getApp().getProperty("Metrics"); 
-
+      dateFormat =Application.getApp().getProperty("DateFormat"); 
 
 storeWeeklyDistance();
 
@@ -366,7 +367,12 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
     );
 
         var dayOfTheWeek = getDayOfAWeekName(today.day_of_week);
-        return dayOfTheWeek+" "+dateString;
+
+        var result =dayOfTheWeek+" "+dateString; 
+if(dateFormat==1){
+  result = dateString;
+}
+        return result;
     }
     
     private function getDayOfAWeekName(number){

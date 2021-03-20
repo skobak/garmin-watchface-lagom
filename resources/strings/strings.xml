@@ -56,5 +56,12 @@
             <string id="MetricsTitle">Metrics</string>
             <string id="KmTitle">km</string>
             <string id="MilesTitle">mil</string>
-
+            <string id="DateFormatTitle">Date format</string>
+            <string id="Date1">DAY dd.mm</string>
+            <string id="Date2">dd.mm</string>
+            <string id="Date3">s1</string>
+            <string id="Date4">s1</string>
+            <string id="Date5">s1</string>
+            <string id="Date6">s1</string>
+            <string id="Date7">s1</string>
 </strings>
