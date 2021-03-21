@@ -34,6 +34,13 @@ class skobFaceView extends WatchUi.WatchFace {
 "FRI",
 "SAT",
 ];
+
+  var weekdayArrNor = [
+     "SO","MA","TI","ON","TO","FR","LO"
+  ];
+
+  var lang =0;
+
    
    var bias1=0;
    var bias2=0;
@@ -174,6 +181,7 @@ try {
       stepField =Application.getApp().getProperty("StepField"); 
       metrics =Application.getApp().getProperty("Metrics"); 
       dateFormat =Application.getApp().getProperty("DateFormat"); 
+      lang =Application.getApp().getProperty("Lang"); 
 
 storeWeeklyDistance();
 
@@ -427,7 +435,10 @@ else if(dateFormat==5){
     }
     
     private function getDayOfAWeekName(number){
+        if(lang==0){
     	return weekdayArr[number-1];
+        }
+        return weekdayArrNor[number-1];
     }
     
     private function getBatteryLevel() {

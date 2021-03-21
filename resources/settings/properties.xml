@@ -8,4 +8,5 @@
     <property id="StepField" type="number">0</property>
     <property id="Metrics" type="number">0</property>
     <property id="DateFormat" type="number">0</property>
+    <property id="Lang" type="number">0</property>
 </properties>

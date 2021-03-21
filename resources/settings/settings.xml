@@ -217,4 +217,10 @@
             <listEntry value="5">@Strings.Date6</listEntry>
         </settingConfig>
     </setting>
+    <setting propertyKey="@Properties.Lang" title="@Strings.LanguageTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.Ln1</listEntry>
+            <listEntry value="1">@Strings.Ln2</listEntry>
+        </settingConfig>
+    </setting>
 </settings>
