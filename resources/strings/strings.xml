@@ -58,10 +58,9 @@
             <string id="MilesTitle">mil</string>
             <string id="DateFormatTitle">Date format</string>
             <string id="Date1">DAY dd.mm</string>
-            <string id="Date2">dd.mm</string>
-            <string id="Date3">s1</string>
-            <string id="Date4">s1</string>
-            <string id="Date5">s1</string>
-            <string id="Date6">s1</string>
-            <string id="Date7">s1</string>
+            <string id="Date2">DAY mm.dd</string>
+            <string id="Date3">DAY dd/mm</string>
+            <string id="Date4">DAY mm/dd</string>
+            <string id="Date5">MM/DD/YY</string>
+            <string id="Date6">DD/MM/YY</string>
 </strings>

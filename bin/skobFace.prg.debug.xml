@@ -95,17 +95,17 @@
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="19" lineNum="197" pc="268437382" symbol="onHide"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="20" lineNum="203" pc="268437387" symbol="onExitSleep"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="21" lineNum="207" pc="268437392" symbol="onEnterSleep"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="31" lineNum="28" pc="268439909" symbol="&lt;init&gt;"/>
-        <entry filename="Rez" id="37" lineNum="21" pc="268439578" symbol="WatchFace"/>
-        <entry filename="Rez" id="37" lineNum="24" pc="268439590" symbol="WatchFace"/>
-        <entry filename="Rez" id="37" lineNum="26" pc="268439748" symbol="WatchFace"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="31" lineNum="28" pc="268440340" symbol="&lt;init&gt;"/>
+        <entry filename="Rez" id="37" lineNum="21" pc="268440009" symbol="WatchFace"/>
+        <entry filename="Rez" id="37" lineNum="24" pc="268440021" symbol="WatchFace"/>
+        <entry filename="Rez" id="37" lineNum="26" pc="268440179" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
-        <entry field="true" id="86" symbol="Date5"/>
-        <entry field="true" id="85" symbol="Date4"/>
-        <entry field="true" id="83" symbol="Date3"/>
-        <entry field="true" id="82" symbol="Date2"/>
-        <entry field="true" id="92" symbol="Date1"/>
+        <entry field="true" id="85" symbol="Date5"/>
+        <entry field="true" id="84" symbol="Date4"/>
+        <entry field="true" id="82" symbol="Date3"/>
+        <entry field="true" id="81" symbol="Date2"/>
+        <entry field="true" id="91" symbol="Date1"/>
         <entry id="41" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBattery&gt;"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="8389346" symbol="text"/>
@@ -118,9 +118,9 @@
         <entry field="true" id="79" symbol="IconsBigTitle"/>
         <entry field="true" id="30" symbol="weeklyDistance"/>
         <entry field="true" id="71" symbol="Blush"/>
-        <entry field="true" id="97" symbol="ColorGreen"/>
+        <entry field="true" id="96" symbol="ColorGreen"/>
         <entry id="8389683" method="true" symbol="onSettingsChanged"/>
-        <entry field="true" id="87" symbol="ColorYellow"/>
+        <entry field="true" id="86" symbol="ColorYellow"/>
         <entry field="true" id="57" symbol="ColorRed"/>
         <entry field="true" id="77" symbol="ColorDarkRed"/>
         <entry id="8390424" module="true" symbol="Storage"/>
@@ -132,13 +132,13 @@
         <entry field="true" id="52" symbol="Orchid"/>
         <entry field="true" id="70" symbol="KmTitle"/>
         <entry id="39" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIconsSmall&gt;"/>
-        <entry field="true" id="88" symbol="AppName"/>
+        <entry field="true" id="87" symbol="AppName"/>
         <entry field="true" id="21" symbol="bgColor"/>
         <entry field="true" id="50" symbol="customIconSmall"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
         <entry id="8388772" module="true" object="true" symbol="Fonts"/>
         <entry id="34" method="true" symbol="resetWeeklyDistance"/>
-        <entry field="true" id="99" symbol="Sandstone"/>
+        <entry field="true" id="98" symbol="Sandstone"/>
         <entry field="true" id="74" symbol="IconsHideTitle"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry field="true" id="67" symbol="ColorOrange"/>
@@ -157,7 +157,7 @@
         <entry id="8389348" symbol="font"/>
         <entry field="true" id="19" symbol="restColor"/>
         <entry id="47" module="true" symbol="Menus"/>
-        <entry field="true" id="102" symbol="ColorDarkGray"/>
+        <entry field="true" id="101" symbol="ColorDarkGray"/>
         <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry id="8389376" method="true" symbol="onEnterSleep"/>
@@ -168,19 +168,19 @@
         <entry field="true" id="20" symbol="accentColor"/>
         <entry field="true" id="22" symbol="globalDc"/>
         <entry field="true" id="68" symbol="Sea"/>
-        <entry field="true" id="95" symbol="DayilyDistanceTitle"/>
+        <entry field="true" id="94" symbol="DayilyDistanceTitle"/>
         <entry field="true" id="78" symbol="Aqua"/>
         <entry id="37" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawDate&gt;"/>
-        <entry field="true" id="90" symbol="Granite"/>
+        <entry field="true" id="89" symbol="Granite"/>
         <entry field="true" id="61" symbol="ColorWhite"/>
-        <entry field="true" id="103" symbol="ColorDarkBlue"/>
+        <entry field="true" id="102" symbol="ColorDarkBlue"/>
         <entry field="true" id="65" symbol="Berry"/>
         <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
         <entry id="33" method="true" symbol="storeWeeklyDistance"/>
-        <entry field="true" id="104" symbol="ColorBlack"/>
+        <entry field="true" id="103" symbol="ColorBlack"/>
         <entry id="40" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawSteps&gt;"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry field="true" id="108" symbol="StepFieldTitle"/>
+        <entry field="true" id="107" symbol="StepFieldTitle"/>
         <entry field="true" id="11" symbol="customFont"/>
         <entry field="true" id="63" symbol="HideIconsTitle"/>
         <entry field="true" id="13" symbol="customFontSuperSmall"/>
@@ -191,7 +191,7 @@
         <entry id="8389377" method="true" symbol="onExitSleep"/>
         <entry id="8388644" module="true" symbol="System"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry field="true" id="98" symbol="AccentColorTitle"/>
+        <entry field="true" id="97" symbol="AccentColorTitle"/>
         <entry field="true" id="62" symbol="LSI"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry id="8390088" module="true" object="true" symbol="JsonData"/>
@@ -200,7 +200,7 @@
         <entry id="8388610" symbol="statics"/>
         <entry id="45" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getBatteryLevel&gt;"/>
         <entry id="8389123" method="true" symbol="onShow"/>
-        <entry field="true" id="89" symbol="ColorDarkGreen"/>
+        <entry field="true" id="88" symbol="ColorDarkGreen"/>
         <entry field="true" id="53" symbol="Sand"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry field="true" id="76" symbol="BackgroundColorTitle"/>
@@ -214,27 +214,27 @@
         <entry id="43" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDateString&gt;"/>
         <entry id="36" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBg&gt;"/>
         <entry field="true" id="64" symbol="WeeklyDistanceTitle"/>
-        <entry field="true" id="100" symbol="ColorLightGray"/>
+        <entry field="true" id="99" symbol="ColorLightGray"/>
         <entry field="true" id="15" symbol="customIcons"/>
-        <entry field="true" id="107" symbol="DateFormatTitle"/>
+        <entry field="true" id="106" symbol="DateFormatTitle"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
-        <entry field="true" id="94" symbol="Sandstone2"/>
+        <entry field="true" id="93" symbol="Sandstone2"/>
         <entry id="8389347" symbol="color"/>
-        <entry field="true" id="96" symbol="ColorPink"/>
-        <entry field="true" id="93" symbol="Cerise"/>
+        <entry field="true" id="95" symbol="ColorPink"/>
+        <entry field="true" id="92" symbol="Cerise"/>
         <entry field="true" id="17" symbol="hourColor"/>
         <entry field="true" id="18" symbol="minutesColor"/>
         <entry field="true" id="49" symbol="customIcon"/>
-        <entry field="true" id="101" symbol="StepsTitle"/>
-        <entry field="true" id="84" symbol="RestColor"/>
-        <entry field="true" id="91" symbol="TanI"/>
+        <entry field="true" id="100" symbol="StepsTitle"/>
+        <entry field="true" id="83" symbol="RestColor"/>
+        <entry field="true" id="90" symbol="TanI"/>
         <entry id="46" module="true" symbol="Layouts"/>
         <entry id="10" object="true" symbol="skobFaceView"/>
         <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
-        <entry field="true" id="106" symbol="Navy"/>
+        <entry field="true" id="105" symbol="Navy"/>
         <entry field="true" id="25" symbol="weekdayArr"/>
-        <entry field="true" id="105" symbol="RestColorTitle"/>
+        <entry field="true" id="104" symbol="RestColorTitle"/>
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry field="true" id="31" symbol="metrics"/>
         <entry id="8388635" module="true" symbol="Application"/>
@@ -243,7 +243,6 @@
         <entry field="true" id="28" symbol="bias3"/>
         <entry field="true" id="27" symbol="bias2"/>
         <entry field="true" id="26" symbol="bias1"/>
-        <entry field="true" id="81" symbol="Date7"/>
         <entry field="true" id="80" symbol="Date6"/>
     </symbolTable>
     <localVars>
@@ -306,15 +305,14 @@
         <entry endPc="268439297" name="positionXSep" stackId="4" startPc="268438838"/>
         <entry endPc="268439297" name="timeFormat" stackId="7" startPc="268438838"/>
         <entry arg="true" endPc="268439298" name="dc" stackId="1" startPc="268438834"/>
-        <entry endPc="268439479" name="result" stackId="4" startPc="268439302"/>
-        <entry endPc="268439479" name="today" stackId="1" startPc="268439302"/>
-        <entry endPc="268439479" name="dateString" stackId="2" startPc="268439302"/>
-        <entry endPc="268439479" name="dayOfTheWeek" stackId="3" startPc="268439302"/>
-        <entry arg="true" endPc="268439503" name="number" stackId="1" startPc="268439480"/>
-        <entry endPc="268439577" name="battery" stackId="1" startPc="268439507"/>
-        <entry endPc="268439577" name="batteryDisplay" stackId="2" startPc="268439507"/>
-        <entry endPc="268439765" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268439590"/>
-        <entry arg="true" endPc="268439766" name="dc" stackId="1" startPc="268439578"/>
+        <entry endPc="268439910" name="today" stackId="1" startPc="268439302"/>
+        <entry endPc="268439910" name="dateString" stackId="3" startPc="268439302"/>
+        <entry endPc="268439910" name="dayOfTheWeek" stackId="2" startPc="268439302"/>
+        <entry arg="true" endPc="268439934" name="number" stackId="1" startPc="268439911"/>
+        <entry endPc="268440008" name="battery" stackId="1" startPc="268439938"/>
+        <entry endPc="268440008" name="batteryDisplay" stackId="2" startPc="268439938"/>
+        <entry endPc="268440196" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268440021"/>
+        <entry arg="true" endPc="268440197" name="dc" stackId="1" startPc="268440009"/>
     </localVars>
     <annotations/>
     <dataEntryOffsetMappings>
@@ -328,7 +326,7 @@
         <dataEntry offset="816" parentId="Rez" symbolId="Layouts" type="module"/>
         <dataEntry offset="855" parentId="Rez" symbolId="JsonData" type="module"/>
         <dataEntry offset="886" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry offset="1381" parentId="globals" symbolId="skobFaceApp" type="class"/>
+        <dataEntry offset="1373" parentId="globals" symbolId="skobFaceApp" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" name="initialize" parent="skobFaceApp">

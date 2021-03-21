@@ -215,7 +215,6 @@
             <listEntry value="3">@Strings.Date4</listEntry>
             <listEntry value="4">@Strings.Date5</listEntry>
             <listEntry value="5">@Strings.Date6</listEntry>
-            <listEntry value="6">@Strings.Date7</listEntry>
         </settingConfig>
     </setting>
 </settings>

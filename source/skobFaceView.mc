@@ -243,9 +243,9 @@ storeWeeklyDistance();
     }
     
     private function drawIconsSmall(dc){
-        var positionY = dc.getHeight()/2-90;
-        var positionX1 = dc.getWidth()/2-68; // center
-        var positionX2 = dc.getWidth()/2+68; // center
+        var positionY = dc.getHeight()/2-87;
+        var positionX1 = dc.getWidth()/2-74; // center
+        var positionX2 = dc.getWidth()/2+74; // center
         
    	    if(System.getDeviceSettings().alarmCount>=1)
    	    {
@@ -358,7 +358,8 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
     // Helper functions
     private function getDateString() {      
          var today = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-         var dateString = Lang.format(
+             var dayOfTheWeek = getDayOfAWeekName(today.day_of_week);
+         var dateString = dayOfTheWeek+" "+Lang.format(
     "$1$.$2$",
     [
         today.day,
@@ -366,13 +367,63 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
     ]
     );
 
-        var dayOfTheWeek = getDayOfAWeekName(today.day_of_week);
+    
 
-        var result =dayOfTheWeek+" "+dateString; 
+     
 if(dateFormat==1){
-  result = dateString;
+  dateString = dayOfTheWeek+" "+Lang.format(
+    "$1$.$2$",
+    [
+       
+        today.month,
+         today.day,
+    ]
+    );
 }
-        return result;
+else if(dateFormat==2){
+  dateString = dayOfTheWeek+" "+Lang.format(
+    "$1$/$2$",
+    [
+          today.day,
+        today.month,
+      
+    ]
+    );
+}
+else if(dateFormat==3){
+  dateString = dayOfTheWeek+" "+Lang.format(
+    "$1$/$2$",
+    [
+          today.month,
+          today.day,
+      
+      
+    ]
+    );
+}
+else if(dateFormat==4){
+  dateString = Lang.format(
+    "$1$/$2$/$3$",
+    [
+          today.month,
+          today.day,
+      today.year,
+      
+    ]
+    );
+}
+else if(dateFormat==5){
+  dateString = Lang.format(
+    "$1$/$2$/$3$",
+    [
+          today.day,
+          today.month,
+      today.year,
+      
+    ]
+    );
+}
+        return dateString;
     }
     
     private function getDayOfAWeekName(number){
