@@ -25,6 +25,7 @@ class skobFaceView extends WatchUi.WatchFace {
 	var globalDc=null;
     var isHideIcons = 0;
     var stepField = 0;
+    var HR=false;
 	var weekdayArr = [
 "SUN",
 "MON",
@@ -170,7 +171,6 @@ try {
     // Update the view
     function onUpdate(dc) {
     
- 
 
       hourColor = Application.getApp().getProperty("HoursColor");
       minutesColor = Application.getApp().getProperty("MinutesColor");
@@ -182,6 +182,7 @@ try {
       metrics =Application.getApp().getProperty("Metrics"); 
       dateFormat =Application.getApp().getProperty("DateFormat"); 
       lang =Application.getApp().getProperty("Lang"); 
+      HR =Application.getApp().getProperty("HR"); 
 
 storeWeeklyDistance();
 
@@ -234,20 +235,29 @@ storeWeeklyDistance();
         var positionY = dc.getHeight()/2+58;
         var positionX1 = dc.getWidth()/2-20; // center
         var positionX2 = dc.getWidth()/2+20; // center
+        var bias =0;
+        if(HR){
+            bias=25;
+        }
         
    	    if(System.getDeviceSettings().alarmCount>=1)
    	    {
        	    var alarmIcon ='A';
     	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(positionX1,positionY, customIcons, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(positionX1-bias,positionY, customIcons, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	    }
    	     	
    	    if(System.getDeviceSettings().doNotDisturb)
    	    {    
    	        var doNotDisturbIcon ='B';
    	    	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(positionX2, positionY, customIcons, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(positionX2+bias, positionY, customIcons, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	    }
+if(HR){
+           var hr = getHeatRate();
+           	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(positionX2-20, positionY-15, customFontSmall, hr, Graphics.TEXT_JUSTIFY_CENTER);
+}
     }
     
     private function drawIconsSmall(dc){
@@ -268,6 +278,11 @@ storeWeeklyDistance();
    	    	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
             dc.drawText(positionX2, positionY, customIconsSmall, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	    }
+           if(HR){
+           var hr = getHeatRate();
+           	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth()/2, dc.getHeight()/2+90, customFontSuperSmall, hr, Graphics.TEXT_JUSTIFY_CENTER);
+}
     }
 
 /*
@@ -446,6 +461,10 @@ else if(dateFormat==5){
 	    var batteryDisplay = View.findDrawableById("BatteryDisplay");      
 	    return battery.format("%d")+"%";	
     }
-    
- 
+
+    private function getHeatRate(){
+      var HRH=Mon.getHeartRateHistory(1, true);
+      var HRS=HRH.next();
+       return HRS.heartRate;
+    }
 }

@@ -223,4 +223,7 @@
             <listEntry value="1">@Strings.Ln2</listEntry>
         </settingConfig>
     </setting>
+    <setting propertyKey="@Properties.HR" title="@Strings.HRTitle">
+    <settingConfig type="boolean" />
+    </setting>
 </settings>
