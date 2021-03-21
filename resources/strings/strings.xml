@@ -32,7 +32,7 @@
 
     <string id="StepFieldTitle">Distance/Week Distance/Steps</string>
     <string id="DayilyDistanceTitle">Distance,km.(daily)</string>
-    <string id="WeeklyDistanceTitle">Distance,km.(weekly,BETA)</string>
+    <string id="WeeklyDistanceTitle">Distance,km.(weekly)</string>
     <string id="StepsTitle">Steps(daily)</string>
 
 
@@ -66,5 +66,5 @@
              <string id="LanguageTitle">Language</string>
              <string id="Ln1">English</string>
              <string id="Ln2">Nordics(no special characters)</string>
-             <string id="HRTitle">Show Heart rate</string>
+             <string id="HRTitle">Show Heart rate(Beta)</string>
 </strings>
