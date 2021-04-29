@@ -1,6 +1,11 @@
 <strings>
 
     <string id="AppName">Lagom</string>
+     <string id="HideIconsTitle">Layout</string>
+    <string id="IconsHideTitle">Big battery/distance without icons</string>
+    <string id="IconsBigTitle">Small battery/distance with big icons</string>
+    <string id="IconsSmallTitle">Big battery/distance with small icons</string>
+
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="HoursColorTitle">Hours Color</string>
     <string id="MinutesColorTitle">Minutes Color</string>
@@ -8,7 +13,8 @@
 
     <string id="RestColorTitle">Basic Color(icons,date,battery)</string>
     <string id="RestColor">Rest elements</string>
-    <string id="HideIconsTitle">Icons/Distance and Battery</string>
+    <string id="DateColor">Date color</string>
+   
     <string id="ColorOrange">Orange</string>
     <string id="ColorBlack">Black</string>
     <string id="ColorGreen">Green</string>
@@ -25,15 +31,16 @@
     <string id="ColorYellow">Yellow</string>
     <string id="ColorLightGray">Light Gray</string>
 
-    <string id="IconsHideTitle">Hide Icons/Big Battery and Distance</string>
 
-    <string id="IconsBigTitle">Big Icons/Small Battery and Distance</string>
-    <string id="IconsSmallTitle">Small Icons/Big Battery and Distance</string>
+    <string id="WeekStartTitle">Week starts on</string>
+    <string id="WeekDaySunTitle">Sunday</string>
+    <string id="WeekDayMonTitle">Monday</string>
 
     <string id="StepFieldTitle">Distance/Week Distance/Steps</string>
     <string id="DayilyDistanceTitle">Distance,km.(daily)</string>
     <string id="WeeklyDistanceTitle">Distance,km.(weekly)</string>
     <string id="StepsTitle">Steps(daily)</string>
+    <string id="millitaryFormatTitle">24H format</string>
 
 
          <string id="Granite">Band Color: Granite Blue</string>
@@ -66,5 +73,20 @@
              <string id="LanguageTitle">Language</string>
              <string id="Ln1">English</string>
              <string id="Ln2">Nordics(no special characters)</string>
-             <string id="HRTitle">Show Heart rate(Beta)</string>
+             <string id="Ln3">Italian</string>
+             <string id="Ln4">Spanish</string>
+
+             <string id="IconOneTitle">Icon One content</string>
+             <string id="IconTwoTitle">Icon Two content</string>
+
+             <string id="ShowIconOneTitle">Show Icon One</string>
+             <string id="ShowIconTwoTitle">Show Icon Two</string>
+             <string id="ShowDistanceTitle">Show Distance</string>
+
+             <string id="AlarmTitle">Is Alarm On icon</string>
+             <string id="DNDTitle">Is Do Not Disturb On</string>
+             <string id="NotificationTitle">Amount of unread notifications</string>
+             <string id="ConnectivityTitle">Is Connected to Phone Icon</string>
+
+             <string id="HRTitle">Show Heart rate(Experimental feature, might work incorrectly for certain watch model)</string>
 </strings>

@@ -1,4 +1,125 @@
 <settings>
+<!-- Layout -->
+    <setting propertyKey="@Properties.HideIcons" title="@Strings.HideIconsTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.IconsHideTitle</listEntry>
+            <listEntry value="1">@Strings.IconsBigTitle</listEntry>
+            <listEntry value="2">@Strings.IconsSmallTitle</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.ShowIconOne" title="@Strings.ShowIconOneTitle">
+    <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.IconOne" title="@Strings.IconOneTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.AlarmTitle</listEntry>
+            <listEntry value="1">@Strings.DNDTitle</listEntry>
+            <listEntry value="2">@Strings.NotificationTitle</listEntry>
+            <listEntry value="3">@Strings.ConnectivityTitle</listEntry>
+        </settingConfig>
+    </setting>
+        <setting propertyKey="@Properties.ShowIconTwo" title="@Strings.ShowIconTwoTitle">
+    <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.IconTwo" title="@Strings.IconTwoTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.AlarmTitle</listEntry>
+            <listEntry value="1">@Strings.DNDTitle</listEntry>
+            <listEntry value="2">@Strings.NotificationTitle</listEntry>
+            <listEntry value="3">@Strings.ConnectivityTitle</listEntry>
+        </settingConfig>
+    </setting>
+<!-- Language -->
+    <setting propertyKey="@Properties.Lang" title="@Strings.LanguageTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.Ln1</listEntry>
+            <listEntry value="1">@Strings.Ln2</listEntry>
+            <listEntry value="2">@Strings.Ln3</listEntry>
+            <listEntry value="3">@Strings.Ln4</listEntry>
+        </settingConfig>
+    </setting>
+
+     <setting propertyKey="@Properties.DateFormat" title="@Strings.DateFormatTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.Date1</listEntry>
+            <listEntry value="1">@Strings.Date2</listEntry>
+            <listEntry value="2">@Strings.Date3</listEntry>
+            <listEntry value="3">@Strings.Date4</listEntry>
+            <listEntry value="4">@Strings.Date5</listEntry>
+            <listEntry value="5">@Strings.Date6</listEntry>
+        </settingConfig>
+    </setting>
+<!-- Metrics -->
+        <setting propertyKey="@Properties.ShowDistance" title="@Strings.ShowDistanceTitle">
+    <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.StepField" title="@Strings.StepFieldTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.DayilyDistanceTitle</listEntry>
+            <listEntry value="1">@Strings.WeeklyDistanceTitle</listEntry>
+            <listEntry value="2">@Strings.StepsTitle</listEntry>
+        </settingConfig>
+    </setting>
+    
+  <setting propertyKey="@Properties.Metrics" title="@Strings.MetricsTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.KmTitle</listEntry>
+            <listEntry value="1">@Strings.MilesTitle</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.WeekStart" title="@Strings.WeekStartTitle">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.WeekDaySunTitle</listEntry>
+            <listEntry value="2">@Strings.WeekDayMonTitle</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.HR" title="@Strings.HRTitle">
+    <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.MillitaryFormat" title="@Strings.millitaryFormatTitle">
+    <settingConfig type="boolean" />
+    </setting>
+    
+<!-- Colors -->
+    <setting propertyKey="@Properties.DateColor" title="@Strings.DateColor">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0x00FF00">@Strings.ColorGreen</listEntry>
+            <listEntry value="0x00AAFF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0xAA0000">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="0x00AA00">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="0xFF5500">@Strings.ColorOrange</listEntry>
+            <listEntry value="0xAA00FF">@Strings.ColorPurple</listEntry>
+            <listEntry value="0xFF00FF">@Strings.ColorPink</listEntry>
+            <listEntry value="0xFFFF00">@Strings.ColorYellow</listEntry>
+            <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+            <listEntry value="0x484e57">@Strings.Granite</listEntry>
+            <listEntry value="0x663349">@Strings.Berry</listEntry>
+            <listEntry value="0x9BADB4">@Strings.Sea</listEntry>
+            <listEntry value="0x969185">@Strings.Sandstone</listEntry>
+            <listEntry value="0xBAB2AB">@Strings.Sand</listEntry>
+            <listEntry value="0xA7A7A7">@Strings.Powder</listEntry>
+            <listEntry value="0x60614C">@Strings.Moss</listEntry>
+            <listEntry value="0x8F8674">@Strings.Sandstone2</listEntry>
+            <listEntry value="0x842B4B">@Strings.Cerise</listEntry>
+            <listEntry value="0x65BEBD">@Strings.Aqua</listEntry>
+            <listEntry value="0xF2D6C1">@Strings.Blush</listEntry>
+            <listEntry value="0xA98A67">@Strings.Tan</listEntry>
+            <listEntry value="0x3E3530">@Strings.Dark</listEntry>
+            <listEntry value="0x915734">@Strings.TanI</listEntry>
+            <listEntry value="0xC4B39F">@Strings.LSI</listEntry>
+            <listEntry value="0x383F5A">@Strings.Navy</listEntry>
+            <listEntry value="0xABA0AB">@Strings.Orchid</listEntry>
+        </settingConfig>
+    </setting>
+
     <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
         <settingConfig type="list">
             <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
@@ -33,8 +154,6 @@
             <listEntry value="0xC4B39F">@Strings.LSI</listEntry>
             <listEntry value="0x383F5A">@Strings.Navy</listEntry>
             <listEntry value="0xABA0AB">@Strings.Orchid</listEntry>
-
-
         </settingConfig>
     </setting>
 
@@ -54,7 +173,6 @@
             <listEntry value="0xFFFF00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
-
             <listEntry value="0x484e57">@Strings.Granite</listEntry>
             <listEntry value="0x663349">@Strings.Berry</listEntry>
             <listEntry value="0x9BADB4">@Strings.Sea</listEntry>
@@ -72,7 +190,6 @@
             <listEntry value="0xC4B39F">@Strings.LSI</listEntry>
             <listEntry value="0x383F5A">@Strings.Navy</listEntry>
             <listEntry value="0xABA0AB">@Strings.Orchid</listEntry>
-
         </settingConfig>
     </setting>
 
@@ -109,9 +226,9 @@
             <listEntry value="0xC4B39F">@Strings.LSI</listEntry>
             <listEntry value="0x383F5A">@Strings.Navy</listEntry>
             <listEntry value="0xABA0AB">@Strings.Orchid</listEntry>
-
         </settingConfig>
     </setting>
+
     <setting propertyKey="@Properties.AccentColor" title="@Strings.AccentColorTitle">
         <settingConfig type="list">
             <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
@@ -145,7 +262,6 @@
             <listEntry value="0xC4B39F">@Strings.LSI</listEntry>
             <listEntry value="0x383F5A">@Strings.Navy</listEntry>
             <listEntry value="0xABA0AB">@Strings.Orchid</listEntry>
-
         </settingConfig>
     </setting>
 
@@ -183,47 +299,5 @@
             <listEntry value="0x383F5A">@Strings.Navy</listEntry>
             <listEntry value="0xABA0AB">@Strings.Orchid</listEntry>
         </settingConfig>
-    </setting>
-
-    <setting propertyKey="@Properties.HideIcons" title="@Strings.HideIconsTitle">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.IconsHideTitle</listEntry>
-            <listEntry value="1">@Strings.IconsBigTitle</listEntry>
-            <listEntry value="2">@Strings.IconsSmallTitle</listEntry>
-        </settingConfig>
-    </setting>
-
-    <setting propertyKey="@Properties.StepField" title="@Strings.StepFieldTitle">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.DayilyDistanceTitle</listEntry>
-            <listEntry value="1">@Strings.WeeklyDistanceTitle</listEntry>
-            <listEntry value="2">@Strings.StepsTitle</listEntry>
-        </settingConfig>
-    </setting>
-  <setting propertyKey="@Properties.Metrics" title="@Strings.MetricsTitle">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.KmTitle</listEntry>
-            <listEntry value="1">@Strings.MilesTitle</listEntry>
-        </settingConfig>
-    </setting>
-
-    <setting propertyKey="@Properties.DateFormat" title="@Strings.DateFormatTitle">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.Date1</listEntry>
-            <listEntry value="1">@Strings.Date2</listEntry>
-            <listEntry value="2">@Strings.Date3</listEntry>
-            <listEntry value="3">@Strings.Date4</listEntry>
-            <listEntry value="4">@Strings.Date5</listEntry>
-            <listEntry value="5">@Strings.Date6</listEntry>
-        </settingConfig>
-    </setting>
-    <setting propertyKey="@Properties.Lang" title="@Strings.LanguageTitle">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.Ln1</listEntry>
-            <listEntry value="1">@Strings.Ln2</listEntry>
-        </settingConfig>
-    </setting>
-    <setting propertyKey="@Properties.HR" title="@Strings.HRTitle">
-    <settingConfig type="boolean" />
     </setting>
 </settings>

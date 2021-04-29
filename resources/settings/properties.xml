@@ -3,6 +3,7 @@
     <property id="HoursColor" type="number">0x00FF00</property>
     <property id="MinutesColor" type="number">0xFFFFFF</property>
     <property id="AccentColor" type="number">0xFF5500</property>
+    <property id="DateColor" type="number">0xFFFFFF</property>
     <property id="RestColor" type="number">0xFFFFFF</property>
     <property id="HideIcons" type="number">0</property>
     <property id="StepField" type="number">0</property>
@@ -10,4 +11,11 @@
     <property id="DateFormat" type="number">0</property>
     <property id="Lang" type="number">0</property>
     <property id="HR" type="boolean">false</property>
+    <property id="MillitaryFormat" type="boolean">true</property>
+    <property id="WeekStart" type="number">2</property>
+    <property id="IconOne" type="number">0</property>
+    <property id="IconTwo" type="number">1</property>
+    <property id="ShowIconOne" type="boolean">true</property>
+    <property id="ShowIconTwo" type="boolean">true</property>
+    <property id="ShowDistance" type="boolean">true</property>
 </properties>

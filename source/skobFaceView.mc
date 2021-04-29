@@ -6,11 +6,14 @@ using Toybox.Weather as Weather;
 using Toybox.Application;
 using Toybox.Time.Gregorian as Date;
 using Toybox.System as Sys;
+using Toybox.Activity as Activity;
 using Toybox.ActivityMonitor as Mon;
 using Toybox.Application.Storage as Storage;
 
 
 class skobFaceView extends WatchUi.WatchFace {
+    var isBTConnected=  false;
+    var notificationCount=  0;
 	var customFont = null;
 	var customFontSmall = null;
 	var customFontSuperSmall = null;
@@ -21,11 +24,19 @@ class skobFaceView extends WatchUi.WatchFace {
     var minutesColor = 0xFFFFFF;
     var restColor = 0xFFFFFF;
     var accentColor =0xFF5500;
+    var dateColor =0xFFFFFF;
 	var bgColor = 0x000000;
+    var weekStartDayIndex=1;
+    var iconOne=0;
+    var iconTwo=1;
+    var showIconOne=true;
+    var showIconTwo=true;
+    var showDistance=true;
 	var globalDc=null;
     var isHideIcons = 0;
     var stepField = 0;
     var HR=false;
+    var millitaryFormat=true;
 	var weekdayArr = [
 "SUN",
 "MON",
@@ -37,8 +48,18 @@ class skobFaceView extends WatchUi.WatchFace {
 ];
 
   var weekdayArrNor = [
-     "SO","MA","TI","ON","TO","FR","LO"
+     "SO","MAN","TIR","ONS","TOR","FRE","LOR"
   ];
+  
+   var weekdayArrIT = [
+     "DOM","LUN","MAR","MER","GIO","VEN","SAB"
+  ];
+
+
+   var weekdayArrSpanish = [
+     "DOM","LUN","MAR","MIE","JUE","VIE","SAB"
+  ];
+
 
   var lang =0;
 
@@ -94,7 +115,7 @@ class skobFaceView extends WatchUi.WatchFace {
 	    Application.Storage.setValue("weeklyDistance_"+today.day_of_week,dist);
 
 	  // day_of_week== 2 is monday, day_of_week [1-sun...7]
-	 if (today.day_of_week==2 && dist!=null && currentDistance!=null && currentDistance>dist){
+	 if (today.day_of_week==weekStartDayIndex && dist!=null && currentDistance!=null && currentDistance>dist){
 	  	// Reset all params if monday distance less that already exists (meaning new data statrs)
 	 resetWeeklyDistance();
 	  }
@@ -176,6 +197,7 @@ try {
       minutesColor = Application.getApp().getProperty("MinutesColor");
       restColor = Application.getApp().getProperty("RestColor");
       accentColor =Application.getApp().getProperty("AccentColor");
+      dateColor =Application.getApp().getProperty("DateColor");
       bgColor=Application.getApp().getProperty("BackgroundColor");
       isHideIcons =Application.getApp().getProperty("HideIcons"); 
       stepField =Application.getApp().getProperty("StepField"); 
@@ -183,8 +205,17 @@ try {
       dateFormat =Application.getApp().getProperty("DateFormat"); 
       lang =Application.getApp().getProperty("Lang"); 
       HR =Application.getApp().getProperty("HR"); 
+      millitaryFormat =Application.getApp().getProperty("MillitaryFormat"); 
+      weekStartDayIndex =Application.getApp().getProperty("WeekStart");
+      iconOne =Application.getApp().getProperty("IconOne");
+      iconTwo =Application.getApp().getProperty("IconTwo");
+      showIconOne =Application.getApp().getProperty("ShowIconOne");
+      showIconTwo =Application.getApp().getProperty("ShowIconTwo");
+      showDistance =Application.getApp().getProperty("ShowDistance");
+      isBTConnected= Sys.getDeviceSettings().phoneConnected;
+      notificationCount= Sys.getDeviceSettings().notificationCount;
 
-storeWeeklyDistance();
+        storeWeeklyDistance();
 
         drawBg(dc);
         drawDate(dc);
@@ -194,10 +225,17 @@ storeWeeklyDistance();
             drawIcons(dc);
         } else if(isHideIcons == 2){
             drawIconsSmall(dc);
-        }
-        
+        }else{
+         if(HR){
+           var hr = getHeatRate();
+           	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth()/2, dc.getHeight()/2+90, customFontSuperSmall, hr, Graphics.TEXT_JUSTIFY_CENTER);
+}
+}
+       if(showDistance){ 
         drawSteps(dc,isHideIcons,stepField);
- 		drawBattery(dc,isHideIcons);
+       }
+ 		drawBattery(dc,isHideIcons,showDistance);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -210,6 +248,7 @@ storeWeeklyDistance();
 
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
+        
     }
 
     // Terminate any active timers and prepare for slow updates.
@@ -226,10 +265,58 @@ storeWeeklyDistance();
         var positionY = dc.getHeight()/2-108;
         var positionX = dc.getWidth()/2; // center
   		var dateString = getDateString();
- 		dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+ 		dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX, positionY, customFontSmall, dateString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
+    private function drawIcon(x,y,font,dc,iconNumber){
+        // 0 - alarm, 1-dnd, 2-notification count, 3 - connectivity
+        var iconNum=0;
+        if(iconNumber==1){
+            iconNum=iconOne;
+        }
+        else if(iconNumber==2){
+            iconNum=iconTwo;
+        }
+        if(iconNum==0){
+            if(System.getDeviceSettings().alarmCount>=1)
+   	        {
+       	      var alarmIcon ='A';
+    	      dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+              dc.drawText(x,y, font, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
+   	        }
+   	    }
+        else if(iconNum==1){
+            if(System.getDeviceSettings().doNotDisturb)
+   	        {    
+   	            var doNotDisturbIcon ='B';
+   	    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+                dc.drawText(x, y, font, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
+   	        }
+   	    }
+        else if(iconNum==2){
+            if(notificationCount>0)
+   	        {    
+   	            var messageIcon ='E';
+   	    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+                dc.drawText(x, y, font, messageIcon, Graphics.TEXT_JUSTIFY_CENTER);
+   	        }
+   	    }
+        else if(iconNum==3){
+            if(isBTConnected)
+   	        {    
+   	            var bluetoothIcon ='C';
+   	    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+                dc.drawText(x, y, font, bluetoothIcon, Graphics.TEXT_JUSTIFY_CENTER);
+   	        }
+            else
+   	        {    
+   	            var bluetoothIcon ='D';
+   	    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+                dc.drawText(x, y, font, bluetoothIcon, Graphics.TEXT_JUSTIFY_CENTER);
+   	        }
+   	    }
+    }
 
     private function drawIcons(dc){
         var positionY = dc.getHeight()/2+58;
@@ -239,45 +326,33 @@ storeWeeklyDistance();
         if(HR){
             bias=25;
         }
-        
-   	    if(System.getDeviceSettings().alarmCount>=1)
-   	    {
-       	    var alarmIcon ='A';
-    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(positionX1-bias,positionY, customIcons, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
-   	    }
-   	     	
-   	    if(System.getDeviceSettings().doNotDisturb)
-   	    {    
-   	        var doNotDisturbIcon ='B';
-   	    	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(positionX2+bias, positionY, customIcons, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
-   	    }
-if(HR){
+
+        // Icons one and two placeholders
+        if(showIconOne){
+        drawIcon(positionX1-bias,positionY,customIcons,dc,1);
+        }
+        if(showIconTwo){
+        drawIcon(positionX2+bias,positionY,customIcons,dc,2);
+        }
+
+        if(HR){
            var hr = getHeatRate();
            	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
             dc.drawText(positionX2-20, positionY-15, customFontSmall, hr, Graphics.TEXT_JUSTIFY_CENTER);
-}
+        }
     }
     
     private function drawIconsSmall(dc){
         var positionY = dc.getHeight()/2-87;
         var positionX1 = dc.getWidth()/2-74; // center
         var positionX2 = dc.getWidth()/2+74; // center
-        
-   	    if(System.getDeviceSettings().alarmCount>=1)
-   	    {
-       	    var alarmIcon ='A';
-    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(positionX1,positionY, customIconsSmall, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
-   	    }
-   	     	
-   	    if(System.getDeviceSettings().doNotDisturb)
-   	    {    
-   	        var doNotDisturbIcon ='B';
-   	    	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(positionX2, positionY, customIconsSmall, doNotDisturbIcon, Graphics.TEXT_JUSTIFY_CENTER);
-   	    }
+
+if(showIconOne){
+        drawIcon(positionX1,positionY,customIconsSmall,dc,1);
+}
+if(showIconTwo){
+        drawIcon(positionX2,positionY,customIconsSmall,dc,2);
+}
            if(HR){
            var hr = getHeatRate();
            	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
@@ -336,7 +411,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
     }
 
 
-    private function drawBattery(dc,isHideIcons){
+    private function drawBattery(dc,isHideIcons,showDistance){
         var positionX = dc.getWidth()/2+25;
         var positionY = dc.getHeight()/2+85;
    	    var batteryLevel = getBatteryLevel();
@@ -345,6 +420,9 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             positionY=positionY-35;
             positionX=positionX+15;
             font = customFontMiddle;
+        }
+        if(showDistance==false){
+            positionX=dc.getWidth()/2;
         }
    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX,positionY, font, batteryLevel, Graphics.TEXT_JUSTIFY_CENTER);
@@ -359,7 +437,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
         var timeFormat = "$1$:$2$";
         var clockTime = System.getClockTime();
         var hours = clockTime.hour;
-        if (!System.getDeviceSettings().is24Hour) {
+        if (!millitaryFormat || !System.getDeviceSettings().is24Hour) {
             if (hours > 12) {
                 hours = hours - 12;
             }
@@ -453,6 +531,12 @@ else if(dateFormat==5){
         if(lang==0){
     	return weekdayArr[number-1];
         }
+        if(lang==2){
+        return weekdayArrIT[number-1];
+        }
+        if(lang==3){
+        return weekdayArrSpanish[number-1];
+        }
         return weekdayArrNor[number-1];
     }
     
@@ -463,8 +547,8 @@ else if(dateFormat==5){
     }
 
     private function getHeatRate(){
-      var HRH=Mon.getHeartRateHistory(1, true);
-      var HRS=HRH.next();
-       return HRS.heartRate;
+        var HRH=Mon.getHeartRateHistory(1, true);
+     var HRS=HRH.next();
+    return HRS.heartRate;
     }
 }
