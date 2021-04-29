@@ -116,9 +116,9 @@
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="33" lineNum="50" pc="268441822" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="33" lineNum="54" pc="268441927" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="33" lineNum="59" pc="268442032" symbol="&lt;init&gt;"/>
-        <entry filename="Rez" id="39" lineNum="21" pc="268441398" symbol="WatchFace"/>
-        <entry filename="Rez" id="39" lineNum="23" pc="268441410" symbol="WatchFace"/>
-        <entry filename="Rez" id="39" lineNum="25" pc="268441556" symbol="WatchFace"/>
+        <entry filename="Rez" id="39" lineNum="24" pc="268441398" symbol="WatchFace"/>
+        <entry filename="Rez" id="39" lineNum="26" pc="268441410" symbol="WatchFace"/>
+        <entry filename="Rez" id="39" lineNum="28" pc="268441556" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
         <entry field="true" id="112" symbol="Date5"/>
@@ -163,7 +163,7 @@
         <entry field="true" id="23" symbol="bgColor"/>
         <entry field="true" id="66" symbol="customIconSmall"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
-        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8388772" module="true" symbol="Fonts"/>
         <entry id="48" method="true" symbol="resetWeeklyDistance"/>
         <entry field="true" id="130" symbol="Sandstone"/>
         <entry field="true" id="91" symbol="DNDTitle"/>
@@ -186,7 +186,7 @@
         <entry id="8391489" module="true" symbol="Weather"/>
         <entry field="true" id="100" symbol="ShowIconTwoTitle"/>
         <entry id="57" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawTime&gt;"/>
-        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8388771" module="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
         <entry field="true" id="28" symbol="showIconTwo"/>
         <entry field="true" id="34" symbol="millitaryFormat"/>
@@ -238,11 +238,11 @@
         <entry id="8389377" method="true" symbol="onExitSleep"/>
         <entry id="8388644" module="true" symbol="System"/>
         <entry field="true" id="33" symbol="HR"/>
-        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388769" module="true" symbol="Rez"/>
         <entry field="true" id="129" symbol="AccentColorTitle"/>
         <entry field="true" id="81" symbol="LSI"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry id="8390088" module="true" symbol="JsonData"/>
         <entry id="61" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getHeatRate&gt;"/>
         <entry id="8389068" method="true" symbol="draw"/>
         <entry field="true" id="64" symbol="LauncherIcon"/>
@@ -253,7 +253,7 @@
         <entry field="true" id="69" symbol="Sand"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry field="true" id="102" symbol="BackgroundColorTitle"/>
-        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388770" module="true" symbol="Strings"/>
         <entry id="8390146" module="true" object="true" symbol="Background"/>
         <entry id="59" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDayOfAWeekName&gt;"/>
         <entry id="8388702" method="true" symbol="initialize"/>
@@ -386,19 +386,104 @@
         <entry endPc="268441573" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268441410"/>
         <entry arg="true" endPc="268441574" name="dc" stackId="1" startPc="268441398"/>
     </localVars>
-    <annotations/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFont"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontSmall"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontMiddle"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontSuperSmall"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customIcon"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customIconSmall"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Tan"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Orchid"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Sand"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Moss"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ShowIconOneTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MinutesColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AlarmTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Powder"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorRed"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MilesTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HRTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IconsSmallTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorOlive"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorWhite"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LSI"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HideIconsTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DateColor"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WeeklyDistanceTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IconOneTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Berry"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MetricsTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorOrange"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LanguageTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Sea"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DNDTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HoursColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="KmTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ConnectivityTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Blush"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Dark"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WeekDayMonTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IconsHideTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorPurple"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ShowIconTwoTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkRed"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Aqua"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IconsBigTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WeekDaySunTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date6"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date3"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RestColor"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date4"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date5"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorYellow"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGreen"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Granite"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TanI"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln3"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Cerise"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Sandstone2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln4"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DayilyDistanceTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IconTwoTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorPink"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorGreen"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AccentColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Sandstone"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="StepsTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WeekStartTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ShowDistanceTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RestColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Navy"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DateFormatTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="millitaryFormatTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="StepFieldTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="NotificationTitle"/>
+    </annotations>
     <dataEntryOffsetMappings>
-        <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
-        <dataEntry offset="158" parentId="globals" symbolId="Background" type="class"/>
-        <dataEntry offset="213" parentId="globals" symbolId="skobFaceView" type="class"/>
-        <dataEntry offset="724" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry offset="803" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry offset="842" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry offset="873" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry offset="952" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry offset="991" parentId="Rez" symbolId="JsonData" type="module"/>
-        <dataEntry offset="1022" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry offset="1669" parentId="globals" symbolId="skobFaceApp" type="class"/>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Background" offset="158" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/skobFaceView" offset="213" parentId="globals" symbolId="skobFaceView" type="class"/>
+        <dataEntry label="globals/Rez" offset="724" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="803" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="842" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="873" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="952" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="991" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1022" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/skobFaceApp" offset="1669" parentId="globals" symbolId="skobFaceApp" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" name="initialize" parent="skobFaceApp">

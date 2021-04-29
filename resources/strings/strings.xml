@@ -9,7 +9,7 @@
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="HoursColorTitle">Hours Color</string>
     <string id="MinutesColorTitle">Minutes Color</string>
-    <string id="AccentColorTitle">Accent Color (steps)</string>
+    <string id="AccentColorTitle">Distance Color</string>
 
     <string id="RestColorTitle">Basic Color(icons,date,battery)</string>
     <string id="RestColor">Rest elements</string>
