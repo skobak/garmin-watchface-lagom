@@ -5,6 +5,10 @@
     <string id="IconsHideTitle">Big battery/distance without icons</string>
     <string id="IconsBigTitle">Small battery/distance with big icons</string>
     <string id="IconsSmallTitle">Big battery/distance with small icons</string>
+    <string id="IconsTypeTitle">Icons style</string>
+    <string id="IconTypeFilledTitle">Filled</string>
+    <string id="IconTypeOutlineTitle">Outline</string>
+    <string id="BatteryIconTitle">Show battery as icon</string>
 
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="HoursColorTitle">Hours Color</string>
@@ -85,7 +89,7 @@
 
              <string id="AlarmTitle">Is Alarm On icon</string>
              <string id="DNDTitle">Is Do Not Disturb On</string>
-             <string id="NotificationTitle">Amount of unread notifications</string>
+             <string id="NotificationTitle">Unread messages on a phone</string>
              <string id="ConnectivityTitle">Is Connected to Phone Icon</string>
 
              <string id="HRTitle">Show Heart rate(Experimental feature, might work incorrectly for certain watch model)</string>

@@ -20,17 +20,24 @@ class skobFaceView extends WatchUi.WatchFace {
 	var customFontMiddle = null;
 	var customIcons = null;
 	var customIconsSmall = null;
+	var customIconsMaterial = null;
+	var customIconsSmallMaterial = null;
     var hourColor = 0x00FF00;
     var minutesColor = 0xFFFFFF;
     var restColor = 0xFFFFFF;
+    var redColor = 0xFF0000;
+    var orangeColor = 0xFF5500;
+    var greenColor = 0x00FF00;
     var accentColor =0xFF5500;
     var dateColor =0xFFFFFF;
 	var bgColor = 0x000000;
     var weekStartDayIndex=1;
+    var iconsType=0;
     var iconOne=0;
     var iconTwo=1;
     var showIconOne=true;
     var showIconTwo=true;
+    var batteryIcon=false; // false is 55%, true is icon
     var showDistance=true;
 	var globalDc=null;
     var isHideIcons = 0;
@@ -78,17 +85,26 @@ class skobFaceView extends WatchUi.WatchFace {
 
     // Load your resources here
     function onLayout(dc) {
+      try{
       customFont = WatchUi.loadResource(Rez.Fonts.customFont);
       customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
       customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
       customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+
+      
+      customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterial);
+      customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterial);
+
       customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
       customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmall);
-
 
       
       setLayout(Rez.Layouts.WatchFace(dc));
       globalDc = dc;
+      }catch( ex ) {
+          System.println(ex);
+
+}
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -205,12 +221,15 @@ try {
       dateFormat =Application.getApp().getProperty("DateFormat"); 
       lang =Application.getApp().getProperty("Lang"); 
       HR =Application.getApp().getProperty("HR"); 
+      HR = false;
       millitaryFormat =Application.getApp().getProperty("MillitaryFormat"); 
       weekStartDayIndex =Application.getApp().getProperty("WeekStart");
+      iconsType =Application.getApp().getProperty("IconsType");
       iconOne =Application.getApp().getProperty("IconOne");
       iconTwo =Application.getApp().getProperty("IconTwo");
       showIconOne =Application.getApp().getProperty("ShowIconOne");
       showIconTwo =Application.getApp().getProperty("ShowIconTwo");
+      batteryIcon =Application.getApp().getProperty("BatteryIcon");
       showDistance =Application.getApp().getProperty("ShowDistance");
       isBTConnected= Sys.getDeviceSettings().phoneConnected;
       notificationCount= Sys.getDeviceSettings().notificationCount;
@@ -266,7 +285,7 @@ try {
         var positionX = dc.getWidth()/2; // center
   		var dateString = getDateString();
  		dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionX, positionY, customFontSmall, dateString, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(positionX, positionY, customFontMiddle, dateString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawIcon(x,y,font,dc,iconNumber){
@@ -326,13 +345,16 @@ try {
         if(HR){
             bias=25;
         }
-
+        var font = customIconsMaterial;
+        if(iconsType==1){
+            font = customIcons;
+        }
         // Icons one and two placeholders
         if(showIconOne){
-        drawIcon(positionX1-bias,positionY,customIcons,dc,1);
+        drawIcon(positionX1-bias,positionY,font,dc,1);
         }
         if(showIconTwo){
-        drawIcon(positionX2+bias,positionY,customIcons,dc,2);
+        drawIcon(positionX2+bias,positionY,font,dc,2);
         }
 
         if(HR){
@@ -347,11 +369,16 @@ try {
         var positionX1 = dc.getWidth()/2-74; // center
         var positionX2 = dc.getWidth()/2+74; // center
 
+          var font = customIconsSmallMaterial;
+        if(iconsType==1){
+            font = customIconsSmall;
+        }
+
 if(showIconOne){
-        drawIcon(positionX1,positionY,customIconsSmall,dc,1);
+        drawIcon(positionX1,positionY,font,dc,1);
 }
 if(showIconTwo){
-        drawIcon(positionX2,positionY,customIconsSmall,dc,2);
+        drawIcon(positionX2,positionY,font,dc,2);
 }
            if(HR){
            var hr = getHeatRate();
@@ -375,6 +402,9 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             positionY=positionY-35;
             positionX=positionX-10;
             font = customFontMiddle;
+               if(batteryIcon==true){
+             positionX = dc.getWidth()/2;
+                 } 
         }
 
 
@@ -404,7 +434,8 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             distanceField= steps;
             }
         }
-        
+
+     
 
       	dc.setColor(accentColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX,positionY, font, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
@@ -416,15 +447,41 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
         var positionY = dc.getHeight()/2+85;
    	    var batteryLevel = getBatteryLevel();
         var font = customFontSuperSmall;
+        if(batteryIcon==true){
+            positionY=positionY+7;
+            font = customIconsSmallMaterial;
+             if(iconsType==1){
+                  font = customIconsSmall;
+              }
+        }
         if(isHideIcons == 0 || isHideIcons == 2){
             positionY=positionY-35;
             positionX=positionX+15;
             font = customFontMiddle;
+           
+            if(batteryIcon==true){
+                    positionX = dc.getWidth()/2;
+                  positionY=positionY+37;
+              font = customIconsMaterial;
+              if(iconsType==1){
+                  font = customIcons;
+              }
+            }
         }
         if(showDistance==false){
             positionX=dc.getWidth()/2;
         }
    	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+
+       if(batteryIcon==true){
+           batteryLevel = getBatteryIcon();
+            if(batteryLevel.equals("5")){
+                dc.setColor(orangeColor,Graphics.COLOR_TRANSPARENT);
+           }
+           if(batteryLevel.equals("6")){
+                dc.setColor(redColor,Graphics.COLOR_TRANSPARENT);
+           }
+       }   
         dc.drawText(positionX,positionY, font, batteryLevel, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -541,9 +598,28 @@ else if(dateFormat==5){
     }
     
     private function getBatteryLevel() {
-        var battery = Sys.getSystemStats().battery;				
-	    var batteryDisplay = View.findDrawableById("BatteryDisplay");      
+        var battery = Sys.getSystemStats().battery;				     
 	    return battery.format("%d")+"%";	
+    }
+
+      private function getBatteryIcon() {
+        var battery = Sys.getSystemStats().battery;	  
+        if(battery>=95){
+            return "0";
+        }else if (battery>=80 && battery<95){
+            return "1";
+        }else if (battery>=60 && battery<80){
+            return "2";
+        }else if (battery>=50 && battery<60){
+            return "3";
+        }else if (battery>=30 && battery<50){
+            return "4";
+        }else if (battery>=10 && battery<30){
+            return "5";
+        }else if (battery>=0 && battery<10){
+            return "6";
+        }  
+        return "7";
     }
 
     private function getHeatRate(){

@@ -7,6 +7,12 @@
             <listEntry value="2">@Strings.IconsSmallTitle</listEntry>
         </settingConfig>
     </setting>
+     <setting propertyKey="@Properties.IconsType" title="@Strings.IconsTypeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.IconTypeFilledTitle</listEntry>
+            <listEntry value="1">@Strings.IconTypeOutlineTitle</listEntry>
+        </settingConfig>
+    </setting>
     <setting propertyKey="@Properties.ShowIconOne" title="@Strings.ShowIconOneTitle">
     <settingConfig type="boolean" />
     </setting>
@@ -28,6 +34,9 @@
             <listEntry value="2">@Strings.NotificationTitle</listEntry>
             <listEntry value="3">@Strings.ConnectivityTitle</listEntry>
         </settingConfig>
+    </setting>
+     <setting propertyKey="@Properties.BatteryIcon" title="@Strings.BatteryIconTitle">
+    <settingConfig type="boolean" />
     </setting>
 <!-- Language -->
     <setting propertyKey="@Properties.Lang" title="@Strings.LanguageTitle">
@@ -74,10 +83,10 @@
             <listEntry value="2">@Strings.WeekDayMonTitle</listEntry>
         </settingConfig>
     </setting>
-
+<!-- 
     <setting propertyKey="@Properties.HR" title="@Strings.HRTitle">
     <settingConfig type="boolean" />
-    </setting>
+    </setting> -->
 
     <setting propertyKey="@Properties.MillitaryFormat" title="@Strings.millitaryFormatTitle">
     <settingConfig type="boolean" />

@@ -1,8 +1,10 @@
 <fonts>
-<font id="customFont" filename="custom-tall.fnt" filter="0123456789:"/>
-<font id="customFontSmall" filename="custom-small.fnt" />
-<font id="customFontMiddle" filename="custom-middle.fnt" />
-<font id="customFontSuperSmall" filename="custom-super-small.fnt" />
-<font id="customIcon" filename="custom-icons.fnt" />
-<font id="customIconSmall" filename="custom-icons-small.fnt" />
+<font id="customFont" filename="custom-tall.fnt" antialias="true" filter="0123456789:"/>
+<font id="customFontSmall" filename="custom-small.fnt" antialias="true" />
+<font id="customFontMiddle" filename="custom-middle.fnt" antialias="true"/>
+<font id="customFontSuperSmall" filename="custom-super-small.fnt" antialias="true" />
+<font id="customIcon" filename="custom-icons.fnt" antialias="true" />
+<font id="customIconSmall" filename="custom-icons-small.fnt" antialias="true" />
+<font id="customIconMaterial" filename="custom-icons-material.fnt" antialias="true"/>
+<font id="customIconSmallMaterial" filename="custom-icons-small-material.fnt" antialias="true" />
 </fonts>
