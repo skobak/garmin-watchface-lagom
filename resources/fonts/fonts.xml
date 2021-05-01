@@ -2,6 +2,7 @@
 <font id="customFont" filename="custom-tall.fnt" antialias="true" filter="0123456789:"/>
 <font id="customFontSmall" filename="custom-small.fnt" antialias="true" />
 <font id="customFontMiddle" filename="custom-middle.fnt" antialias="true"/>
+<font id="customFontTall" filename="custom-date.fnt" antialias="true"/>
 <font id="customFontSuperSmall" filename="custom-super-small.fnt" antialias="true" />
 <font id="customIcon" filename="custom-icons.fnt" antialias="true" />
 <font id="customIconSmall" filename="custom-icons-small.fnt" antialias="true" />

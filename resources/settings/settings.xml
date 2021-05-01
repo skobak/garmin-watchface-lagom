@@ -45,6 +45,7 @@
             <listEntry value="1">@Strings.Ln2</listEntry>
             <listEntry value="2">@Strings.Ln3</listEntry>
             <listEntry value="3">@Strings.Ln4</listEntry>
+            <listEntry value="4">@Strings.Ln5</listEntry>
         </settingConfig>
     </setting>
 
@@ -56,6 +57,8 @@
             <listEntry value="3">@Strings.Date4</listEntry>
             <listEntry value="4">@Strings.Date5</listEntry>
             <listEntry value="5">@Strings.Date6</listEntry>
+            <listEntry value="6">@Strings.Date7</listEntry>
+            <listEntry value="7">@Strings.Date8</listEntry>
         </settingConfig>
     </setting>
 <!-- Metrics -->

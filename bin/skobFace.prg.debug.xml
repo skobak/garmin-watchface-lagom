@@ -16,404 +16,425 @@
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="10" lineNum="15" pc="268435598" symbol="draw"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="10" lineNum="17" pc="268435602" symbol="draw"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceBackground.mc" id="10" lineNum="18" pc="268435655" symbol="draw"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="12" lineNum="82" pc="268435668" symbol="initialize"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="12" lineNum="83" pc="268435672" symbol="initialize"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="87" pc="268435691" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="88" pc="268435695" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="89" pc="268435695" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="90" pc="268435738" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="91" pc="268435781" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="92" pc="268435824" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="95" pc="268435867" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="96" pc="268435910" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="98" pc="268435953" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="99" pc="268435996" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="102" pc="268436039" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="103" pc="268436076" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="105" pc="268436096" symbol="onLayout"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="14" lineNum="113" pc="268436127" symbol="onShow"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="116" pc="268436132" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="118" pc="268436136" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="120" pc="268436136" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="122" pc="268436159" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="123" pc="268436166" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="126" pc="268436176" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="129" pc="268436232" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="131" pc="268436269" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="134" pc="268436307" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="136" pc="268436358" symbol="storeWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="145" pc="268436396" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="146" pc="268436400" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="147" pc="268436400" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="148" pc="268436432" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="149" pc="268436464" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="150" pc="268436496" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="151" pc="268436528" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="152" pc="268436560" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="153" pc="268436592" symbol="resetWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="160" pc="268436647" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="161" pc="268436651" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="162" pc="268436658" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="163" pc="268436658" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="164" pc="268436686" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="165" pc="268436693" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="168" pc="268436703" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="169" pc="268436731" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="170" pc="268436738" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="174" pc="268436748" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="175" pc="268436776" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="176" pc="268436783" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="179" pc="268436793" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="180" pc="268436821" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="181" pc="268436828" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="185" pc="268436838" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="186" pc="268436866" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="187" pc="268436873" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="192" pc="268436883" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="193" pc="268436911" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="194" pc="268436918" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="197" pc="268436928" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="198" pc="268436956" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="199" pc="268436963" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="205" pc="268436995" symbol="getWeeklyDistance"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="209" pc="268436999" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="212" pc="268437003" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="213" pc="268437040" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="214" pc="268437077" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="215" pc="268437114" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="216" pc="268437151" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="217" pc="268437188" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="218" pc="268437225" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="219" pc="268437262" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="220" pc="268437299" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="221" pc="268437336" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="222" pc="268437373" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="223" pc="268437410" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="224" pc="268437447" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="225" pc="268437457" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="226" pc="268437494" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="227" pc="268437531" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="228" pc="268437568" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="229" pc="268437605" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="230" pc="268437642" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="231" pc="268437679" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="232" pc="268437716" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="233" pc="268437753" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="234" pc="268437790" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="235" pc="268437819" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="237" pc="268437848" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="239" pc="268437860" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="240" pc="268437874" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="241" pc="268437888" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="243" pc="268437902" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="244" pc="268437919" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="245" pc="268437936" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="246" pc="268437953" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="248" pc="268437970" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="249" pc="268437981" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="250" pc="268437994" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="251" pc="268438026" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="254" pc="268438103" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="255" pc="268438114" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="257" pc="268438147" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="19" lineNum="263" pc="268438178" symbol="onHide"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="20" lineNum="269" pc="268438183" symbol="onExitSleep"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="21" lineNum="274" pc="268438188" symbol="onEnterSleep"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="34" lineNum="47" pc="268442556" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="34" lineNum="57" pc="268442661" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="34" lineNum="61" pc="268442766" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="34" lineNum="66" pc="268442871" symbol="&lt;init&gt;"/>
-        <entry filename="Rez" id="40" lineNum="26" pc="268442225" symbol="WatchFace"/>
-        <entry filename="Rez" id="40" lineNum="29" pc="268442237" symbol="WatchFace"/>
-        <entry filename="Rez" id="40" lineNum="31" pc="268442395" symbol="WatchFace"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="12" lineNum="99" pc="268435668" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="12" lineNum="100" pc="268435672" symbol="initialize"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="104" pc="268435691" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="105" pc="268435695" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="106" pc="268435695" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="107" pc="268435738" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="108" pc="268435781" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="109" pc="268435824" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="110" pc="268435867" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="113" pc="268435910" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="114" pc="268435953" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="116" pc="268435996" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="117" pc="268436039" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="120" pc="268436082" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="121" pc="268436119" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="13" lineNum="123" pc="268436139" symbol="onLayout"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="14" lineNum="131" pc="268436170" symbol="onShow"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="134" pc="268436175" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="136" pc="268436179" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="138" pc="268436179" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="140" pc="268436202" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="141" pc="268436209" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="144" pc="268436219" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="147" pc="268436275" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="149" pc="268436312" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="152" pc="268436350" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="15" lineNum="154" pc="268436401" symbol="storeWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="163" pc="268436439" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="164" pc="268436443" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="165" pc="268436443" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="166" pc="268436475" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="167" pc="268436507" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="168" pc="268436539" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="169" pc="268436571" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="170" pc="268436603" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="16" lineNum="171" pc="268436635" symbol="resetWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="178" pc="268436690" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="179" pc="268436694" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="180" pc="268436701" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="181" pc="268436701" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="182" pc="268436729" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="183" pc="268436736" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="186" pc="268436746" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="187" pc="268436774" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="188" pc="268436781" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="192" pc="268436791" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="193" pc="268436819" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="194" pc="268436826" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="197" pc="268436836" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="198" pc="268436864" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="199" pc="268436871" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="203" pc="268436881" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="204" pc="268436909" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="205" pc="268436916" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="210" pc="268436926" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="211" pc="268436954" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="212" pc="268436961" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="215" pc="268436971" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="216" pc="268436999" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="217" pc="268437006" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="17" lineNum="223" pc="268437038" symbol="getWeeklyDistance"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="227" pc="268437042" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="230" pc="268437046" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="231" pc="268437083" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="232" pc="268437120" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="233" pc="268437157" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="234" pc="268437194" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="235" pc="268437231" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="236" pc="268437268" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="237" pc="268437305" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="238" pc="268437342" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="239" pc="268437379" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="240" pc="268437416" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="241" pc="268437453" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="242" pc="268437490" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="243" pc="268437500" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="244" pc="268437537" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="245" pc="268437574" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="246" pc="268437611" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="247" pc="268437648" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="248" pc="268437685" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="249" pc="268437722" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="250" pc="268437759" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="251" pc="268437796" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="252" pc="268437833" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="253" pc="268437862" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="255" pc="268437891" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="257" pc="268437903" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="258" pc="268437917" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="259" pc="268437931" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="261" pc="268437945" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="262" pc="268437962" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="263" pc="268437979" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="264" pc="268437996" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="266" pc="268438013" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="267" pc="268438024" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="268" pc="268438037" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="269" pc="268438069" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="272" pc="268438146" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="273" pc="268438157" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="18" lineNum="275" pc="268438190" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="19" lineNum="281" pc="268438221" symbol="onHide"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="20" lineNum="287" pc="268438226" symbol="onExitSleep"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="21" lineNum="292" pc="268438231" symbol="onEnterSleep"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="53" pc="268443072" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="54" pc="268443242" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="55" pc="268443412" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="56" pc="268443582" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="57" pc="268443752" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="59" pc="268443857" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="70" pc="268443962" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="74" pc="268444067" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="78" pc="268444172" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="35" lineNum="83" pc="268444277" symbol="&lt;init&gt;"/>
+        <entry filename="Rez" id="41" lineNum="27" pc="268442688" symbol="WatchFace"/>
+        <entry filename="Rez" id="41" lineNum="29" pc="268442700" symbol="WatchFace"/>
+        <entry filename="Rez" id="41" lineNum="31" pc="268442846" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
-        <entry field="true" id="125" symbol="Date5"/>
-        <entry field="true" id="124" symbol="Date4"/>
-        <entry field="true" id="122" symbol="Date3"/>
-        <entry field="true" id="121" symbol="Date2"/>
-        <entry field="true" id="133" symbol="Date1"/>
-        <entry id="63" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBattery&gt;"/>
+        <entry field="true" id="135" symbol="Date5"/>
+        <entry field="true" id="134" symbol="Date4"/>
+        <entry field="true" id="132" symbol="Date3"/>
+        <entry field="true" id="131" symbol="Date2"/>
+        <entry field="true" id="143" symbol="Date1"/>
+        <entry id="70" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBattery&gt;"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="8389346" symbol="text"/>
-        <entry field="true" id="103" symbol="HoursColorTitle"/>
-        <entry field="true" id="155" symbol="millitaryFormatTitle"/>
-        <entry field="true" id="86" symbol="MilesTitle"/>
+        <entry field="true" id="46" symbol="monthSp"/>
+        <entry field="true" id="44" symbol="monthSE"/>
+        <entry field="true" id="111" symbol="HoursColorTitle"/>
+        <entry field="true" id="166" symbol="millitaryFormatTitle"/>
+        <entry field="true" id="94" symbol="MilesTitle"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
-        <entry field="true" id="17" symbol="customIconsSmall"/>
-        <entry field="true" id="110" symbol="ColorPurple"/>
+        <entry field="true" id="18" symbol="customIconsSmall"/>
+        <entry field="true" id="118" symbol="ColorPurple"/>
         <entry id="4" module="true" symbol="globals/Rez/Menus"/>
-        <entry field="true" id="118" symbol="IconsBigTitle"/>
-        <entry field="true" id="51" symbol="weeklyDistance"/>
-        <entry field="true" id="140" symbol="IconTwoTitle"/>
-        <entry field="true" id="106" symbol="Blush"/>
-        <entry field="true" id="142" symbol="ColorGreen"/>
+        <entry field="true" id="126" symbol="IconsBigTitle"/>
+        <entry field="true" id="47" symbol="monthIT"/>
+        <entry field="true" id="58" symbol="weeklyDistance"/>
+        <entry field="true" id="151" symbol="IconTwoTitle"/>
+        <entry field="true" id="114" symbol="Blush"/>
+        <entry field="true" id="43" symbol="monthEn"/>
+        <entry field="true" id="153" symbol="ColorGreen"/>
         <entry id="8389683" method="true" symbol="onSettingsChanged"/>
-        <entry field="true" id="127" symbol="ColorYellow"/>
-        <entry field="true" id="45" symbol="weekdayArrSpanish"/>
-        <entry field="true" id="36" symbol="showDistance"/>
-        <entry field="true" id="91" symbol="IconsTypeTitle"/>
-        <entry field="true" id="85" symbol="ColorRed"/>
-        <entry field="true" id="105" symbol="ConnectivityTitle"/>
-        <entry field="true" id="116" symbol="ColorDarkRed"/>
+        <entry field="true" id="137" symbol="ColorYellow"/>
+        <entry field="true" id="52" symbol="weekdayArrSpanish"/>
+        <entry id="74" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getMonthName&gt;"/>
+        <entry field="true" id="37" symbol="showDistance"/>
+        <entry field="true" id="99" symbol="IconsTypeTitle"/>
+        <entry field="true" id="93" symbol="ColorRed"/>
+        <entry field="true" id="113" symbol="ConnectivityTitle"/>
+        <entry field="true" id="124" symbol="ColorDarkRed"/>
         <entry id="8390424" module="true" symbol="Storage"/>
-        <entry field="true" id="96" symbol="IconOneTitle"/>
-        <entry field="true" id="53" symbol="dateFormat"/>
-        <entry field="true" id="98" symbol="MetricsTitle"/>
+        <entry field="true" id="104" symbol="IconOneTitle"/>
+        <entry field="true" id="60" symbol="dateFormat"/>
+        <entry field="true" id="106" symbol="MetricsTitle"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="23" symbol="redColor"/>
+        <entry field="true" id="24" symbol="redColor"/>
         <entry id="9" object="true" symbol="skobFaceApp"/>
-        <entry field="true" id="33" symbol="showIconOne"/>
-        <entry field="true" id="114" symbol="ColorBlue"/>
-        <entry field="true" id="78" symbol="Orchid"/>
-        <entry field="true" id="104" symbol="KmTitle"/>
-        <entry id="61" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIconsSmall&gt;"/>
-        <entry field="true" id="129" symbol="AppName"/>
-        <entry field="true" id="28" symbol="bgColor"/>
-        <entry field="true" id="74" symbol="customIconSmall"/>
+        <entry field="true" id="34" symbol="showIconOne"/>
+        <entry field="true" id="122" symbol="ColorBlue"/>
+        <entry field="true" id="86" symbol="Orchid"/>
+        <entry field="true" id="112" symbol="KmTitle"/>
+        <entry id="68" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIconsSmall&gt;"/>
+        <entry field="true" id="139" symbol="AppName"/>
+        <entry field="true" id="29" symbol="bgColor"/>
+        <entry field="true" id="82" symbol="customIconSmall"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
         <entry id="8388772" module="true" symbol="Fonts"/>
-        <entry id="55" method="true" symbol="resetWeeklyDistance"/>
-        <entry field="true" id="144" symbol="Sandstone"/>
-        <entry field="true" id="102" symbol="DNDTitle"/>
-        <entry field="true" id="157" symbol="NotificationTitle"/>
-        <entry field="true" id="109" symbol="IconsHideTitle"/>
+        <entry id="62" method="true" symbol="resetWeeklyDistance"/>
+        <entry field="true" id="155" symbol="Sandstone"/>
+        <entry field="true" id="110" symbol="DNDTitle"/>
+        <entry field="true" id="168" symbol="NotificationTitle"/>
+        <entry field="true" id="117" symbol="IconsHideTitle"/>
         <entry id="8388631" module="true" symbol="Activity"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
-        <entry field="true" id="99" symbol="ColorOrange"/>
-        <entry field="true" id="119" symbol="WeekDaySunTitle"/>
-        <entry field="true" id="25" symbol="greenColor"/>
+        <entry field="true" id="107" symbol="ColorOrange"/>
+        <entry field="true" id="127" symbol="WeekDaySunTitle"/>
+        <entry field="true" id="26" symbol="greenColor"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="38" symbol="isHideIcons"/>
-        <entry field="true" id="82" symbol="MinutesColorTitle"/>
-        <entry field="true" id="94" symbol="DateColor"/>
-        <entry field="true" id="77" symbol="Tan"/>
+        <entry field="true" id="39" symbol="isHideIcons"/>
+        <entry field="true" id="90" symbol="MinutesColorTitle"/>
+        <entry field="true" id="102" symbol="DateColor"/>
+        <entry field="true" id="85" symbol="Tan"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
         <entry field="true" id="15" symbol="customFontMiddle"/>
         <entry id="8391489" module="true" symbol="Weather"/>
-        <entry field="true" id="111" symbol="ShowIconTwoTitle"/>
-        <entry id="64" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawTime&gt;"/>
-        <entry field="true" id="18" symbol="customIconsMaterial"/>
+        <entry field="true" id="119" symbol="ShowIconTwoTitle"/>
+        <entry field="true" id="16" symbol="customFontTall"/>
+        <entry id="71" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawTime&gt;"/>
+        <entry field="true" id="19" symbol="customIconsMaterial"/>
         <entry id="8388771" module="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry field="true" id="34" symbol="showIconTwo"/>
-        <entry field="true" id="41" symbol="millitaryFormat"/>
-        <entry field="true" id="22" symbol="restColor"/>
-        <entry id="71" module="true" symbol="Menus"/>
-        <entry field="true" id="148" symbol="ColorDarkGray"/>
+        <entry field="true" id="35" symbol="showIconTwo"/>
+        <entry field="true" id="42" symbol="millitaryFormat"/>
+        <entry field="true" id="23" symbol="restColor"/>
+        <entry id="79" module="true" symbol="Menus"/>
+        <entry field="true" id="49" symbol="weekdayArrSe"/>
+        <entry field="true" id="159" symbol="ColorDarkGray"/>
         <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
-        <entry field="true" id="113" symbol="BatteryIconTitle"/>
+        <entry field="true" id="121" symbol="BatteryIconTitle"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
-        <entry field="true" id="31" symbol="iconOne"/>
+        <entry field="true" id="32" symbol="iconOne"/>
         <entry id="8389376" method="true" symbol="onEnterSleep"/>
-        <entry field="true" id="84" symbol="Powder"/>
+        <entry field="true" id="92" symbol="Powder"/>
         <entry field="true" id="8389063" symbol="identifier"/>
-        <entry field="true" id="81" symbol="ShowIconOneTitle"/>
-        <entry field="true" id="107" symbol="Dark"/>
+        <entry field="true" id="89" symbol="ShowIconOneTitle"/>
+        <entry field="true" id="115" symbol="Dark"/>
         <entry id="8389349" symbol="justification"/>
-        <entry field="true" id="26" symbol="accentColor"/>
-        <entry field="true" id="44" symbol="weekdayArrIT"/>
-        <entry field="true" id="37" symbol="globalDc"/>
-        <entry field="true" id="101" symbol="Sea"/>
-        <entry field="true" id="139" symbol="DayilyDistanceTitle"/>
-        <entry field="true" id="117" symbol="Aqua"/>
-        <entry id="58" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawDate&gt;"/>
-        <entry field="true" id="46" symbol="lang"/>
-        <entry field="true" id="131" symbol="Granite"/>
-        <entry field="true" id="90" symbol="ColorWhite"/>
-        <entry field="true" id="149" symbol="ColorDarkBlue"/>
+        <entry field="true" id="27" symbol="accentColor"/>
+        <entry field="true" id="51" symbol="weekdayArrIT"/>
+        <entry field="true" id="38" symbol="globalDc"/>
+        <entry field="true" id="109" symbol="Sea"/>
+        <entry field="true" id="150" symbol="DayilyDistanceTitle"/>
+        <entry field="true" id="125" symbol="Aqua"/>
+        <entry id="65" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawDate&gt;"/>
+        <entry field="true" id="53" symbol="lang"/>
+        <entry field="true" id="141" symbol="Granite"/>
+        <entry field="true" id="98" symbol="ColorWhite"/>
+        <entry field="true" id="160" symbol="ColorDarkBlue"/>
         <entry field="true" id="11" symbol="isBTConnected"/>
-        <entry field="true" id="97" symbol="Berry"/>
+        <entry field="true" id="105" symbol="Berry"/>
         <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
-        <entry id="54" method="true" symbol="storeWeeklyDistance"/>
-        <entry field="true" id="150" symbol="ShowDistanceTitle"/>
-        <entry field="true" id="151" symbol="ColorBlack"/>
-        <entry field="true" id="112" symbol="IconTypeFilledTitle"/>
-        <entry field="true" id="83" symbol="AlarmTitle"/>
-        <entry id="62" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawSteps&gt;"/>
+        <entry id="61" method="true" symbol="storeWeeklyDistance"/>
+        <entry field="true" id="161" symbol="ShowDistanceTitle"/>
+        <entry field="true" id="162" symbol="ColorBlack"/>
+        <entry field="true" id="120" symbol="IconTypeFilledTitle"/>
+        <entry field="true" id="91" symbol="AlarmTitle"/>
+        <entry id="69" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawSteps&gt;"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry field="true" id="156" symbol="StepFieldTitle"/>
+        <entry field="true" id="167" symbol="StepFieldTitle"/>
         <entry field="true" id="12" symbol="customFont"/>
-        <entry field="true" id="138" symbol="Ln4"/>
-        <entry field="true" id="134" symbol="Ln3"/>
-        <entry field="true" id="135" symbol="Ln2"/>
-        <entry field="true" id="128" symbol="Ln1"/>
-        <entry field="true" id="93" symbol="HideIconsTitle"/>
-        <entry field="true" id="126" symbol="IconTypeOutlineTitle"/>
-        <entry field="true" id="19" symbol="customIconsSmallMaterial"/>
+        <entry field="true" id="45" symbol="monthNor"/>
+        <entry field="true" id="147" symbol="Ln5"/>
+        <entry field="true" id="149" symbol="Ln4"/>
+        <entry field="true" id="144" symbol="Ln3"/>
+        <entry field="true" id="145" symbol="Ln2"/>
+        <entry field="true" id="138" symbol="Ln1"/>
+        <entry field="true" id="101" symbol="HideIconsTitle"/>
+        <entry field="true" id="136" symbol="IconTypeOutlineTitle"/>
+        <entry field="true" id="20" symbol="customIconsSmallMaterial"/>
         <entry field="true" id="14" symbol="customFontSuperSmall"/>
-        <entry field="true" id="39" symbol="stepField"/>
-        <entry id="60" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIcons&gt;"/>
-        <entry id="56" method="true" symbol="getWeeklyDistance"/>
-        <entry field="true" id="80" symbol="Moss"/>
-        <entry field="true" id="32" symbol="iconTwo"/>
+        <entry field="true" id="40" symbol="stepField"/>
+        <entry id="67" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIcons&gt;"/>
+        <entry id="63" method="true" symbol="getWeeklyDistance"/>
+        <entry field="true" id="88" symbol="Moss"/>
+        <entry field="true" id="33" symbol="iconTwo"/>
         <entry id="8389377" method="true" symbol="onExitSleep"/>
         <entry id="8388644" module="true" symbol="System"/>
-        <entry field="true" id="40" symbol="HR"/>
+        <entry field="true" id="41" symbol="HR"/>
         <entry id="8388769" module="true" symbol="Rez"/>
-        <entry field="true" id="76" symbol="customIconSmallMaterial"/>
-        <entry field="true" id="75" symbol="customIconMaterial"/>
-        <entry field="true" id="143" symbol="AccentColorTitle"/>
-        <entry field="true" id="92" symbol="LSI"/>
+        <entry field="true" id="84" symbol="customIconSmallMaterial"/>
+        <entry field="true" id="83" symbol="customIconMaterial"/>
+        <entry field="true" id="154" symbol="AccentColorTitle"/>
+        <entry field="true" id="100" symbol="LSI"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry id="8390088" module="true" symbol="JsonData"/>
-        <entry id="69" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getHeatRate&gt;"/>
+        <entry id="77" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getHeatRate&gt;"/>
         <entry id="8389068" method="true" symbol="draw"/>
-        <entry field="true" id="72" symbol="LauncherIcon"/>
+        <entry field="true" id="80" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
-        <entry id="67" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getBatteryLevel&gt;"/>
+        <entry id="75" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getBatteryLevel&gt;"/>
         <entry id="8389123" method="true" symbol="onShow"/>
-        <entry field="true" id="130" symbol="ColorDarkGreen"/>
-        <entry field="true" id="35" symbol="batteryIcon"/>
-        <entry field="true" id="79" symbol="Sand"/>
+        <entry field="true" id="140" symbol="ColorDarkGreen"/>
+        <entry field="true" id="36" symbol="batteryIcon"/>
+        <entry field="true" id="87" symbol="Sand"/>
         <entry id="8389350" module="true" symbol="globals"/>
-        <entry field="true" id="115" symbol="BackgroundColorTitle"/>
-        <entry field="true" id="30" symbol="iconsType"/>
+        <entry field="true" id="123" symbol="BackgroundColorTitle"/>
+        <entry field="true" id="31" symbol="iconsType"/>
         <entry id="8388770" module="true" symbol="Strings"/>
         <entry id="8390146" module="true" object="true" symbol="Background"/>
-        <entry id="66" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDayOfAWeekName&gt;"/>
+        <entry id="73" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDayOfAWeekName&gt;"/>
         <entry id="8388702" method="true" symbol="initialize"/>
-        <entry field="true" id="29" symbol="weekStartDayIndex"/>
-        <entry field="true" id="88" symbol="IconsSmallTitle"/>
+        <entry field="true" id="30" symbol="weekStartDayIndex"/>
+        <entry field="true" id="96" symbol="IconsSmallTitle"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry field="true" id="100" symbol="LanguageTitle"/>
-        <entry field="true" id="89" symbol="ColorOlive"/>
-        <entry id="65" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDateString&gt;"/>
-        <entry id="57" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBg&gt;"/>
-        <entry field="true" id="95" symbol="WeeklyDistanceTitle"/>
-        <entry field="true" id="145" symbol="ColorLightGray"/>
-        <entry field="true" id="147" symbol="WeekStartTitle"/>
-        <entry field="true" id="16" symbol="customIcons"/>
-        <entry field="true" id="154" symbol="DateFormatTitle"/>
+        <entry field="true" id="108" symbol="LanguageTitle"/>
+        <entry field="true" id="97" symbol="ColorOlive"/>
+        <entry id="72" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getDateString&gt;"/>
+        <entry id="64" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawBg&gt;"/>
+        <entry field="true" id="103" symbol="WeeklyDistanceTitle"/>
+        <entry field="true" id="156" symbol="ColorLightGray"/>
+        <entry field="true" id="158" symbol="WeekStartTitle"/>
+        <entry field="true" id="17" symbol="customIcons"/>
+        <entry field="true" id="165" symbol="DateFormatTitle"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
-        <entry field="true" id="137" symbol="Sandstone2"/>
+        <entry field="true" id="148" symbol="Sandstone2"/>
         <entry id="8389347" symbol="color"/>
-        <entry id="59" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIcon&gt;"/>
-        <entry field="true" id="141" symbol="ColorPink"/>
-        <entry id="68" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getBatteryIcon&gt;"/>
-        <entry field="true" id="136" symbol="Cerise"/>
-        <entry field="true" id="20" symbol="hourColor"/>
-        <entry field="true" id="21" symbol="minutesColor"/>
-        <entry field="true" id="108" symbol="WeekDayMonTitle"/>
-        <entry field="true" id="27" symbol="dateColor"/>
-        <entry field="true" id="73" symbol="customIcon"/>
-        <entry field="true" id="146" symbol="StepsTitle"/>
-        <entry field="true" id="123" symbol="RestColor"/>
-        <entry field="true" id="132" symbol="TanI"/>
-        <entry id="70" module="true" symbol="Layouts"/>
-        <entry field="true" id="24" symbol="orangeColor"/>
+        <entry id="66" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;drawIcon&gt;"/>
+        <entry field="true" id="152" symbol="ColorPink"/>
+        <entry id="76" method="true" symbol="&lt;globals/skobFaceView/&lt;&gt;getBatteryIcon&gt;"/>
+        <entry field="true" id="146" symbol="Cerise"/>
+        <entry field="true" id="21" symbol="hourColor"/>
+        <entry field="true" id="22" symbol="minutesColor"/>
+        <entry field="true" id="116" symbol="WeekDayMonTitle"/>
+        <entry field="true" id="28" symbol="dateColor"/>
+        <entry field="true" id="81" symbol="customIcon"/>
+        <entry field="true" id="157" symbol="StepsTitle"/>
+        <entry field="true" id="133" symbol="RestColor"/>
+        <entry field="true" id="142" symbol="TanI"/>
+        <entry id="78" module="true" symbol="Layouts"/>
+        <entry field="true" id="25" symbol="orangeColor"/>
         <entry id="10" object="true" symbol="skobFaceView"/>
-        <entry field="true" id="87" symbol="HRTitle"/>
+        <entry field="true" id="95" symbol="HRTitle"/>
         <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
-        <entry field="true" id="153" symbol="Navy"/>
-        <entry field="true" id="42" symbol="weekdayArr"/>
-        <entry field="true" id="152" symbol="RestColorTitle"/>
+        <entry field="true" id="164" symbol="Navy"/>
+        <entry field="true" id="48" symbol="weekdayArr"/>
+        <entry field="true" id="163" symbol="RestColorTitle"/>
         <entry id="8389125" method="true" symbol="onHide"/>
-        <entry field="true" id="52" symbol="metrics"/>
+        <entry field="true" id="59" symbol="metrics"/>
         <entry id="8388635" module="true" symbol="Application"/>
         <entry field="true" id="8389584" symbol="notificationCount"/>
         <entry field="true" id="13" symbol="customFontSmall"/>
-        <entry field="true" id="43" symbol="weekdayArrNor"/>
-        <entry field="true" id="50" symbol="bias4"/>
-        <entry field="true" id="49" symbol="bias3"/>
-        <entry field="true" id="48" symbol="bias2"/>
-        <entry field="true" id="47" symbol="bias1"/>
-        <entry field="true" id="120" symbol="Date6"/>
+        <entry field="true" id="50" symbol="weekdayArrNor"/>
+        <entry field="true" id="57" symbol="bias4"/>
+        <entry field="true" id="56" symbol="bias3"/>
+        <entry field="true" id="55" symbol="bias2"/>
+        <entry field="true" id="54" symbol="bias1"/>
+        <entry field="true" id="130" symbol="Date8"/>
+        <entry field="true" id="129" symbol="Date7"/>
+        <entry field="true" id="128" symbol="Date6"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435484" name="state" stackId="1" startPc="268435479"/>
         <entry arg="true" endPc="268435489" name="state" stackId="1" startPc="268435484"/>
         <entry endPc="268435597" name="dictionary" stackId="1" startPc="268435556"/>
         <entry arg="true" endPc="268435668" name="dc" stackId="1" startPc="268435598"/>
-        <entry arg="true" endPc="268436127" name="dc" stackId="1" startPc="268435691"/>
-        <entry endPc="268436373" name="today" stackId="2" startPc="268436136"/>
-        <entry endPc="268436373" name="currentDistance" stackId="3" startPc="268436136"/>
-        <entry endPc="268436373" name="dist" stackId="1" startPc="268436136"/>
-        <entry endPc="268436973" name="wedDistance" stackId="5" startPc="268436658"/>
-        <entry endPc="268436973" name="monDistance" stackId="3" startPc="268436658"/>
-        <entry endPc="268436973" name="tueDistance" stackId="4" startPc="268436658"/>
-        <entry endPc="268436973" name="thuDistance" stackId="6" startPc="268436658"/>
-        <entry endPc="268436973" name="sunDistance" stackId="2" startPc="268436658"/>
-        <entry endPc="268436973" name="satDistance" stackId="8" startPc="268436658"/>
-        <entry endPc="268436973" name="friDistance" stackId="7" startPc="268436658"/>
-        <entry endPc="268436998" name="distanceSumm" stackId="1" startPc="268436651"/>
-        <entry endPc="268438100" name="hr" stackId="2" startPc="268437981"/>
-        <entry arg="true" endPc="268438178" name="dc" stackId="1" startPc="268436999"/>
-        <entry arg="true" endPc="268438270" name="dc" stackId="1" startPc="268438193"/>
-        <entry endPc="268438401" name="positionY" stackId="2" startPc="268438274"/>
-        <entry endPc="268438401" name="dateString" stackId="4" startPc="268438274"/>
-        <entry endPc="268438401" name="positionX" stackId="3" startPc="268438274"/>
-        <entry arg="true" endPc="268438402" name="dc" stackId="1" startPc="268438270"/>
-        <entry endPc="268438573" name="alarmIcon" stackId="7" startPc="268438502"/>
-        <entry endPc="268438685" name="doNotDisturbIcon" stackId="8" startPc="268438614"/>
-        <entry endPc="268438790" name="messageIcon" stackId="9" startPc="268438719"/>
-        <entry endPc="268438889" name="bluetoothIcon" stackId="10" startPc="268438818"/>
-        <entry endPc="268438963" name="bluetoothIcon" stackId="11" startPc="268438892"/>
-        <entry endPc="268438966" name="iconNum" stackId="6" startPc="268438406"/>
-        <entry arg="true" endPc="268438967" name="x" stackId="1" startPc="268438402"/>
-        <entry arg="true" endPc="268438967" name="dc" stackId="4" startPc="268438402"/>
-        <entry arg="true" endPc="268438967" name="font" stackId="3" startPc="268438402"/>
-        <entry arg="true" endPc="268438967" name="iconNumber" stackId="5" startPc="268438402"/>
-        <entry arg="true" endPc="268438967" name="y" stackId="2" startPc="268438402"/>
-        <entry endPc="268439304" name="hr" stackId="7" startPc="268439209"/>
-        <entry endPc="268439307" name="font" stackId="6" startPc="268438971"/>
-        <entry endPc="268439307" name="bias" stackId="5" startPc="268438971"/>
-        <entry endPc="268439307" name="positionX2" stackId="4" startPc="268438971"/>
-        <entry endPc="268439307" name="positionY" stackId="2" startPc="268438971"/>
-        <entry endPc="268439307" name="positionX1" stackId="3" startPc="268438971"/>
-        <entry arg="true" endPc="268439308" name="dc" stackId="1" startPc="268438967"/>
-        <entry endPc="268439635" name="hr" stackId="6" startPc="268439516"/>
-        <entry endPc="268439638" name="font" stackId="5" startPc="268439312"/>
-        <entry endPc="268439638" name="positionX2" stackId="4" startPc="268439312"/>
-        <entry endPc="268439638" name="positionY" stackId="2" startPc="268439312"/>
-        <entry endPc="268439638" name="positionX1" stackId="3" startPc="268439312"/>
-        <entry arg="true" endPc="268439639" name="dc" stackId="1" startPc="268439308"/>
-        <entry endPc="268440114" name="steps" stackId="9" startPc="268439643"/>
-        <entry endPc="268440114" name="font" stackId="7" startPc="268439643"/>
-        <entry endPc="268440114" name="positionY" stackId="5" startPc="268439643"/>
-        <entry endPc="268440114" name="positionX" stackId="4" startPc="268439643"/>
-        <entry endPc="268440114" name="prefix" stackId="6" startPc="268439643"/>
-        <entry endPc="268440114" name="distanceField" stackId="10" startPc="268439643"/>
-        <entry endPc="268440114" name="distance" stackId="8" startPc="268439643"/>
-        <entry arg="true" endPc="268440115" name="stepField" stackId="3" startPc="268439639"/>
-        <entry arg="true" endPc="268440115" name="dc" stackId="1" startPc="268439639"/>
-        <entry arg="true" endPc="268440115" name="isHideIcons" stackId="2" startPc="268439639"/>
-        <entry endPc="268440635" name="batteryLevel" stackId="6" startPc="268440119"/>
-        <entry endPc="268440635" name="font" stackId="7" startPc="268440119"/>
-        <entry endPc="268440635" name="positionY" stackId="5" startPc="268440119"/>
-        <entry endPc="268440635" name="positionX" stackId="4" startPc="268440119"/>
-        <entry arg="true" endPc="268440636" name="dc" stackId="1" startPc="268440115"/>
-        <entry arg="true" endPc="268440636" name="showDistance" stackId="3" startPc="268440115"/>
-        <entry arg="true" endPc="268440636" name="isHideIcons" stackId="2" startPc="268440115"/>
-        <entry endPc="268441114" name="hours" stackId="9" startPc="268440640"/>
-        <entry endPc="268441114" name="positionXHours" stackId="3" startPc="268440640"/>
-        <entry endPc="268441114" name="xBias" stackId="2" startPc="268440640"/>
-        <entry endPc="268441114" name="positionY" stackId="6" startPc="268440640"/>
-        <entry endPc="268441114" name="clockTime" stackId="8" startPc="268440640"/>
-        <entry endPc="268441114" name="positionXMinutes" stackId="5" startPc="268440640"/>
-        <entry endPc="268441114" name="positionXSep" stackId="4" startPc="268440640"/>
-        <entry endPc="268441114" name="timeFormat" stackId="7" startPc="268440640"/>
-        <entry arg="true" endPc="268441115" name="dc" stackId="1" startPc="268440636"/>
-        <entry endPc="268441727" name="today" stackId="1" startPc="268441119"/>
-        <entry endPc="268441727" name="dateString" stackId="3" startPc="268441119"/>
-        <entry endPc="268441727" name="dayOfTheWeek" stackId="2" startPc="268441119"/>
-        <entry arg="true" endPc="268441865" name="number" stackId="1" startPc="268441728"/>
-        <entry endPc="268441915" name="battery" stackId="1" startPc="268441869"/>
-        <entry endPc="268442173" name="battery" stackId="1" startPc="268441920"/>
-        <entry endPc="268442224" name="HRS" stackId="2" startPc="268442178"/>
-        <entry endPc="268442224" name="HRH" stackId="1" startPc="268442178"/>
-        <entry endPc="268442412" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268442237"/>
-        <entry arg="true" endPc="268442413" name="dc" stackId="1" startPc="268442225"/>
+        <entry arg="true" endPc="268436170" name="dc" stackId="1" startPc="268435691"/>
+        <entry endPc="268436416" name="today" stackId="2" startPc="268436179"/>
+        <entry endPc="268436416" name="currentDistance" stackId="3" startPc="268436179"/>
+        <entry endPc="268436416" name="dist" stackId="1" startPc="268436179"/>
+        <entry endPc="268437016" name="wedDistance" stackId="5" startPc="268436701"/>
+        <entry endPc="268437016" name="monDistance" stackId="3" startPc="268436701"/>
+        <entry endPc="268437016" name="tueDistance" stackId="4" startPc="268436701"/>
+        <entry endPc="268437016" name="thuDistance" stackId="6" startPc="268436701"/>
+        <entry endPc="268437016" name="sunDistance" stackId="2" startPc="268436701"/>
+        <entry endPc="268437016" name="satDistance" stackId="8" startPc="268436701"/>
+        <entry endPc="268437016" name="friDistance" stackId="7" startPc="268436701"/>
+        <entry endPc="268437041" name="distanceSumm" stackId="1" startPc="268436694"/>
+        <entry endPc="268438143" name="hr" stackId="2" startPc="268438024"/>
+        <entry arg="true" endPc="268438221" name="dc" stackId="1" startPc="268437042"/>
+        <entry arg="true" endPc="268438313" name="dc" stackId="1" startPc="268438236"/>
+        <entry endPc="268438444" name="positionY" stackId="2" startPc="268438317"/>
+        <entry endPc="268438444" name="dateString" stackId="4" startPc="268438317"/>
+        <entry endPc="268438444" name="positionX" stackId="3" startPc="268438317"/>
+        <entry arg="true" endPc="268438445" name="dc" stackId="1" startPc="268438313"/>
+        <entry endPc="268438616" name="alarmIcon" stackId="7" startPc="268438545"/>
+        <entry endPc="268438728" name="doNotDisturbIcon" stackId="8" startPc="268438657"/>
+        <entry endPc="268438833" name="messageIcon" stackId="9" startPc="268438762"/>
+        <entry endPc="268438932" name="bluetoothIcon" stackId="10" startPc="268438861"/>
+        <entry endPc="268439006" name="bluetoothIcon" stackId="11" startPc="268438935"/>
+        <entry endPc="268439009" name="iconNum" stackId="6" startPc="268438449"/>
+        <entry arg="true" endPc="268439010" name="x" stackId="1" startPc="268438445"/>
+        <entry arg="true" endPc="268439010" name="dc" stackId="4" startPc="268438445"/>
+        <entry arg="true" endPc="268439010" name="font" stackId="3" startPc="268438445"/>
+        <entry arg="true" endPc="268439010" name="iconNumber" stackId="5" startPc="268438445"/>
+        <entry arg="true" endPc="268439010" name="y" stackId="2" startPc="268438445"/>
+        <entry endPc="268439347" name="hr" stackId="7" startPc="268439252"/>
+        <entry endPc="268439350" name="font" stackId="6" startPc="268439014"/>
+        <entry endPc="268439350" name="bias" stackId="5" startPc="268439014"/>
+        <entry endPc="268439350" name="positionX2" stackId="4" startPc="268439014"/>
+        <entry endPc="268439350" name="positionY" stackId="2" startPc="268439014"/>
+        <entry endPc="268439350" name="positionX1" stackId="3" startPc="268439014"/>
+        <entry arg="true" endPc="268439351" name="dc" stackId="1" startPc="268439010"/>
+        <entry endPc="268439678" name="hr" stackId="6" startPc="268439559"/>
+        <entry endPc="268439681" name="font" stackId="5" startPc="268439355"/>
+        <entry endPc="268439681" name="positionX2" stackId="4" startPc="268439355"/>
+        <entry endPc="268439681" name="positionY" stackId="2" startPc="268439355"/>
+        <entry endPc="268439681" name="positionX1" stackId="3" startPc="268439355"/>
+        <entry arg="true" endPc="268439682" name="dc" stackId="1" startPc="268439351"/>
+        <entry endPc="268440157" name="steps" stackId="9" startPc="268439686"/>
+        <entry endPc="268440157" name="font" stackId="7" startPc="268439686"/>
+        <entry endPc="268440157" name="positionY" stackId="5" startPc="268439686"/>
+        <entry endPc="268440157" name="positionX" stackId="4" startPc="268439686"/>
+        <entry endPc="268440157" name="prefix" stackId="6" startPc="268439686"/>
+        <entry endPc="268440157" name="distanceField" stackId="10" startPc="268439686"/>
+        <entry endPc="268440157" name="distance" stackId="8" startPc="268439686"/>
+        <entry arg="true" endPc="268440158" name="stepField" stackId="3" startPc="268439682"/>
+        <entry arg="true" endPc="268440158" name="dc" stackId="1" startPc="268439682"/>
+        <entry arg="true" endPc="268440158" name="isHideIcons" stackId="2" startPc="268439682"/>
+        <entry endPc="268440699" name="batteryLevel" stackId="6" startPc="268440162"/>
+        <entry endPc="268440699" name="font" stackId="7" startPc="268440162"/>
+        <entry endPc="268440699" name="positionY" stackId="5" startPc="268440162"/>
+        <entry endPc="268440699" name="positionX" stackId="4" startPc="268440162"/>
+        <entry arg="true" endPc="268440700" name="dc" stackId="1" startPc="268440158"/>
+        <entry arg="true" endPc="268440700" name="showDistance" stackId="3" startPc="268440158"/>
+        <entry arg="true" endPc="268440700" name="isHideIcons" stackId="2" startPc="268440158"/>
+        <entry endPc="268441178" name="hours" stackId="9" startPc="268440704"/>
+        <entry endPc="268441178" name="positionXHours" stackId="3" startPc="268440704"/>
+        <entry endPc="268441178" name="xBias" stackId="2" startPc="268440704"/>
+        <entry endPc="268441178" name="positionY" stackId="6" startPc="268440704"/>
+        <entry endPc="268441178" name="clockTime" stackId="8" startPc="268440704"/>
+        <entry endPc="268441178" name="positionXMinutes" stackId="5" startPc="268440704"/>
+        <entry endPc="268441178" name="positionXSep" stackId="4" startPc="268440704"/>
+        <entry endPc="268441178" name="timeFormat" stackId="7" startPc="268440704"/>
+        <entry arg="true" endPc="268441179" name="dc" stackId="1" startPc="268440700"/>
+        <entry endPc="268441977" name="monthName" stackId="3" startPc="268441183"/>
+        <entry endPc="268441977" name="today" stackId="1" startPc="268441183"/>
+        <entry endPc="268441977" name="dateString" stackId="4" startPc="268441183"/>
+        <entry endPc="268441977" name="dayOfTheWeek" stackId="2" startPc="268441183"/>
+        <entry arg="true" endPc="268442153" name="number" stackId="1" startPc="268441978"/>
+        <entry arg="true" endPc="268442328" name="number" stackId="1" startPc="268442153"/>
+        <entry endPc="268442378" name="battery" stackId="1" startPc="268442332"/>
+        <entry endPc="268442636" name="battery" stackId="1" startPc="268442383"/>
+        <entry endPc="268442687" name="HRS" stackId="2" startPc="268442641"/>
+        <entry endPc="268442687" name="HRH" stackId="1" startPc="268442641"/>
+        <entry endPc="268442863" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268442700"/>
+        <entry arg="true" endPc="268442864" name="dc" stackId="1" startPc="268442688"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
         <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFont"/>
         <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontSmall"/>
         <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontMiddle"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontTall"/>
         <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontSuperSmall"/>
         <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customIcon"/>
         <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customIconSmall"/>
@@ -463,6 +484,8 @@
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IconsBigTitle"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WeekDaySunTitle"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date6"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date7"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date8"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date2"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Date3"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RestColor"/>
@@ -479,6 +502,7 @@
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln3"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln2"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Cerise"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln5"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Sandstone2"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Ln4"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DayilyDistanceTitle"/>
@@ -505,14 +529,14 @@
         <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
         <dataEntry label="globals/Background" offset="158" parentId="globals" symbolId="Background" type="class"/>
         <dataEntry label="globals/skobFaceView" offset="213" parentId="globals" symbolId="skobFaceView" type="class"/>
-        <dataEntry label="globals/Rez" offset="788" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/Rez/Drawables" offset="867" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="906" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Fonts" offset="937" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="1032" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/JsonData" offset="1071" parentId="Rez" symbolId="JsonData" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="1102" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/skobFaceApp" offset="1781" parentId="globals" symbolId="skobFaceApp" type="class"/>
+        <dataEntry label="globals/Rez" offset="852" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="931" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="970" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="1001" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1104" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="1143" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1174" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/skobFaceApp" offset="1877" parentId="globals" symbolId="skobFaceApp" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" name="initialize" parent="skobFaceApp">
@@ -615,6 +639,10 @@
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;getDayOfAWeekName&gt;" parent="skobFaceView">
+            <param id="number"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" name="&lt;globals/skobFaceView/&lt;&gt;getMonthName&gt;" parent="skobFaceView">
             <param id="number"/>
             <documentation/>
         </functionEntry>

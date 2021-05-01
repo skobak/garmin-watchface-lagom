@@ -18,6 +18,7 @@ class skobFaceView extends WatchUi.WatchFace {
 	var customFontSmall = null;
 	var customFontSuperSmall = null;
 	var customFontMiddle = null;
+	var customFontTall = null;
 	var customIcons = null;
 	var customIconsSmall = null;
 	var customIconsMaterial = null;
@@ -44,6 +45,17 @@ class skobFaceView extends WatchUi.WatchFace {
     var stepField = 0;
     var HR=false;
     var millitaryFormat=true;
+
+    // var monthsEn =[
+    //    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL","AUG", "SEP", "OCT", "NOV", "DEC"
+    // ]
+
+    var monthEn =  [ "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ];
+    var monthSE =  [ "JANUARI",	"FEBRUARI","MARS","APRIL","MAJ","JUNI","JULI","AUGUSTI","SEPTEMBER","OKTOBER","NOVEMBER","DESEMBER" ];
+    var monthNor =  [ "JANUAR",	"FEBRUAR","MARS","APRIL","MAI","JUNI","JULI","AUGUST","SEPTEMBER","OKTOBER","NOVEMBER","DESEMBER" ];
+    var monthSp =  ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
+    var monthIT = ["GENNAIO","FEBBRAIO","MARZO","APRILE","MAGGIO","GIUGNO","LUGLIO","AGOSTO","SETTEMBRE","OTTOBRE","NOVEMBRE","DICEMBRE"];
+
 	var weekdayArr = [
 "SUN",
 "MON",
@@ -53,6 +65,11 @@ class skobFaceView extends WatchUi.WatchFace {
 "FRI",
 "SAT",
 ];
+
+
+  var weekdayArrSe = [
+     "SON","MAN","TIS","ONS","TORS","FRE","LOR"
+  ];
 
   var weekdayArrNor = [
      "SO","MAN","TIR","ONS","TOR","FRE","LOR"
@@ -90,6 +107,7 @@ class skobFaceView extends WatchUi.WatchFace {
       customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
       customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
       customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+      customFontTall = WatchUi.loadResource(Rez.Fonts.customFontTall);
 
       
       customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterial);
@@ -285,7 +303,7 @@ try {
         var positionX = dc.getWidth()/2; // center
   		var dateString = getDateString();
  		dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionX, positionY, customFontMiddle, dateString, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(positionX, positionY, customFontTall, dateString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawIcon(x,y,font,dc,iconNumber){
@@ -365,9 +383,9 @@ try {
     }
     
     private function drawIconsSmall(dc){
-        var positionY = dc.getHeight()/2-87;
-        var positionX1 = dc.getWidth()/2-74; // center
-        var positionX2 = dc.getWidth()/2+74; // center
+        var positionY = dc.getHeight()/2-86;
+        var positionX1 = dc.getWidth()/2-67; // center
+        var positionX2 = dc.getWidth()/2+67; // center
 
           var font = customIconsSmallMaterial;
         if(iconsType==1){
@@ -399,7 +417,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
         }
         var font = customFontSuperSmall;
         if(isHideIcons == 0 || isHideIcons == 2){
-            positionY=positionY-35;
+            positionY=positionY-38;
             positionX=positionX-10;
             font = customFontMiddle;
                if(batteryIcon==true){
@@ -448,20 +466,23 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
    	    var batteryLevel = getBatteryLevel();
         var font = customFontSuperSmall;
         if(batteryIcon==true){
-            positionY=positionY+7;
+            positionY=positionY+5;
             font = customIconsSmallMaterial;
              if(iconsType==1){
                   font = customIconsSmall;
               }
         }
         if(isHideIcons == 0 || isHideIcons == 2){
-            positionY=positionY-35;
+            positionY=positionY-38;
             positionX=positionX+15;
             font = customFontMiddle;
            
             if(batteryIcon==true){
                     positionX = dc.getWidth()/2;
                   positionY=positionY+37;
+                  if(showDistance==false){
+                      positionY=positionY-30;
+                  }
               font = customIconsMaterial;
               if(iconsType==1){
                   font = customIcons;
@@ -516,7 +537,9 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
     // Helper functions
     private function getDateString() {      
          var today = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-             var dayOfTheWeek = getDayOfAWeekName(today.day_of_week);
+         var dayOfTheWeek = getDayOfAWeekName(today.day_of_week);
+         var monthName = getMonthName(today.month);
+
          var dateString = dayOfTheWeek+" "+Lang.format(
     "$1$.$2$",
     [
@@ -581,6 +604,24 @@ else if(dateFormat==5){
     ]
     );
 }
+
+else if(dateFormat==6){
+  dateString = Lang.format(
+    "$1$",
+    [
+          today.day,
+    ]
+    )+" "+monthName.substring(0,3);
+}
+
+else if(dateFormat==7){
+  dateString = Lang.format(
+    "$1$",
+    [
+          today.day,
+    ]
+    )+" "+monthName;
+}
         return dateString;
     }
     
@@ -594,7 +635,26 @@ else if(dateFormat==5){
         if(lang==3){
         return weekdayArrSpanish[number-1];
         }
+        if(lang==4){
+        return weekdayArrSe[number-1];
+        }
         return weekdayArrNor[number-1];
+    }
+
+    private function getMonthName(number){
+        if(lang==0){
+    	return monthEn[number-1];
+        }
+        if(lang==2){
+        return monthIT[number-1];
+        }
+        if(lang==3){
+        return monthSp[number-1];
+        }
+        if(lang==4){
+        return monthSE[number-1];
+        }
+        return monthNor[number-1];
     }
     
     private function getBatteryLevel() {
