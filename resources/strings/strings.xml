@@ -44,9 +44,8 @@
     <string id="DayilyDistanceTitle">Distance,km.(daily)</string>
     <string id="WeeklyDistanceTitle">Distance,km.(weekly)</string>
     <string id="StepsTitle">Steps(daily)</string>
-    <string id="millitaryFormatTitle">24H format</string>
-
-
+    <string id="millitaryFormatTitle">24H format(yes: 14:15 ignore watch settings, no: watch settings)</string>
+    <string id="leadingZeroTitle">Leading Zero for Hours (yes: 09:15, no: 9:15)</string>
          <string id="Granite">Band Color: Granite Blue</string>
             <string id="Berry">Band Color: Berry</string>
             <string id="Sea">Band Color: Sea Foam</string>
@@ -94,6 +93,7 @@
              <string id="DNDTitle">Is Do Not Disturb On</string>
              <string id="NotificationTitle">Unread messages on a phone</string>
              <string id="ConnectivityTitle">Is Connected to Phone Icon</string>
-
-             <string id="HRTitle">Show Heart rate(Experimental feature, might work incorrectly for certain watch model)</string>
+             <string id="HRTitle">Heart Rate</string>
+             <string id="YourAgeTitle">Your age (for HR zones caclualtion)</string>
+             <string id="MyNumberError">Age should be between 0 and 150</string>
 </strings>

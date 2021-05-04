@@ -8,8 +8,9 @@ using Toybox.Time.Gregorian as Date;
 using Toybox.System as Sys;
 using Toybox.Activity as Activity;
 using Toybox.ActivityMonitor as Mon;
+using Toybox.UserProfile as UserProfile;
 using Toybox.Application.Storage as Storage;
-
+const INTEGER_FORMAT = "%d";
 
 class skobFaceView extends WatchUi.WatchFace {
     var isBTConnected=  false;
@@ -36,6 +37,7 @@ class skobFaceView extends WatchUi.WatchFace {
     var iconsType=0;
     var iconOne=0;
     var iconTwo=1;
+    var age=30;
     var showIconOne=true;
     var showIconTwo=true;
     var batteryIcon=false; // false is 55%, true is icon
@@ -45,6 +47,7 @@ class skobFaceView extends WatchUi.WatchFace {
     var stepField = 0;
     var HR=false;
     var millitaryFormat=true;
+    var leadingZero=false;
 
     // var monthsEn =[
     //    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL","AUG", "SEP", "OCT", "NOV", "DEC"
@@ -226,7 +229,6 @@ try {
     // Update the view
     function onUpdate(dc) {
     
-
       hourColor = Application.getApp().getProperty("HoursColor");
       minutesColor = Application.getApp().getProperty("MinutesColor");
       restColor = Application.getApp().getProperty("RestColor");
@@ -239,12 +241,14 @@ try {
       dateFormat =Application.getApp().getProperty("DateFormat"); 
       lang =Application.getApp().getProperty("Lang"); 
       HR =Application.getApp().getProperty("HR"); 
-      HR = false;
+    //   HR = false;
       millitaryFormat =Application.getApp().getProperty("MillitaryFormat"); 
+      leadingZero =Application.getApp().getProperty("LeadingZero"); 
       weekStartDayIndex =Application.getApp().getProperty("WeekStart");
       iconsType =Application.getApp().getProperty("IconsType");
       iconOne =Application.getApp().getProperty("IconOne");
       iconTwo =Application.getApp().getProperty("IconTwo");
+      age =Application.getApp().getProperty("Age");
       showIconOne =Application.getApp().getProperty("ShowIconOne");
       showIconTwo =Application.getApp().getProperty("ShowIconTwo");
       batteryIcon =Application.getApp().getProperty("BatteryIcon");
@@ -263,11 +267,20 @@ try {
         } else if(isHideIcons == 2){
             drawIconsSmall(dc);
         }else{
-         if(HR){
-           var hr = getHeatRate();
-           	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2, dc.getHeight()/2+90, customFontSuperSmall, hr, Graphics.TEXT_JUSTIFY_CENTER);
-}
+         if(HR){ //if no ICONS
+            var fontHR = customFontSuperSmall;
+            var x = dc.getWidth()/2;
+            var y = dc.getHeight()/2+90;
+            if(batteryIcon==true  && showDistance==true){ // [distance] [HR]
+            y=dc.getHeight()/2+47;
+            x=x+35;
+            fontHR=customFontMiddle;}
+   if(batteryIcon && !showDistance){
+                y=y-47;
+                fontHR=customFontMiddle;
+            }
+           drawHR(dc,x,y,fontHR);
+         }
 }
        if(showDistance){ 
         drawSteps(dc,isHideIcons,stepField);
@@ -290,6 +303,43 @@ try {
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+    }
+
+    private function drawHR(dc,x,y,font){
+            var hr = getHR();
+            var color = getHRColorByValue(hr);
+           	dc.setColor(color,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(x,y, font, hr, Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function getHRColorByValue(hr){
+        var max= 220 - age;
+        if(hr.equals("")){
+            return restColor;
+        }
+
+        hr  = hr.toNumber();
+        // zone 1
+        if(hr<=max*0.7){
+            return 0xFFFFFF;
+        }
+        // zone 2
+        if(hr>max*0.7 && hr<=max*0.8){
+            return 0x00AAFF;
+        }
+        // zone 3
+        if(hr>max*0.8 && hr<=max*0.9){
+            return 0x00FF00;
+        }
+        // zone 4
+        if(hr>max*0.9 && hr<=max){
+            return 0xFFFF00;
+        }
+        // zone 5
+        if(hr>max){
+            return 0xFF0000;
+        }
+        return restColor;
     }
     
     
@@ -323,7 +373,7 @@ try {
               dc.drawText(x,y, font, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	        }
    	    }
-        else if(iconNum==1){
+        else if(iconNum==1){ // DND
             if(System.getDeviceSettings().doNotDisturb)
    	        {    
    	            var doNotDisturbIcon ='B';
@@ -339,7 +389,7 @@ try {
                 dc.drawText(x, y, font, messageIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	        }
    	    }
-        else if(iconNum==3){
+        else if(iconNum==3){ // Connectivity
             if(isBTConnected)
    	        {    
    	            var bluetoothIcon ='C';
@@ -353,6 +403,7 @@ try {
                 dc.drawText(x, y, font, bluetoothIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	        }
    	    }
+
     }
 
     private function drawIcons(dc){
@@ -376,9 +427,7 @@ try {
         }
 
         if(HR){
-           var hr = getHeatRate();
-           	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(positionX2-20, positionY-15, customFontSmall, hr, Graphics.TEXT_JUSTIFY_CENTER);
+           drawHR(dc,positionX2-20,positionY-15,customFontSmall);
         }
     }
     
@@ -398,11 +447,22 @@ if(showIconOne){
 if(showIconTwo){
         drawIcon(positionX2,positionY,font,dc,2);
 }
-           if(HR){
-           var hr = getHeatRate();
-           	dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2, dc.getHeight()/2+90, customFontSuperSmall, hr, Graphics.TEXT_JUSTIFY_CENTER);
-}
+
+        if(HR){
+            var fontHR = customFontSuperSmall;
+            var x = dc.getWidth()/2;
+            var y = dc.getHeight()/2+90;
+            if(batteryIcon==true  && showDistance==true){ // [distance] [HR]
+            y=dc.getHeight()/2+47;
+            x=x+35;
+            fontHR=customFontMiddle;
+            }
+            if(batteryIcon && !showDistance){
+                y=y-47;
+                fontHR=customFontMiddle;
+            }
+           drawHR(dc,x,y, fontHR);
+        }
     }
 
 /*
@@ -422,6 +482,9 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             font = customFontMiddle;
                if(batteryIcon==true){
              positionX = dc.getWidth()/2;
+             if(HR){
+                 positionX=positionX-35;
+             }
                  } 
         }
 
@@ -480,7 +543,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             if(batteryIcon==true){
                     positionX = dc.getWidth()/2;
                   positionY=positionY+37;
-                  if(showDistance==false){
+                  if(showDistance==false && HR==false){
                       positionY=positionY-30;
                   }
               font = customIconsMaterial;
@@ -515,12 +578,20 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
         var timeFormat = "$1$:$2$";
         var clockTime = System.getClockTime();
         var hours = clockTime.hour;
-        if (!millitaryFormat || !System.getDeviceSettings().is24Hour) {
+
+        if (!millitaryFormat && !System.getDeviceSettings().is24Hour) {
             if (hours > 12) {
                 hours = hours - 12;
             }
+            // when using the 12 hour clock, midnight is displayed as 12:00 AM (not 0:00 AM)
+            if (hours == 0) {
+				hours = 12;
+			}
         }
-        if(hours<10){
+        
+        if(leadingZero==true){
+             hours=hours.format("%02d");
+        }else if(hours<10){
             xBias= 20;
         }
         dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
@@ -682,9 +753,20 @@ else if(dateFormat==7){
         return "7";
     }
 
-    private function getHeatRate(){
-        var HRH=Mon.getHeartRateHistory(1, true);
-     var HRS=HRH.next();
-    return HRS.heartRate;
+
+    private function getHR(){
+        var value = "";
+      	var activityInfo = Activity.getActivityInfo();
+		var sample = activityInfo.currentHeartRate;
+				if (sample != null) {
+					value = sample.format(INTEGER_FORMAT);
+				} else if (ActivityMonitor has :getHeartRateHistory) {
+					sample = ActivityMonitor.getHeartRateHistory(1, /* newestFirst */ true)
+						.next();
+					if ((sample != null) && (sample.heartRate != ActivityMonitor.INVALID_HR_SAMPLE)) {
+						value = sample.heartRate.format(INTEGER_FORMAT);
+					}
+				}
+        return value;
     }
 }

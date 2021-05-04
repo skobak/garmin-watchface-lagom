@@ -86,10 +86,18 @@
             <listEntry value="2">@Strings.WeekDayMonTitle</listEntry>
         </settingConfig>
     </setting>
-<!-- 
+
     <setting propertyKey="@Properties.HR" title="@Strings.HRTitle">
     <settingConfig type="boolean" />
-    </setting> -->
+    </setting>
+
+    <setting propertyKey="@Properties.Age" title="@Strings.YourAgeTitle">
+        <settingConfig type="numeric" min="0" max="150" errorMessage="@Strings.MyNumberError" />
+    </setting>
+
+    <setting propertyKey="@Properties.LeadingZero" title="@Strings.leadingZeroTitle">
+    <settingConfig type="boolean" />
+    </setting>
 
     <setting propertyKey="@Properties.MillitaryFormat" title="@Strings.millitaryFormatTitle">
     <settingConfig type="boolean" />
