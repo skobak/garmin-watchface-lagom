@@ -102,6 +102,9 @@
     <setting propertyKey="@Properties.MillitaryFormat" title="@Strings.millitaryFormatTitle">
     <settingConfig type="boolean" />
     </setting>
+    <setting propertyKey="@Properties.NoSeparation" title="@Strings.noSeparationTitile">
+    <settingConfig type="boolean" />
+    </setting>
     
 <!-- Colors -->
     <setting propertyKey="@Properties.RestColor" title="@Strings.RestColorTitle">

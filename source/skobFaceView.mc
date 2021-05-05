@@ -47,6 +47,7 @@ class skobFaceView extends WatchUi.WatchFace {
     var stepField = 0;
     var HR=false;
     var millitaryFormat=true;
+    var noSeparation=false;
     var leadingZero=false;
 
     // var monthsEn =[
@@ -243,6 +244,7 @@ try {
       HR =Application.getApp().getProperty("HR"); 
     //   HR = false;
       millitaryFormat =Application.getApp().getProperty("MillitaryFormat"); 
+      noSeparation =Application.getApp().getProperty("NoSeparation"); 
       leadingZero =Application.getApp().getProperty("LeadingZero"); 
       weekStartDayIndex =Application.getApp().getProperty("WeekStart");
       iconsType =Application.getApp().getProperty("IconsType");
@@ -432,9 +434,13 @@ try {
     }
     
     private function drawIconsSmall(dc){
+
+        var widthOfDate = dc.getTextWidthInPixels(getDateString(), customFontTall);
         var positionY = dc.getHeight()/2-86;
-        var positionX1 = dc.getWidth()/2-67; // center
-        var positionX2 = dc.getWidth()/2+67; // center
+        // var positionX1 = dc.getWidth()/2-67; // center
+        // var positionX2 = dc.getWidth()/2+67; // center
+        var positionX1 = dc.getWidth()/2-widthOfDate/2-22; // left icon
+        var positionX2 = dc.getWidth()/2+widthOfDate/2+22; // right icon
 
           var font = customIconsSmallMaterial;
         if(iconsType==1){
@@ -480,6 +486,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             positionY=positionY-38;
             positionX=positionX-10;
             font = customFontMiddle;
+
                if(batteryIcon==true){
              positionX = dc.getWidth()/2;
              if(HR){
@@ -590,18 +597,34 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
         }
         
         if(leadingZero==true){
-             hours=hours.format("%02d");
+            hours=hours.format("%02d");
         }else if(hours<10){
             xBias= 20;
         }
-        dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionXHours, positionY, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
- 	    // :
-        dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionXSep-xBias-3, positionY-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
- 	    // Minutes
-        dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionXMinutes-xBias, positionY, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
+        var hourWidth = dc.getTextWidthInPixels(hours+"", customFont);
+        var minutesWidth =dc.getTextWidthInPixels(clockTime.min.format("%02d"), customFont);
+        var sepWidth = dc.getTextWidthInPixels(":", customFont);
+        var timeWidth = (hourWidth+minutesWidth+sepWidth);
+        if(noSeparation==true){
+            timeWidth = (hourWidth+minutesWidth);
+            // Hours
+            // var oneCharWidth = dc.getTextWidthInPixels(chars, font) / chars.length();
+            dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2, positionY, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
+    
+            // Minutes
+            dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+minutesWidth/2, positionY, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
+        }else{
+            dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2, positionY, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
+            // :
+            dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth/2, positionY-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
+            // Minutes
+            dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth+minutesWidth/2, positionY, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
+        }
     }
 
 

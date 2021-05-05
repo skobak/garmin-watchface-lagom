@@ -45,6 +45,7 @@
     <string id="WeeklyDistanceTitle">Distance,km.(weekly)</string>
     <string id="StepsTitle">Steps(daily)</string>
     <string id="millitaryFormatTitle">24H format(yes: 14:15 ignore watch settings, no: watch settings)</string>
+    <string id="noSeparationTitile">Military format, no : between hours and minutes (yes: 1415, no: 14:15)</string>
     <string id="leadingZeroTitle">Leading Zero for Hours (yes: 09:15, no: 9:15)</string>
          <string id="Granite">Band Color: Granite Blue</string>
             <string id="Berry">Band Color: Berry</string>

@@ -14,6 +14,7 @@
     <property id="BatteryIcon" type="boolean">false</property>
     <property id="HR" type="boolean">false</property>
     <property id="MillitaryFormat" type="boolean">true</property>
+    <property id="NoSeparation" type="boolean">false</property>
     <property id="LeadingZero" type="boolean">false</property>
     <property id="WeekStart" type="number">2</property>
     <property id="Age" type="number">30</property>
