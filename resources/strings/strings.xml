@@ -78,10 +78,12 @@
             <string id="Date8">DD MONTH</string>
              <string id="LanguageTitle">Language</string>
              <string id="Ln1">English</string>
-             <string id="Ln2">Nordics(no special characters)</string>
+             <string id="Ln2">Nordic</string>
              <string id="Ln3">Italian</string>
              <string id="Ln4">Spanish</string>
              <string id="Ln5">Swedish</string>
+             <string id="Ln6">German</string>
+             <string id="Ln7">Slovak</string>
 
              <string id="IconOneTitle">Icon One content</string>
              <string id="IconTwoTitle">Icon Two content</string>
@@ -89,12 +91,14 @@
              <string id="ShowIconOneTitle">Show Icon One</string>
              <string id="ShowIconTwoTitle">Show Icon Two</string>
              <string id="ShowDistanceTitle">Show Distance</string>
+             <string id="ShowWeekTitle">Show Week Number</string>
 
              <string id="AlarmTitle">Is Alarm On icon</string>
              <string id="DNDTitle">Is Do Not Disturb On</string>
              <string id="NotificationTitle">Unread messages on a phone</string>
              <string id="ConnectivityTitle">Is Connected to Phone Icon</string>
              <string id="HRTitle">Heart Rate</string>
+             <string id="HRColoringTitle">Heart Rate Coloring(green-blue-red zones)</string>
              <string id="YourAgeTitle">Your age (for HR zones caclualtion)</string>
              <string id="MyNumberError">Age should be between 0 and 150</string>
 </strings>

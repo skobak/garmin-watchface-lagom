@@ -42,10 +42,12 @@ class skobFaceView extends WatchUi.WatchFace {
     var showIconTwo=true;
     var batteryIcon=false; // false is 55%, true is icon
     var showDistance=true;
+    var showWeekNumber=false;
 	var globalDc=null;
     var isHideIcons = 0;
     var stepField = 0;
     var HR=false;
+    var HRColoring=true;
     var millitaryFormat=true;
     var noSeparation=false;
     var leadingZero=false;
@@ -59,6 +61,18 @@ class skobFaceView extends WatchUi.WatchFace {
     var monthNor =  [ "JANUAR",	"FEBRUAR","MARS","APRIL","MAI","JUNI","JULI","AUGUST","SEPTEMBER","OKTOBER","NOVEMBER","DESEMBER" ];
     var monthSp =  ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
     var monthIT = ["GENNAIO","FEBBRAIO","MARZO","APRILE","MAGGIO","GIUGNO","LUGLIO","AGOSTO","SETTEMBRE","OTTOBRE","NOVEMBRE","DICEMBRE"];
+    var monthGE = ["JANUAR","FEBRUAR","MARZ","APRIL","MAI","JUNI","JULI","AUGUST","SEPTEMBER","OKTOBER","NOVEMBER","DEZEMBER"];
+    var monthSL = ["JANUAR","FEBRUAR","MAREC","APRIL","MAJ","JUN","JUL","AUGUST","SEPTEMBER","OKTOBER","NOVEMBER","DECEMBER"];
+// 0 -eng
+            //  <string id="Ln1">English</string>
+            //  <string id="Ln2">Nordic</string>
+            //  <string id="Ln3">Italian</string>
+            //  <string id="Ln4">Spanish</string>
+            //  <string id="Ln5">Swedish</string>
+            //  <string id="Ln6">German</string>
+            //  <string id="Ln7">Slovak</string>
+
+    var WeekWord =["Week","Uke","Settimana","Semana","Vecka","Woche","Tyzden"];
 
 	var weekdayArr = [
 "SUN",
@@ -86,6 +100,12 @@ class skobFaceView extends WatchUi.WatchFace {
 
    var weekdayArrSpanish = [
      "DOM","LUN","MAR","MIE","JUE","VIE","SAB"
+  ];
+   var weekdayArrGerman = [
+     "SON","MON","DIE","MIT","DON","FRE","SAM"
+  ];
+   var weekdayArrSlovak = [
+     "NED","PON","UTO","STR","STV","PIA","SOB"
   ];
 
 
@@ -229,7 +249,6 @@ try {
 
     // Update the view
     function onUpdate(dc) {
-    
       hourColor = Application.getApp().getProperty("HoursColor");
       minutesColor = Application.getApp().getProperty("MinutesColor");
       restColor = Application.getApp().getProperty("RestColor");
@@ -242,6 +261,7 @@ try {
       dateFormat =Application.getApp().getProperty("DateFormat"); 
       lang =Application.getApp().getProperty("Lang"); 
       HR =Application.getApp().getProperty("HR"); 
+      HRColoring =Application.getApp().getProperty("HRColoring"); 
     //   HR = false;
       millitaryFormat =Application.getApp().getProperty("MillitaryFormat"); 
       noSeparation =Application.getApp().getProperty("NoSeparation"); 
@@ -255,6 +275,7 @@ try {
       showIconTwo =Application.getApp().getProperty("ShowIconTwo");
       batteryIcon =Application.getApp().getProperty("BatteryIcon");
       showDistance =Application.getApp().getProperty("ShowDistance");
+      showWeekNumber =Application.getApp().getProperty("ShowWeek");
       isBTConnected= Sys.getDeviceSettings().phoneConnected;
       notificationCount= Sys.getDeviceSettings().notificationCount;
 
@@ -288,6 +309,21 @@ try {
         drawSteps(dc,isHideIcons,stepField);
        }
  		drawBattery(dc,isHideIcons,showDistance);
+       if(showWeekNumber){
+           drawWeekNumber(dc);
+       }
+    }
+
+    function drawWeekNumber(dc){
+        var weekNumber = getWeekNumber();
+
+        var positionY = dc.getHeight()/2-118;
+        var positionX = dc.getWidth()/2; // center
+        dc.setColor(dateColor, Graphics.COLOR_TRANSPARENT);
+ 		// dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
+       
+
+        dc.drawText(positionX, positionY, customFontSuperSmall," "+WeekWord[lang]+" "+weekNumber+" ", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -317,6 +353,10 @@ try {
     private function getHRColorByValue(hr){
         var max= 220 - age;
         if(hr.equals("")){
+            return restColor;
+        }
+
+        if(HRColoring==false){
             return restColor;
         }
 
@@ -732,6 +772,12 @@ else if(dateFormat==7){
         if(lang==4){
         return weekdayArrSe[number-1];
         }
+        if(lang==5){
+        return weekdayArrGerman[number-1];
+        }
+        if(lang==6){
+        return weekdayArrSlovak[number-1];
+        }
         return weekdayArrNor[number-1];
     }
 
@@ -747,6 +793,12 @@ else if(dateFormat==7){
         }
         if(lang==4){
         return monthSE[number-1];
+        }
+        if(lang==5){
+        return monthGE[number-1];
+        }
+        if(lang==6){
+        return monthSL[number-1];
         }
         return monthNor[number-1];
     }
@@ -792,4 +844,70 @@ else if(dateFormat==7){
 				}
         return value;
     }
+
+function getWeekNumber(){
+    var today = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+    var weekNumber = iso_week_number(today.year,today.month,today.day);
+    return weekNumber;
+}
+
+function julian_day(year, month, day)
+{
+var a = (14 - month) / 12;
+var y = (year + 4800 - a);
+var m = (month + 12 * a - 3);
+return day + ((153 * m + 2) / 5) + (365 * y) + (y / 4) - (y / 100) + (y / 400) - 32045;
+}
+
+function is_leap_year(year)
+{
+if (year % 4 != 0) {
+return false;
+}
+else if (year % 100 != 0) {
+return true;
+}
+else if (year % 400 == 0) {
+return true;
+}
+
+return false;
+}
+
+function iso_week_number(year, month, day)
+{
+var first_day_of_year = julian_day(year, 1, 1);
+var given_day_of_year = julian_day(year, month, day);
+
+var day_of_week = (first_day_of_year + 3) % 7; // days past thursday
+var week_of_year = (given_day_of_year - first_day_of_year + day_of_week + 4) / 7;
+
+// week is at end of this year or the beginning of next year
+if (week_of_year == 53) {
+
+if (day_of_week == 6) {
+return week_of_year;
+}
+else if (day_of_week == 5 && is_leap_year(year)) {
+return week_of_year;
+}
+else {
+return 1;
+}
+}
+
+// week is in previous year, try again under that year
+else if (week_of_year == 0) {
+first_day_of_year = julian_day(year - 1, 1, 1);
+
+day_of_week = (first_day_of_year + 3) % 7;
+
+return (given_day_of_year - first_day_of_year + day_of_week + 4) / 7;
+}
+
+// any old week of the year
+else {
+return week_of_year;
+}
+}
 }

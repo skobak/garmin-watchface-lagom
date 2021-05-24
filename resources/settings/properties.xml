@@ -23,4 +23,6 @@
     <property id="ShowIconOne" type="boolean">true</property>
     <property id="ShowIconTwo" type="boolean">true</property>
     <property id="ShowDistance" type="boolean">true</property>
+    <property id="ShowWeek" type="boolean">false</property>
+    <property id="HRColoring" type="boolean">true</property>
 </properties>

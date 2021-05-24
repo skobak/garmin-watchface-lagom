@@ -46,6 +46,8 @@
             <listEntry value="2">@Strings.Ln3</listEntry>
             <listEntry value="3">@Strings.Ln4</listEntry>
             <listEntry value="4">@Strings.Ln5</listEntry>
+            <listEntry value="5">@Strings.Ln6</listEntry>
+            <listEntry value="6">@Strings.Ln7</listEntry>
         </settingConfig>
     </setting>
 
@@ -61,10 +63,14 @@
             <listEntry value="7">@Strings.Date8</listEntry>
         </settingConfig>
     </setting>
+            <setting propertyKey="@Properties.ShowWeek" title="@Strings.ShowWeekTitle">
+    <settingConfig type="boolean" />
+    </setting>
 <!-- Metrics -->
         <setting propertyKey="@Properties.ShowDistance" title="@Strings.ShowDistanceTitle">
     <settingConfig type="boolean" />
     </setting>
+
     <setting propertyKey="@Properties.StepField" title="@Strings.StepFieldTitle">
         <settingConfig type="list">
             <listEntry value="0">@Strings.DayilyDistanceTitle</listEntry>
@@ -88,6 +94,9 @@
     </setting>
 
     <setting propertyKey="@Properties.HR" title="@Strings.HRTitle">
+    <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.HRColoring" title="@Strings.HRColoringTitle">
     <settingConfig type="boolean" />
     </setting>
 
