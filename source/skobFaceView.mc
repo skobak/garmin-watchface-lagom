@@ -181,7 +181,7 @@ class skobFaceView extends WatchUi.WatchFace {
         if(screenSize==0){
          customFont = WatchUi.loadResource(Rez.Fonts.customFont);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
-         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontDate);
 
         customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall); //HR
         customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
@@ -200,7 +200,7 @@ class skobFaceView extends WatchUi.WatchFace {
         if(screenSize==1){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontBig);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
-         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
 
         customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
         customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmallBig);
@@ -214,7 +214,7 @@ class skobFaceView extends WatchUi.WatchFace {
          customFontDatePadding = 30;
          customFontTimePadding = 0;
          customFontIconPadding = 11;
-         customLayour2Padding = 50;
+         customLayour2Padding = 30;
         }
         if(screenSize==2){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontHuge);
@@ -519,7 +519,7 @@ try {
         // var positionY = dc.getHeight()/2-108;
         var positionX = dc.getWidth()/2; // center
   		var dateString = getDateString();
- 		dc.setColor(dateColor,Graphics.COLOR_GREEN);
+ 		dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(positionX, positionYLayer1, customFontDate, dateString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -536,7 +536,7 @@ try {
             if(System.getDeviceSettings().alarmCount>=1)
    	        {
        	      var alarmIcon ='A';
-    	      dc.setColor(restColor,Graphics.COLOR_BLUE);
+    	      dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
               dc.drawText(x,y, font, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	        }
    	    }
@@ -803,7 +803,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
             dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+minutesWidth/2, positionYLayer2, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
         }else{
-            dc.setColor(hourColor,Graphics.COLOR_RED);
+            dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
             dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2, positionYLayer2, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
             // :
             dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
