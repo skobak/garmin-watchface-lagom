@@ -16,6 +16,13 @@ class skobFaceView extends WatchUi.WatchFace {
     var isBTConnected=  false;
     var notificationCount=  0;
 	var customFont = null;
+
+    var customFontSmallPadding = 0;
+    var customFontMiddlePadding = 0;
+    var customFontDatePadding = 0;
+    var customFontTimePadding = 0;
+    var customFontIconPadding = 0;
+
 	var customFontBig = null;
 	var customFontHuge = null;
 	var customFontSmall = null;
@@ -138,7 +145,8 @@ class skobFaceView extends WatchUi.WatchFace {
    */
    var screenSize = 0;
 
-   var positionYLayer1 =0; // Top
+   var positionYLayer0 =0; // Top
+   var positionYLayer1 =0;
    var positionYLayer2 =0;
    var positionYLayer3 =0;
    var positionYLayer4 =0; // Bottom
@@ -171,7 +179,7 @@ class skobFaceView extends WatchUi.WatchFace {
         customFont = WatchUi.loadResource(Rez.Fonts.customFont);
         customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
         customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
-        customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+        // customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
         customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
         customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterial);
         customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterial);
@@ -180,14 +188,23 @@ class skobFaceView extends WatchUi.WatchFace {
         if(screenSize==0){
          customFont = WatchUi.loadResource(Rez.Fonts.customFont);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
+         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+         // This is a area around font, so we should keep it in mind for the right calculation
+         customFontSmallPadding = 15;
+         customFontMiddlePadding = 8;
+         customFontDatePadding = 30;
+         customFontTimePadding = 0;
+         customFontIconPadding = 0;
         }
         if(screenSize==1){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontBig);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
+         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
         }
         if(screenSize==2){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontHuge);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateHuge);
+         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
         }
     }
 
@@ -196,16 +213,18 @@ class skobFaceView extends WatchUi.WatchFace {
         var centerY = dc.getHeight()/2;
         var timeFontHeight = dc.getFontHeight(customFont);
         var dateFontHeight = dc.getFontHeight(customFontDate);
+        var superSmallFontHeight = dc.getFontHeight(customFontSuperSmall);
 /*
   i Date i
     HH:HH - always centered 
   Dist, Battery, Icons
   small batter
 */
-        positionYLayer1 =centerY - timeFontHeight/2- dateFontHeight/2; // Top
+        positionYLayer0 =centerY - timeFontHeight/2- dateFontHeight/2 - customFontDatePadding-superSmallFontHeight/2; // Top
+        positionYLayer1 =centerY - timeFontHeight/2- dateFontHeight/2 - customFontDatePadding; // Top
         positionYLayer2 =centerY-timeFontHeight/2;
-        positionYLayer3 =0+timeFontHeight/2;
-        positionYLayer4 =0; // Bottom
+        positionYLayer3 =centerY+timeFontHeight/2+5;
+        positionYLayer4 =centerY+timeFontHeight/2+30; // Bottom
     }
 
     // Load your resources here
@@ -362,24 +381,21 @@ try {
             drawIcons(dc);
         } else if(isHideIcons == 2){
             drawIconsSmall(dc);
-        }else{
-         if(HR){ //if no ICONS
-            var fontHR = customFontSuperSmall;
-            var x = dc.getWidth()/2;
-            var y = dc.getHeight()/2+90;
-            if(batteryIcon==true  && showDistance==true){ // [distance] [HR]
-            y=dc.getHeight()/2+47;
-            x=x+35;
-            fontHR=customFontMiddle;}
-   if(batteryIcon && !showDistance){
-                y=y-47;
-                fontHR=customFontMiddle;
-            }
-           drawHR(dc,x,y,fontHR);
+        }
+
+        if(HR){ //if no ICONS
+            // var fontHR = customFontSuperSmall;
+            // var x = dc.getWidth()/2;
+            // if(batteryIcon  && showDistance){
+            // fontHR=customFontMiddle;}
+            // if(batteryIcon && !showDistance){
+            //     fontHR=customFontMiddle;
+            // }
+           drawHR(dc);
          }
-}
+
        if(showDistance){ 
-        drawSteps(dc,isHideIcons,stepField);
+        drawDistance(dc,isHideIcons,stepField);
        }
  		drawBattery(dc,isHideIcons,showDistance);
        if(showWeekNumber){
@@ -390,13 +406,13 @@ try {
     function drawWeekNumber(dc){
         var weekNumber = getWeekNumber();
 
-        var positionY = dc.getHeight()/2-118;
+        var positionY = 0;
         var positionX = dc.getWidth()/2; // center
         dc.setColor(dateColor, Graphics.COLOR_TRANSPARENT);
  		// dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
        
 
-        dc.drawText(positionX, positionY, customFontSuperSmall," "+WeekWord[lang]+" "+weekNumber+" ", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(positionX, positionYLayer0, customFontSuperSmall," "+WeekWord[lang]+" "+weekNumber+" ", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -416,11 +432,21 @@ try {
     function onEnterSleep() {
     }
 
-    private function drawHR(dc,x,y,font){
+    private function drawHR(dc){
+            var biasXRight =0;
             var hr = getHR();
             var color = getHRColorByValue(hr);
-           	dc.setColor(color,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(x,y, font, hr, Graphics.TEXT_JUSTIFY_CENTER);
+           	dc.setColor(color,Graphics.COLOR_ORANGE);
+
+            var positionY = positionYLayer3-customFontMiddlePadding;
+            var font = customFontMiddle;
+
+            if(showDistance && batteryIcon){ 
+                var HRwidth= dc.getTextWidthInPixels(hr,font);
+                biasXRight=biasXRight+HRwidth; 
+            }
+
+            dc.drawText(dc.getWidth()/2+biasXRight,positionY, font, hr, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function getHRColorByValue(hr){
@@ -471,7 +497,7 @@ try {
         // var positionY = dc.getHeight()/2-108;
         var positionX = dc.getWidth()/2; // center
   		var dateString = getDateString();
- 		dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
+ 		dc.setColor(dateColor,Graphics.COLOR_GREEN);
         dc.drawText(positionX, positionYLayer1, customFontDate, dateString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -488,7 +514,7 @@ try {
             if(System.getDeviceSettings().alarmCount>=1)
    	        {
        	      var alarmIcon ='A';
-    	      dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+    	      dc.setColor(restColor,Graphics.COLOR_BLUE);
               dc.drawText(x,y, font, alarmIcon, Graphics.TEXT_JUSTIFY_CENTER);
    	        }
    	    }
@@ -526,12 +552,11 @@ try {
     }
 
     private function drawIcons(dc){
-        var positionY = dc.getHeight()/2+58;
-        var positionX1 = dc.getWidth()/2-20; // center
-        var positionX2 = dc.getWidth()/2+20; // center
+        var positionX1 = dc.getWidth()/2; // center
+        var positionX2 = dc.getWidth()/2; // center
         var bias =0;
         if(HR){
-            bias=25;
+            bias=dc.getTextWidthInPixels("555",customFontSmall);
         }
         var font = customIconsMaterial;
         if(iconsType==1){
@@ -539,92 +564,65 @@ try {
         }
         // Icons one and two placeholders
         if(showIconOne){
-        drawIcon(positionX1-bias,positionY,font,dc,1);
+        drawIcon(positionX1-bias,positionYLayer3,font,dc,1);
         }
         if(showIconTwo){
-        drawIcon(positionX2+bias,positionY,font,dc,2);
-        }
-
-        if(HR){
-           drawHR(dc,positionX2-20,positionY-15,customFontSmall);
+        drawIcon(positionX2+bias,positionYLayer3,font,dc,2);
         }
     }
     
     private function drawIconsSmall(dc){
 
         var widthOfDate = dc.getTextWidthInPixels(getDateString(), customFontDate);
-        var positionY = dc.getHeight()/2-86;
         // var positionX1 = dc.getWidth()/2-67; // center
         // var positionX2 = dc.getWidth()/2+67; // center
         var positionX1 = dc.getWidth()/2-widthOfDate/2-22; // left icon
         var positionX2 = dc.getWidth()/2+widthOfDate/2+22; // right icon
 
-          var font = customIconsSmallMaterial;
+        var font = customIconsSmallMaterial;
         if(iconsType==1){
             font = customIconsSmall;
         }
 
+        var fontHeight = dc.getFontHeight(font);
+
 if(showIconOne){
-        drawIcon(positionX1,positionY,font,dc,1);
+        drawIcon(positionX1,positionYLayer1+fontHeight,font,dc,1);
 }
 if(showIconTwo){
-        drawIcon(positionX2,positionY,font,dc,2);
+        drawIcon(positionX2,positionYLayer1+fontHeight,font,dc,2);
 }
 
-        if(HR){
-            var fontHR = customFontSuperSmall;
-            var x = dc.getWidth()/2;
-            var y = dc.getHeight()/2+90;
-            if(batteryIcon==true  && showDistance==true){ // [distance] [HR]
-            y=dc.getHeight()/2+47;
-            x=x+35;
-            fontHR=customFontMiddle;
-            }
-            if(batteryIcon && !showDistance){
-                y=y-47;
-                fontHR=customFontMiddle;
-            }
-           drawHR(dc,x,y, fontHR);
-        }
+        // if(HR){
+        //     var fontHR = customFontSuperSmall;
+        //     var x = dc.getWidth()/2;
+        //     if(batteryIcon==true  && showDistance==true){ // [distance] [HR]
+        //     x=x+35;
+        //     fontHR=customFontMiddle;
+        //     }
+        //     if(batteryIcon && !showDistance){
+        //         fontHR=customFontMiddle;
+        //     }
+        //    drawHR(dc,x,positionYLayer3, fontHR);
+        // }
     }
 
-/*
-stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
-*/
-    private function drawSteps(dc,isHideIcons,stepField){
-        var positionX = dc.getWidth()/2-25;
-        var positionY = dc.getHeight()/2+85;
+
+
+private function getDistanceData(){
         var prefix = "km";
         if(metrics==1){
             prefix="mil";
         }
-        var font = customFontSuperSmall;
-        if(isHideIcons == 0 || isHideIcons == 2){
-            positionY=positionY-38;
-            positionX=positionX-10;
-            font = customFontMiddle;
-
-               if(batteryIcon==true){
-             positionX = dc.getWidth()/2;
-             if(HR){
-                 positionX=positionX-35;
-             }
-                 } 
-        }
-
-
        	var distance = Mon.getInfo().distance;
-
         if(metrics==1){
             distance=distance*0.62137;
         }
        	var steps = Mon.getInfo().steps;
-
        	var distanceField = "0"+prefix;
        	
        	if(stepField==1){
        	distance = getWeeklyDistance();
-       	
        	}
        	
        	if(distance!=null){
@@ -633,42 +631,71 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
  		}
 
         if(stepField== 2){
-        if(steps==null){
-        distanceField="0";
+            if(steps==null){
+            distanceField="0";
         }else{
             distanceField= steps;
             }
         }
+        return distanceField;
+}
+/*
+stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
+*/
+    private function drawDistance(dc,isHideIcons,stepField){
+        var positionY = positionYLayer3-customFontMiddlePadding;
+        var font = customFontSuperSmall;
+        var biasXLeft = 0;
 
-     
+        var distanceField = getDistanceData();
+
+        // Check the layout
+        if(isHideIcons == 1){ // Is should be at the bottom at layer4
+            positionY=positionYLayer4;
+        }
+        else{ // Is should be big on layer 3       
+            font = customFontMiddle;
+            if(batteryIcon && !HR){
+                biasXLeft=0;
+            }
+        }
+
+        var widthOfDistance = dc.getTextWidthInPixels(distanceField,font);
+        biasXLeft=biasXLeft+widthOfDistance/2; 
 
       	dc.setColor(accentColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionX,positionY, font, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(dc.getWidth()/2-biasXLeft,positionY, font, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
 
     private function drawBattery(dc,isHideIcons,showDistance){
         var positionX = dc.getWidth()/2+25;
-        var positionY = dc.getHeight()/2+85;
+        var positionY = positionYLayer3-customFontMiddlePadding;
+        if(isHideIcons==1 || batteryIcon){
+            positionY = positionYLayer4;
+        }
    	    var batteryLevel = getBatteryLevel();
         var font = customFontSuperSmall;
         if(batteryIcon==true){
-            positionY=positionY+5;
+            // positionY=positionY+5;
             font = customIconsSmallMaterial;
              if(iconsType==1){
                   font = customIconsSmall;
+              
               }
+                  var iconHeight = dc.getFontHeight(font);
+                  positionY=positionY+iconHeight/2;
         }
         if(isHideIcons == 0 || isHideIcons == 2){
-            positionY=positionY-38;
+            // positionY=positionY-38;
             positionX=positionX+15;
             font = customFontMiddle;
            
             if(batteryIcon==true){
                     positionX = dc.getWidth()/2;
-                  positionY=positionY+37;
+                //   positionY=positionY+37;
                   if(showDistance==false && HR==false){
-                      positionY=positionY-30;
+                    //   positionY=positionY-30;
                   }
               font = customIconsMaterial;
               if(iconsType==1){
