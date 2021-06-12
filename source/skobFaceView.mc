@@ -190,11 +190,11 @@ class skobFaceView extends WatchUi.WatchFace {
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
          customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
          // This is a area around font, so we should keep it in mind for the right calculation
-         customFontSmallPadding = 15;
+         customFontSmallPadding = 5;
          customFontMiddlePadding = 8;
          customFontDatePadding = 30;
          customFontTimePadding = 0;
-         customFontIconPadding = 0;
+         customFontIconPadding = 10;
         }
         if(screenSize==1){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontBig);
@@ -383,14 +383,7 @@ try {
             drawIconsSmall(dc);
         }
 
-        if(HR){ //if no ICONS
-            // var fontHR = customFontSuperSmall;
-            // var x = dc.getWidth()/2;
-            // if(batteryIcon  && showDistance){
-            // fontHR=customFontMiddle;}
-            // if(batteryIcon && !showDistance){
-            //     fontHR=customFontMiddle;
-            // }
+        if(HR){
            drawHR(dc);
          }
 
@@ -441,7 +434,7 @@ try {
             var positionY = positionYLayer3-customFontMiddlePadding;
             var font = customFontMiddle;
 
-            if(showDistance && batteryIcon){ 
+            if(showDistance && isHideIcons!=1){ 
                 var HRwidth= dc.getTextWidthInPixels(hr,font);
                 biasXRight=biasXRight+HRwidth; 
             }
@@ -556,18 +549,20 @@ try {
         var positionX2 = dc.getWidth()/2; // center
         var bias =0;
         if(HR){
-            bias=dc.getTextWidthInPixels("555",customFontSmall);
+            bias=dc.getTextWidthInPixels("555",customFontSmall)/2;
         }
         var font = customIconsMaterial;
         if(iconsType==1){
             font = customIcons;
         }
+
+        var fontWidth = dc.getTextWidthInPixels("A",font);
         // Icons one and two placeholders
         if(showIconOne){
-        drawIcon(positionX1-bias,positionYLayer3,font,dc,1);
+        drawIcon(positionX1-fontWidth-bias,positionYLayer3,font,dc,1);
         }
         if(showIconTwo){
-        drawIcon(positionX2+bias,positionYLayer3,font,dc,2);
+        drawIcon(positionX2+fontWidth+bias,positionYLayer3,font,dc,2);
         }
     }
     
@@ -645,79 +640,99 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
     private function drawDistance(dc,isHideIcons,stepField){
         var positionY = positionYLayer3-customFontMiddlePadding;
         var font = customFontSuperSmall;
+        if(isHideIcons != 1){
+            font = customFontMiddle;
+        }else{
+            positionY=positionYLayer4+customFontSmallPadding;
+        }
         var biasXLeft = 0;
 
         var distanceField = getDistanceData();
 
-        // Check the layout
-        if(isHideIcons == 1){ // Is should be at the bottom at layer4
-            positionY=positionYLayer4;
-        }
-        else{ // Is should be big on layer 3       
-            font = customFontMiddle;
-            if(batteryIcon && !HR){
-                biasXLeft=0;
-            }
-        }
-
         var widthOfDistance = dc.getTextWidthInPixels(distanceField,font);
-        biasXLeft=biasXLeft+widthOfDistance/2; 
+        biasXLeft=biasXLeft+widthOfDistance/2;
 
+        if(isHideIcons != 1 && !HR){
+            biasXLeft=0;
+        }
       	dc.setColor(accentColor,Graphics.COLOR_TRANSPARENT);
         dc.drawText(dc.getWidth()/2-biasXLeft,positionY, font, distanceField, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
 
     private function drawBattery(dc,isHideIcons,showDistance){
-        var positionX = dc.getWidth()/2+25;
-        var positionY = positionYLayer3-customFontMiddlePadding;
-        if(isHideIcons==1 || batteryIcon){
-            positionY = positionYLayer4;
-        }
+        var xBias=0;
    	    var batteryLevel = getBatteryLevel();
         var font = customFontSuperSmall;
-        if(batteryIcon==true){
-            // positionY=positionY+5;
+        var positionY = positionYLayer4+customFontSmallPadding;
+        var dataWidth = dc.getTextWidthInPixels(batteryLevel,font);
+
+        if(isHideIcons==1 && showDistance){
+            xBias=xBias+dataWidth;
+        }
+
+        // if icon
+        dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+        if(batteryIcon){
+            // get certain Icon
+            batteryLevel = getBatteryIcon();
+            if(batteryLevel.equals("5")){
+                dc.setColor(orangeColor,Graphics.COLOR_TRANSPARENT);
+            }
+            if(batteryLevel.equals("6")){
+                dc.setColor(redColor,Graphics.COLOR_TRANSPARENT);
+            }
             font = customIconsSmallMaterial;
              if(iconsType==1){
                   font = customIconsSmall;
-              
-              }
-                  var iconHeight = dc.getFontHeight(font);
-                  positionY=positionY+iconHeight/2;
+             }
+             dataWidth = dc.getTextWidthInPixels(batteryLevel,font);
+             positionY = positionYLayer4+customFontIconPadding;
         }
-        if(isHideIcons == 0 || isHideIcons == 2){
-            // positionY=positionY-38;
-            positionX=positionX+15;
-            font = customFontMiddle;
-           
-            if(batteryIcon==true){
-                    positionX = dc.getWidth()/2;
-                //   positionY=positionY+37;
-                  if(showDistance==false && HR==false){
-                    //   positionY=positionY-30;
-                  }
-              font = customIconsMaterial;
-              if(iconsType==1){
-                  font = customIcons;
-              }
-            }
-        }
-        if(showDistance==false){
-            positionX=dc.getWidth()/2;
-        }
-   	    dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
 
-       if(batteryIcon==true){
-           batteryLevel = getBatteryIcon();
-            if(batteryLevel.equals("5")){
-                dc.setColor(orangeColor,Graphics.COLOR_TRANSPARENT);
-           }
-           if(batteryLevel.equals("6")){
-                dc.setColor(redColor,Graphics.COLOR_TRANSPARENT);
-           }
-       }   
-        dc.drawText(positionX,positionY, font, batteryLevel, Graphics.TEXT_JUSTIFY_CENTER);
+
+
+    //     if(batteryIcon==true){
+    //         font = customIconsSmallMaterial;
+    //          if(iconsType==1){
+    //               font = customIconsSmall;
+    //           }
+    //       var iconHeight = dc.getFontHeight(font);
+    //       positionY=positionY+iconHeight/2;
+    //     }
+
+    //     if(isHideIcons == 0 || isHideIcons == 2){
+    //         // positionY=positionY-38;
+    //         positionX=positionX+15;
+    //         font = customFontMiddle;
+           
+    //         if(batteryIcon==true){
+    //                 positionX = dc.getWidth()/2;
+    //             //   positionY=positionY+37;
+    //               if(showDistance==false && HR==false){
+    //                 //   positionY=positionY-30;
+    //               }
+    //           font = customIconsMaterial;
+    //           if(iconsType==1){
+    //               font = customIcons;
+    //           }
+    //         }
+    //     }
+    //     if(showDistance==false){
+    //         positionX=dc.getWidth()/2;
+    //     }
+   	//     dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
+
+    //    if(batteryIcon==true){
+    //        batteryLevel = getBatteryIcon();
+    //         if(batteryLevel.equals("5")){
+    //             dc.setColor(orangeColor,Graphics.COLOR_TRANSPARENT);
+    //        }
+    //        if(batteryLevel.equals("6")){
+    //             dc.setColor(redColor,Graphics.COLOR_TRANSPARENT);
+    //        }
+    //    }   
+        dc.drawText(dc.getWidth()/2+xBias,positionY, font, batteryLevel, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawTime(dc) {
