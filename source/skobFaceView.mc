@@ -16,10 +16,14 @@ class skobFaceView extends WatchUi.WatchFace {
     var isBTConnected=  false;
     var notificationCount=  0;
 	var customFont = null;
+	var customFontBig = null;
+	var customFontHuge = null;
 	var customFontSmall = null;
 	var customFontSuperSmall = null;
 	var customFontMiddle = null;
-	var customFontTall = null;
+	var customFontDate = null;
+	var customFontDateBig = null;
+	var customFontDateHuge = null;
 	var customIcons = null;
 	var customIconsSmall = null;
 	var customIconsMaterial = null;
@@ -119,33 +123,102 @@ class skobFaceView extends WatchUi.WatchFace {
    var weeklyDistance = 0;
    var metrics = 0;
    var dateFormat = 0;
-    
+
+   /*
+   Options
+   0-218
+   1-240
+   2-260
+   3-280
+   4-360
+   5-390
+   5-416
+   Possible
+   0-small,1-big,2-huge
+   */
+   var screenSize = 0;
+
+   var positionYLayer1 =0; // Top
+   var positionYLayer2 =0;
+   var positionYLayer3 =0;
+   var positionYLayer4 =0; // Bottom
+   var fontDate = null;
+   var fontTime = null;
+   var fontIconBig = null;
+   var fontIconSmall = null;
+   var fontSmall = null;
+
     function initialize() {
         WatchFace.initialize();
+    }
+
+    function defineScreenSize(dc){
+     var x = dc.getWidth();
+     var y = dc.getHeight();
+
+     if(x>200 && x <=240){
+         screenSize=0; //small
+     }
+     if(x>240 && x<360){
+         screenSize=1; //big
+     }
+     if(x>=360){
+         screenSize=2; //huge
+     }
+    }
+
+    function defineFonts(){
+        customFont = WatchUi.loadResource(Rez.Fonts.customFont);
+        customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
+        customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
+        customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+        customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
+        customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterial);
+        customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterial);
+        customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
+        customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmall);
+        if(screenSize==0){
+         customFont = WatchUi.loadResource(Rez.Fonts.customFont);
+         customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
+        }
+        if(screenSize==1){
+         customFont = WatchUi.loadResource(Rez.Fonts.customFontBig);
+         customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
+        }
+        if(screenSize==2){
+         customFont = WatchUi.loadResource(Rez.Fonts.customFontHuge);
+         customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateHuge);
+        }
+    }
+
+    function defineLayouts(dc){
+        var centerX = 0;
+        var centerY = dc.getHeight()/2;
+        var timeFontHeight = dc.getFontHeight(customFont);
+        var dateFontHeight = dc.getFontHeight(customFontDate);
+/*
+  i Date i
+    HH:HH - always centered 
+  Dist, Battery, Icons
+  small batter
+*/
+        positionYLayer1 =centerY - timeFontHeight/2- dateFontHeight/2; // Top
+        positionYLayer2 =centerY-timeFontHeight/2;
+        positionYLayer3 =0+timeFontHeight/2;
+        positionYLayer4 =0; // Bottom
     }
 
     // Load your resources here
     function onLayout(dc) {
       try{
-      customFont = WatchUi.loadResource(Rez.Fonts.customFont);
-      customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
-      customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
-      customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
-      customFontTall = WatchUi.loadResource(Rez.Fonts.customFontTall);
-
-      
-      customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterial);
-      customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterial);
-
-      customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
-      customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmall);
-
+      defineScreenSize(dc);
+      defineFonts();
+      defineLayouts(dc);
       
       setLayout(Rez.Layouts.WatchFace(dc));
       globalDc = dc;
       }catch( ex ) {
           System.println(ex);
-
 }
     }
 
@@ -391,11 +464,15 @@ try {
     }
 
     private function drawDate(dc){
-        var positionY = dc.getHeight()/2-108;
+                // define font-size depend on screen size
+        var fontHeight = dc.getFontHeight(customFont);
+        var positionY = dc.getHeight()/2-fontHeight/2;
+
+        // var positionY = dc.getHeight()/2-108;
         var positionX = dc.getWidth()/2; // center
   		var dateString = getDateString();
  		dc.setColor(dateColor,Graphics.COLOR_TRANSPARENT);
-        dc.drawText(positionX, positionY, customFontTall, dateString, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(positionX, positionYLayer1, customFontDate, dateString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawIcon(x,y,font,dc,iconNumber){
@@ -475,7 +552,7 @@ try {
     
     private function drawIconsSmall(dc){
 
-        var widthOfDate = dc.getTextWidthInPixels(getDateString(), customFontTall);
+        var widthOfDate = dc.getTextWidthInPixels(getDateString(), customFontDate);
         var positionY = dc.getHeight()/2-86;
         // var positionX1 = dc.getWidth()/2-67; // center
         // var positionX2 = dc.getWidth()/2+67; // center
@@ -621,7 +698,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
         var positionXHours = dc.getWidth()/2-60;
         var positionXSep = dc.getWidth()/2;
         var positionXMinutes = dc.getWidth()/2+60;
-        var positionY = dc.getHeight()/2-118;
+
         var timeFormat = "$1$:$2$";
         var clockTime = System.getClockTime();
         var hours = clockTime.hour;
@@ -645,25 +722,26 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
         var minutesWidth =dc.getTextWidthInPixels(clockTime.min.format("%02d"), customFont);
         var sepWidth = dc.getTextWidthInPixels(":", customFont);
         var timeWidth = (hourWidth+minutesWidth+sepWidth);
+        
         if(noSeparation==true){
             timeWidth = (hourWidth+minutesWidth);
             // Hours
             // var oneCharWidth = dc.getTextWidthInPixels(chars, font) / chars.length();
             dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2, positionY, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2,  positionYLayer2, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
     
             // Minutes
             dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+minutesWidth/2, positionY, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+minutesWidth/2, positionYLayer2, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
         }else{
-            dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2, positionY, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.setColor(hourColor,Graphics.COLOR_RED);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2, positionYLayer2, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
             // :
             dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth/2, positionY-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth/2, positionYLayer2-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
             // Minutes
             dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth+minutesWidth/2, positionY, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth+minutesWidth/2, positionYLayer2, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
         }
     }
 
