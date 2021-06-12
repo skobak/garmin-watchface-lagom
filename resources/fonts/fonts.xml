@@ -1,15 +1,25 @@
 <fonts>
 <font id="customFont" filename="custom-tall.fnt" antialias="true" filter="0123456789:"/>
 <font id="customFontBig" filename="custom-tall-big.fnt" antialias="true" filter="0123456789:"/>
-<font id="customFontHuge" filename="custom-tall-huge.fnt" antialias="true" filter="0123456789:"/>
+<font id="customFontHuge" filename="custom-tall-huge.fnt" antialias="true"/>
 <font id="customFontSmall" filename="custom-small.fnt" antialias="true" />
 <font id="customFontMiddle" filename="custom-middle.fnt" antialias="true"/>
 <font id="customFontDate" filename="custom-date.fnt" antialias="true"/>
 <font id="customFontDateBig" filename="custom-date-big.fnt" antialias="true"/>
 <font id="customFontDateHuge" filename="custom-date-huge.fnt" antialias="true"/>
 <font id="customFontSuperSmall" filename="custom-super-small.fnt" antialias="true" />
+<font id="customFontSuperSmallBig" filename="custom-super-small-big.fnt" antialias="true" />
+<font id="customFontSuperSmallHuge" filename="custom-super-small-huge.fnt" antialias="true" />
 <font id="customIcon" filename="custom-icons.fnt" antialias="true" />
+<font id="customIconBig" filename="custom-icons-big.fnt" antialias="true" />
+<font id="customIconHuge" filename="custom-icons-huge.fnt" antialias="true" />
 <font id="customIconSmall" filename="custom-icons-small.fnt" antialias="true" />
+<font id="customIconSmallBig" filename="custom-icons-small-big.fnt" antialias="true" />
+<font id="customIconSmallHuge" filename="custom-icons-small-huge.fnt" antialias="true" />
 <font id="customIconMaterial" filename="custom-icons-material.fnt" antialias="true"/>
+<font id="customIconMaterialBig" filename="custom-icons-material-big.fnt" antialias="true"/>
+<font id="customIconMaterialHuge" filename="custom-icons-material-huge.fnt" antialias="true"/>
 <font id="customIconSmallMaterial" filename="custom-icons-small-material.fnt" antialias="true" />
+<font id="customIconSmallMaterialBig" filename="custom-icons-small-material-big.fnt" antialias="true" />
+<font id="customIconSmallMaterialHuge" filename="custom-icons-small-material-huge.fnt" antialias="true" />
 </fonts>

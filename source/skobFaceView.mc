@@ -22,6 +22,7 @@ class skobFaceView extends WatchUi.WatchFace {
     var customFontDatePadding = 0;
     var customFontTimePadding = 0;
     var customFontIconPadding = 0;
+    var customLayour2Padding = 0;
 
 	var customFontBig = null;
 	var customFontHuge = null;
@@ -176,35 +177,63 @@ class skobFaceView extends WatchUi.WatchFace {
     }
 
     function defineFonts(){
-        customFont = WatchUi.loadResource(Rez.Fonts.customFont);
-        customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
-        customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
-        // customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
-        customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
-        customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterial);
-        customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterial);
-        customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
-        customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmall);
+
         if(screenSize==0){
          customFont = WatchUi.loadResource(Rez.Fonts.customFont);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDate);
          customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+
+        customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall); //HR
+        customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmall);
+        customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterial);
+        customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterial);
+        customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
+        customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmall);
          // This is a area around font, so we should keep it in mind for the right calculation
          customFontSmallPadding = 5;
          customFontMiddlePadding = 8;
          customFontDatePadding = 30;
          customFontTimePadding = 0;
          customFontIconPadding = 10;
+         customLayour2Padding = 30;
         }
         if(screenSize==1){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontBig);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
          customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+
+        customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
+        customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmallBig);
+        customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterialBig);
+        customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterialBig);
+        customIcons = WatchUi.loadResource(Rez.Fonts.customIconBig);
+        customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmallBig);
+         // This is a area around font, so we should keep it in mind for the right calculation
+         customFontSmallPadding = 5;
+         customFontMiddlePadding = 8;
+         customFontDatePadding = 30;
+         customFontTimePadding = 0;
+         customFontIconPadding = 11;
+         customLayour2Padding = 50;
         }
         if(screenSize==2){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontHuge);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateHuge);
-         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontMiddle);
+         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontDateHuge);
+
+         customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
+        customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmallHuge);
+        customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterialHuge);
+        customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterialHuge);
+        customIcons = WatchUi.loadResource(Rez.Fonts.customIconHuge);
+        customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmallHuge);
+         // This is a area around font, so we should keep it in mind for the right calculation
+         customFontSmallPadding = 5;
+         customFontMiddlePadding = 8;
+         customFontDatePadding = 30;
+         customFontTimePadding = 0;
+         customFontIconPadding = 13;
+         customLayour2Padding = 60;
         }
     }
 
@@ -224,7 +253,7 @@ class skobFaceView extends WatchUi.WatchFace {
         positionYLayer1 =centerY - timeFontHeight/2- dateFontHeight/2 - customFontDatePadding; // Top
         positionYLayer2 =centerY-timeFontHeight/2;
         positionYLayer3 =centerY+timeFontHeight/2+5;
-        positionYLayer4 =centerY+timeFontHeight/2+30; // Bottom
+        positionYLayer4 =centerY+timeFontHeight/2+customLayour2Padding; // Bottom
     }
 
     // Load your resources here
@@ -569,8 +598,6 @@ try {
     private function drawIconsSmall(dc){
 
         var widthOfDate = dc.getTextWidthInPixels(getDateString(), customFontDate);
-        // var positionX1 = dc.getWidth()/2-67; // center
-        // var positionX2 = dc.getWidth()/2+67; // center
         var positionX1 = dc.getWidth()/2-widthOfDate/2-22; // left icon
         var positionX2 = dc.getWidth()/2+widthOfDate/2+22; // right icon
 
@@ -780,7 +807,7 @@ stepField | 0 - distance dat, 1 - distance week, 2 - distance steps
             dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth/2, positionYLayer2, customFont, hours, Graphics.TEXT_JUSTIFY_CENTER);
             // :
             dc.setColor(hourColor,Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth/2, positionYLayer2-8, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth/2, positionYLayer2, customFont, ":", Graphics.TEXT_JUSTIFY_CENTER);
             // Minutes
             dc.setColor(minutesColor,Graphics.COLOR_TRANSPARENT);
             dc.drawText(dc.getWidth()/2-timeWidth/2+hourWidth+sepWidth+minutesWidth/2, positionYLayer2, customFont,  clockTime.min.format("%02d"), Graphics.TEXT_JUSTIFY_CENTER);
