@@ -23,6 +23,13 @@ class skobFaceView extends WatchUi.WatchFace {
     var customFontTimePadding = 0;
     var customFontIconPadding = 0;
     var customLayour2Padding = 0;
+    var layer0Ybias = 0;
+    var layer1Ybias = 0;
+    var layer2Ybias = 0;
+    var layer3Ybias = 0;
+    var layer4Ybias = 0;
+    var smallIconBias = 0;
+    var smallIconXBias = 0;
 
 	var customFontBig = null;
 	var customFontHuge = null;
@@ -171,8 +178,11 @@ class skobFaceView extends WatchUi.WatchFace {
      if(x>240 && x<360){
          screenSize=1; //big
      }
-     if(x>=360){
-         screenSize=2; //huge
+     if(x>=360 && x<390){
+        screenSize=2; //big
+     }
+     if(x>=390){
+         screenSize=3; //huge
      }
     }
 
@@ -190,12 +200,19 @@ class skobFaceView extends WatchUi.WatchFace {
         customIcons = WatchUi.loadResource(Rez.Fonts.customIcon);
         customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmall);
          // This is a area around font, so we should keep it in mind for the right calculation
-         customFontSmallPadding = 5;
-         customFontMiddlePadding = 8;
+         customFontSmallPadding = 10;
+         customFontMiddlePadding = 14;
          customFontDatePadding = 30;
          customFontTimePadding = 0;
          customFontIconPadding = 10;
          customLayour2Padding = 30;
+         smallIconBias = 0;
+         smallIconXBias=22;
+        layer0Ybias = 5;
+        layer1Ybias = 6;
+        layer2Ybias = 0;
+        layer3Ybias = 0;
+        layer4Ybias = -5;
         }
         if(screenSize==1){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontBig);
@@ -210,13 +227,47 @@ class skobFaceView extends WatchUi.WatchFace {
         customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmallBig);
          // This is a area around font, so we should keep it in mind for the right calculation
          customFontSmallPadding = 5;
-         customFontMiddlePadding = 8;
+         customFontMiddlePadding = 14;
          customFontDatePadding = 30;
          customFontTimePadding = 0;
          customFontIconPadding = 11;
          customLayour2Padding = 30;
+         smallIconBias = -7;
+
+         smallIconXBias=25;
+            layer0Ybias = 5;
+        layer1Ybias = 7;
+        layer2Ybias = 0;
+        layer3Ybias = -3;
+        layer4Ybias = 0;
         }
-        if(screenSize==2){
+        if(screenSize==2){ //360
+         customFont = WatchUi.loadResource(Rez.Fonts.customFont360);
+         customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
+         customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
+
+        customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
+        customFontSuperSmall = WatchUi.loadResource(Rez.Fonts.customFontSuperSmallBig);
+        customIconsMaterial = WatchUi.loadResource(Rez.Fonts.customIconMaterialBig);
+        customIconsSmallMaterial = WatchUi.loadResource(Rez.Fonts.customIconSmallMaterialBig);
+        customIcons = WatchUi.loadResource(Rez.Fonts.customIconBig);
+        customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmallBig);
+         // This is a area around font, so we should keep it in mind for the right calculation
+         customFontSmallPadding = 5;
+         customFontMiddlePadding = 14;
+         customFontDatePadding = 30;
+         customFontTimePadding = 0;
+         customFontIconPadding = 11;
+         customLayour2Padding = 30;
+         smallIconBias = -7;
+        smallIconXBias=30;
+            layer0Ybias = 0;
+        layer1Ybias = 5;
+        layer2Ybias = 0;
+        layer3Ybias = -3;
+        layer4Ybias = 0;
+        }
+        if(screenSize==3){
          customFont = WatchUi.loadResource(Rez.Fonts.customFontHuge);
          customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateHuge);
          customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontDateHuge);
@@ -229,11 +280,19 @@ class skobFaceView extends WatchUi.WatchFace {
         customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmallHuge);
          // This is a area around font, so we should keep it in mind for the right calculation
          customFontSmallPadding = 5;
-         customFontMiddlePadding = 8;
+         customFontMiddlePadding = 14;
          customFontDatePadding = 30;
          customFontTimePadding = 0;
          customFontIconPadding = 13;
          customLayour2Padding = 60;
+
+        smallIconXBias=35;
+                
+            layer0Ybias = -4;
+        layer1Ybias = -3;
+        layer2Ybias = 0;
+        layer3Ybias = 0;
+        layer4Ybias = -2;
         }
     }
 
@@ -249,11 +308,11 @@ class skobFaceView extends WatchUi.WatchFace {
   Dist, Battery, Icons
   small batter
 */
-        positionYLayer0 =centerY - timeFontHeight/2- dateFontHeight/2 - customFontDatePadding-superSmallFontHeight/2; // Top
-        positionYLayer1 =centerY - timeFontHeight/2- dateFontHeight/2 - customFontDatePadding; // Top
-        positionYLayer2 =centerY-timeFontHeight/2;
-        positionYLayer3 =centerY+timeFontHeight/2+5;
-        positionYLayer4 =centerY+timeFontHeight/2+customLayour2Padding; // Bottom
+        positionYLayer0 =centerY - timeFontHeight/2- dateFontHeight/2 - customFontDatePadding-superSmallFontHeight/2+layer0Ybias; // Top
+        positionYLayer1 =centerY - timeFontHeight/2- dateFontHeight/2 - customFontDatePadding+layer1Ybias; // Top
+        positionYLayer2 =centerY-timeFontHeight/2+layer2Ybias;
+        positionYLayer3 =centerY+timeFontHeight/2+5+layer3Ybias;
+        positionYLayer4 =centerY+timeFontHeight/2+customLayour2Padding+layer4Ybias; // Bottom
     }
 
     // Load your resources here
@@ -458,7 +517,7 @@ try {
             var biasXRight =0;
             var hr = getHR();
             var color = getHRColorByValue(hr);
-           	dc.setColor(color,Graphics.COLOR_ORANGE);
+           	dc.setColor(color,Graphics.COLOR_TRANSPARENT);
 
             var positionY = positionYLayer3-customFontMiddlePadding;
             var font = customFontMiddle;
@@ -598,8 +657,8 @@ try {
     private function drawIconsSmall(dc){
 
         var widthOfDate = dc.getTextWidthInPixels(getDateString(), customFontDate);
-        var positionX1 = dc.getWidth()/2-widthOfDate/2-22; // left icon
-        var positionX2 = dc.getWidth()/2+widthOfDate/2+22; // right icon
+        var positionX1 = dc.getWidth()/2-widthOfDate/2-smallIconXBias; // left icon
+        var positionX2 = dc.getWidth()/2+widthOfDate/2+smallIconXBias; // right icon
 
         var font = customIconsSmallMaterial;
         if(iconsType==1){
@@ -609,10 +668,10 @@ try {
         var fontHeight = dc.getFontHeight(font);
 
 if(showIconOne){
-        drawIcon(positionX1,positionYLayer1+fontHeight,font,dc,1);
+        drawIcon(positionX1,positionYLayer1+fontHeight+smallIconBias,font,dc,1);
 }
 if(showIconTwo){
-        drawIcon(positionX2,positionYLayer1+fontHeight,font,dc,2);
+        drawIcon(positionX2,positionYLayer1+fontHeight+smallIconBias,font,dc,2);
 }
 
         // if(HR){

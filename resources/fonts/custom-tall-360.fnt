@@ -1,0 +1,24 @@
+info face="Oswald Medium" size=220 bold=1 italic=0 charset="" unicode=1 stretchH=133 smooth=1 aa=4 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=155 base=229 scaleW=256 scaleH=256 pages=3 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="custom-tall-360_0.png"
+page id=1 file="custom-tall-360_1.png"
+page id=2 file="custom-tall-360_2.png"
+chars count=11
+char id=48   x=118   y=0     width=57    height=144   xoffset=7     yoffset=0    xadvance=69    page=0  chnl=15
+char id=49   x=50    y=0     width=37    height=140   xoffset=3     yoffset=0    xadvance=51    page=2  chnl=15
+char id=50   x=58    y=0     width=58    height=142   xoffset=5     yoffset=0    xadvance=64    page=1  chnl=15
+char id=51   x=176   y=0     width=57    height=144   xoffset=5     yoffset=0    xadvance=64    page=0  chnl=15
+char id=52   x=175   y=0     width=61    height=140   xoffset=4     yoffset=0    xadvance=65    page=1  chnl=15
+char id=53   x=117   y=0     width=57    height=142   xoffset=5     yoffset=0    xadvance=64    page=1  chnl=15
+char id=54   x=0     y=0     width=58    height=144   xoffset=7     yoffset=0    xadvance=67    page=0  chnl=15
+char id=55   x=0     y=0     width=49    height=140   xoffset=2     yoffset=0    xadvance=53    page=2  chnl=15
+char id=56   x=0     y=0     width=57    height=144   xoffset=5     yoffset=0    xadvance=66    page=1  chnl=15
+char id=57   x=59    y=0     width=58    height=144   xoffset=5     yoffset=0    xadvance=67    page=0  chnl=15
+char id=58   x=234   y=0     width=20    height=84    xoffset=8     yoffset=25   xadvance=31    page=0  chnl=15
+kernings count=6
+kerning first=57  second=55  amount=-2  
+kerning first=50  second=52  amount=-1  
+kerning first=52  second=49  amount=-1  
+kerning first=56  second=55  amount=-1  
+kerning first=53  second=55  amount=-1  
+kerning first=55  second=52  amount=-2  
