@@ -14,7 +14,7 @@ char id=54   x=71    y=0     width=70    height=176   xoffset=8     yoffset=0   
 char id=55   x=147   y=0     width=60    height=172   xoffset=3     yoffset=0   xadvance=65    page=2  chnl=15
 char id=56   x=0     y=0     width=70    height=176   xoffset=7     yoffset=0   xadvance=81    page=1  chnl=15
 char id=57   x=0     y=0     width=71    height=176   xoffset=6     yoffset=0   xadvance=83    page=0  chnl=15
-char id=58   x=214   y=0     width=25    height=102   xoffset=10    yoffset=50   xadvance=38    page=0  chnl=15
+char id=58   x=214   y=0     width=25    height=102   xoffset=10    yoffset=32   xadvance=38    page=0  chnl=15
 kernings count=8
 kerning first=48  second=55  amount=-1  
 kerning first=50  second=52  amount=-1  

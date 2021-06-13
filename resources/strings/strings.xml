@@ -2,9 +2,9 @@
 
     <string id="AppName">Lagom</string>
      <string id="HideIconsTitle">Layout</string>
-    <string id="IconsHideTitle">Big battery/distance without icons</string>
+    <string id="IconsHideTitle">Big HR/distance without icons</string>
     <string id="IconsBigTitle">Small battery/distance with big icons</string>
-    <string id="IconsSmallTitle">Big battery/distance with small icons</string>
+    <string id="IconsSmallTitle">Big HR/distance with small icons</string>
     <string id="IconsTypeTitle">Icons style</string>
     <string id="IconTypeFilledTitle">Filled</string>
     <string id="IconTypeOutlineTitle">Outline</string>
@@ -41,8 +41,8 @@
     <string id="WeekDayMonTitle">Monday</string>
 
     <string id="StepFieldTitle">Distance/Week Distance/Steps</string>
-    <string id="DayilyDistanceTitle">Distance,km.(daily)</string>
-    <string id="WeeklyDistanceTitle">Distance,km.(weekly)</string>
+    <string id="DayilyDistanceTitle">Distance,km/mil.(daily)</string>
+    <string id="WeeklyDistanceTitle">Distance,km/mil.(weekly)</string>
     <string id="StepsTitle">Steps(daily)</string>
     <string id="millitaryFormatTitle">24H format(yes: 14:15 ignore watch settings, no: watch settings)</string>
     <string id="noSeparationTitile">Military format, no : between hours and minutes (yes: 1415, no: 14:15)</string>
