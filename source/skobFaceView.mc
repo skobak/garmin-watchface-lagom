@@ -19,7 +19,6 @@ class skobFaceView extends WatchUi.WatchFace {
   var customFontAOD =
       null;  // Special font for Always on display (small for allocat 10% of the
              // pixels (VENU requirementa and amoled displays in general))
-
   var customFontSmallPadding = 0;
   var customFontMiddlePadding = 0;
   var customFontDatePadding = 0;
@@ -33,7 +32,6 @@ class skobFaceView extends WatchUi.WatchFace {
   var layer4Ybias = 0;
   var smallIconBias = 0;
   var smallIconXBias = 0;
-
   var customFontBig = null;
   var customFontHuge = null;
   var customFontSmall = null;
@@ -175,6 +173,9 @@ class skobFaceView extends WatchUi.WatchFace {
     }
   }
 
+  /*
+   Different screen require different fonts and so on
+  */
   function defineScreenSize(dc) {
     var x = dc.getWidth();
     var y = dc.getHeight();
@@ -357,12 +358,6 @@ class skobFaceView extends WatchUi.WatchFace {
     var timeFontHeight = dc.getFontHeight(customFont);
     var dateFontHeight = dc.getFontHeight(customFontDate);
     var superSmallFontHeight = dc.getFontHeight(customFontSuperSmall);
-    /*
-      i Date i
-        HH:HH - always centered
-      Dist, Battery, Icons
-      small batter
-    */
     positionYLayer0 = centerY - timeFontHeight / 2 - dateFontHeight / 2 -
                       customFontDatePadding - superSmallFontHeight / 2 +
                       layer0Ybias;  // Top
@@ -380,7 +375,6 @@ class skobFaceView extends WatchUi.WatchFace {
       defineScreenSize(dc);
       defineFonts();
       defineLayouts(dc);
-
       setLayout(Rez.Layouts.WatchFace(dc));
     } catch (ex) {
       System.println(ex);
@@ -476,8 +470,8 @@ class skobFaceView extends WatchUi.WatchFace {
     return distanceSumm;
   }
 
-  // Update the view
-  function onUpdate(dc) {
+ private
+  funtion setSettings() {
     hourColor = Application.getApp().getProperty("HoursColor");
     minutesColor = Application.getApp().getProperty("MinutesColor");
     restColor = Application.getApp().getProperty("RestColor");
@@ -491,7 +485,6 @@ class skobFaceView extends WatchUi.WatchFace {
     lang = Application.getApp().getProperty("Lang");
     HR = Application.getApp().getProperty("HR");
     HRColoring = Application.getApp().getProperty("HRColoring");
-    //   HR = false;
     millitaryFormat = Application.getApp().getProperty("MillitaryFormat");
     noSeparation = Application.getApp().getProperty("NoSeparation");
     leadingZero = Application.getApp().getProperty("LeadingZero");
@@ -507,9 +500,13 @@ class skobFaceView extends WatchUi.WatchFace {
     showWeekNumber = Application.getApp().getProperty("ShowWeek");
     isBTConnected = Sys.getDeviceSettings().phoneConnected;
     notificationCount = Sys.getDeviceSettings().notificationCount;
-
+  }
+  // Update the view
+  function onUpdate(dc) {
+    setSettings();
     storeWeeklyDistance();
 
+    // Only for OLED displays in low power mode
     if (inLowPower && canBurnIn) {
       dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
       dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
@@ -734,19 +731,6 @@ class skobFaceView extends WatchUi.WatchFace {
       drawIcon(positionX2, positionYLayer1 + fontHeight + smallIconBias, font,
                dc, 2);
     }
-
-    // if(HR){
-    //     var fontHR = customFontSuperSmall;
-    //     var x = dc.getWidth()/2;
-    //     if(batteryIcon==true  && showDistance==true){ // [distance] [HR]
-    //     x=x+35;
-    //     fontHR=customFontMiddle;
-    //     }
-    //     if(batteryIcon && !showDistance){
-    //         fontHR=customFontMiddle;
-    //     }
-    //    drawHR(dc,x,positionYLayer3, fontHR);
-    // }
   }
 
  private
@@ -837,47 +821,6 @@ class skobFaceView extends WatchUi.WatchFace {
       dataWidth = dc.getTextWidthInPixels(batteryLevel, font);
       positionY = positionYLayer4 + batteryPadding;
     }
-
-    //     if(batteryIcon==true){
-    //         font = customIconsSmallMaterial;
-    //          if(iconsType==1){
-    //               font = customIconsSmall;
-    //           }
-    //       var iconHeight = dc.getFontHeight(font);
-    //       positionY=positionY+iconHeight/2;
-    //     }
-
-    //     if(isHideIcons == 0 || isHideIcons == 2){
-    //         // positionY=positionY-38;
-    //         positionX=positionX+15;
-    //         font = customFontMiddle;
-
-    //         if(batteryIcon==true){
-    //                 positionX = dc.getWidth()/2;
-    //             //   positionY=positionY+37;
-    //               if(showDistance==false && HR==false){
-    //                 //   positionY=positionY-30;
-    //               }
-    //           font = customIconsMaterial;
-    //           if(iconsType==1){
-    //               font = customIcons;
-    //           }
-    //         }
-    //     }
-    //     if(showDistance==false){
-    //         positionX=dc.getWidth()/2;
-    //     }
-    //     dc.setColor(restColor,Graphics.COLOR_TRANSPARENT);
-
-    //    if(batteryIcon==true){
-    //        batteryLevel = getBatteryIcon();
-    //         if(batteryLevel.equals("5")){
-    //             dc.setColor(orangeColor,Graphics.COLOR_TRANSPARENT);
-    //        }
-    //        if(batteryLevel.equals("6")){
-    //             dc.setColor(redColor,Graphics.COLOR_TRANSPARENT);
-    //        }
-    //    }
     dc.drawText(dc.getWidth() / 2 + xBias, positionY, font, batteryLevel,
                 Graphics.TEXT_JUSTIFY_CENTER);
   }
@@ -918,8 +861,6 @@ class skobFaceView extends WatchUi.WatchFace {
     if (noSeparation == true) {
       timeWidth = (hourWidth + minutesWidth);
       // Hours
-      // var oneCharWidth = dc.getTextWidthInPixels(chars, font) /
-      // chars.length();
       dc.setColor(hourColor, Graphics.COLOR_TRANSPARENT);
       dc.drawText(dc.getWidth() / 2 - timeWidth / 2 + hourWidth / 2,
                   positionYLayer2, customFont, hours,
@@ -932,6 +873,7 @@ class skobFaceView extends WatchUi.WatchFace {
           positionYLayer2, customFont, clockTime.min.format("%02d"),
           Graphics.TEXT_JUSTIFY_CENTER);
     } else {
+      // Hours
       dc.setColor(hourColor, Graphics.COLOR_TRANSPARENT);
       dc.drawText(dc.getWidth() / 2 - timeWidth / 2 + hourWidth / 2,
                   positionYLayer2, customFont, hours,
@@ -950,6 +892,9 @@ class skobFaceView extends WatchUi.WatchFace {
     }
   }
 
+  // Special Always on display mode for OMALED display such as on Venu
+  // The reuqirements is no pixel could be lit more then 3 minutes
+  // So we have to move it every minute in a loop to preven pixel burn out
  private
   function drawTimeAOD(dc) {
     var xBias = 0;
