@@ -235,11 +235,11 @@ class skobFaceView extends WatchUi.WatchFace {
       customLayour2Padding = 30;
       smallIconBias = 0;
       smallIconXBias = 22;
-      layer0Ybias = 2;
+      layer0Ybias = 3;
       layer1Ybias = 3;
       layer2Ybias = 0;
-      layer3Ybias = 0;
-      layer4Ybias = -8;
+      layer3Ybias = -3;
+      layer4Ybias = -13;
     }
     if (screenSize == 0) {
       customFont = WatchUi.loadResource(Rez.Fonts.customFont);
@@ -267,8 +267,8 @@ class skobFaceView extends WatchUi.WatchFace {
       layer0Ybias = 5;
       layer1Ybias = 6;
       layer2Ybias = 0;
-      layer3Ybias = 0;
-      layer4Ybias = -5;
+      layer3Ybias = 2;
+      layer4Ybias = -8;
     }
     if (screenSize == 1) {
       customFont = WatchUi.loadResource(Rez.Fonts.customFontBig);
@@ -793,9 +793,9 @@ class skobFaceView extends WatchUi.WatchFace {
     var distanceField = getDistanceData();
 
     var widthOfDistance = dc.getTextWidthInPixels(distanceField + "", font);
-    biasXLeft = biasXLeft + widthOfDistance / 2;
+    biasXLeft = biasXLeft + widthOfDistance / 2 - 5;
 
-    if (isHideIcons != 1 && !HR) {
+    if (isHideIcons != 1 && !HR && batteryIcon) {
       biasXLeft = 0;
     }
     dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
@@ -815,6 +815,16 @@ class skobFaceView extends WatchUi.WatchFace {
       xBias = xBias + dataWidth;
     }
 
+    if (!batteryIcon && !HR && isHideIcons != 1) {
+      font = customFontMiddle;
+      dataWidth = dc.getTextWidthInPixels(batteryLevel, font) / 2;
+      positionY = positionYLayer3 - customFontMiddlePadding;
+      xBias = dataWidth + 12;
+    }
+
+    if (!batteryIcon && !HR && isHideIcons != 1 && !showDistance) {
+      xBias = 0;
+    }
     // if icon
     dc.setColor(restColor, Graphics.COLOR_TRANSPARENT);
     if (batteryIcon) {

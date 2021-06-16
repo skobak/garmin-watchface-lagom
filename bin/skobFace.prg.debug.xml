@@ -247,61 +247,61 @@
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="26" lineNum="579" pc="268441771" symbol="onEnterSleep"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="26" lineNum="580" pc="268441775" symbol="onEnterSleep"/>
         <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="26" lineNum="581" pc="268441785" symbol="onEnterSleep"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1127" pc="268448313" symbol="getWeekNumber"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1128" pc="268448317" symbol="getWeekNumber"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1129" pc="268448373" symbol="getWeekNumber"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1130" pc="268448410" symbol="getWeekNumber"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1133" pc="268448414" symbol="julian_day"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1134" pc="268448418" symbol="julian_day"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1135" pc="268448434" symbol="julian_day"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1136" pc="268448447" symbol="julian_day"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1137" pc="268448466" symbol="julian_day"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1141" pc="268448533" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1142" pc="268448537" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1143" pc="268448554" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1144" pc="268448560" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1145" pc="268448577" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1146" pc="268448583" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1147" pc="268448600" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1150" pc="268448606" symbol="is_leap_year"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1153" pc="268448610" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1154" pc="268448614" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1155" pc="268448639" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1157" pc="268448658" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1158" pc="268448674" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1162" pc="268448696" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1163" pc="268448707" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1164" pc="268448718" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1165" pc="268448724" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1166" pc="268448754" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1168" pc="268448760" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1173" pc="268448769" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1174" pc="268448780" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1176" pc="268448811" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1178" pc="268448827" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1183" pc="268448851" symbol="iso_week_number"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="74" pc="268449239" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="78" pc="268449409" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="82" pc="268449579" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="86" pc="268449749" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="90" pc="268449919" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="94" pc="268450089" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="98" pc="268450259" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="102" pc="268450429" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="106" pc="268450599" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="111" pc="268450730" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="116" pc="268450835" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="126" pc="268450940" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="127" pc="268451045" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="128" pc="268451150" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="129" pc="268451255" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="130" pc="268451360" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="131" pc="268451465" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="132" pc="268451570" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="133" pc="268451675" symbol="&lt;init&gt;"/>
-        <entry filename="Rez" id="54" lineNum="44" pc="268448855" symbol="WatchFace"/>
-        <entry filename="Rez" id="54" lineNum="46" pc="268448867" symbol="WatchFace"/>
-        <entry filename="Rez" id="54" lineNum="48" pc="268449013" symbol="WatchFace"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1137" pc="268448499" symbol="getWeekNumber"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1138" pc="268448503" symbol="getWeekNumber"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1139" pc="268448559" symbol="getWeekNumber"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="45" lineNum="1140" pc="268448596" symbol="getWeekNumber"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1143" pc="268448600" symbol="julian_day"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1144" pc="268448604" symbol="julian_day"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1145" pc="268448620" symbol="julian_day"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1146" pc="268448633" symbol="julian_day"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="46" lineNum="1147" pc="268448652" symbol="julian_day"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1151" pc="268448719" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1152" pc="268448723" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1153" pc="268448740" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1154" pc="268448746" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1155" pc="268448763" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1156" pc="268448769" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1157" pc="268448786" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="47" lineNum="1160" pc="268448792" symbol="is_leap_year"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1163" pc="268448796" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1164" pc="268448800" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1165" pc="268448825" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1167" pc="268448844" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1168" pc="268448860" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1172" pc="268448882" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1173" pc="268448893" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1174" pc="268448904" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1175" pc="268448910" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1176" pc="268448940" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1178" pc="268448946" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1183" pc="268448955" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1184" pc="268448966" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1186" pc="268448997" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1188" pc="268449013" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="1193" pc="268449037" symbol="iso_week_number"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="74" pc="268449425" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="78" pc="268449595" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="82" pc="268449765" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="86" pc="268449935" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="90" pc="268450105" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="94" pc="268450275" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="98" pc="268450445" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="102" pc="268450615" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="106" pc="268450785" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="111" pc="268450916" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="116" pc="268451021" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="126" pc="268451126" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="127" pc="268451231" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="128" pc="268451336" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="129" pc="268451441" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="130" pc="268451546" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="131" pc="268451651" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="132" pc="268451756" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\askob\\eclipse-workspace\\skobFace\\source\\skobFaceView.mc" id="48" lineNum="133" pc="268451861" symbol="&lt;init&gt;"/>
+        <entry filename="Rez" id="54" lineNum="44" pc="268449041" symbol="WatchFace"/>
+        <entry filename="Rez" id="54" lineNum="46" pc="268449053" symbol="WatchFace"/>
+        <entry filename="Rez" id="54" lineNum="48" pc="268449199" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
         <entry field="true" id="214" symbol="Date5"/>
@@ -673,77 +673,77 @@
         <entry endPc="268443903" name="prefix" stackId="1" startPc="268443635"/>
         <entry endPc="268443903" name="distanceField" stackId="4" startPc="268443635"/>
         <entry endPc="268443903" name="distance" stackId="2" startPc="268443635"/>
-        <entry endPc="268444154" name="widthOfDistance" stackId="8" startPc="268443908"/>
-        <entry endPc="268444154" name="font" stackId="5" startPc="268443908"/>
-        <entry endPc="268444154" name="biasXLeft" stackId="6" startPc="268443908"/>
-        <entry endPc="268444154" name="positionY" stackId="4" startPc="268443908"/>
-        <entry endPc="268444154" name="distanceField" stackId="7" startPc="268443908"/>
-        <entry arg="true" endPc="268444155" name="stepField" stackId="3" startPc="268443904"/>
-        <entry arg="true" endPc="268444155" name="dc" stackId="1" startPc="268443904"/>
-        <entry arg="true" endPc="268444155" name="isHideIcons" stackId="2" startPc="268443904"/>
-        <entry endPc="268444547" name="batteryLevel" stackId="5" startPc="268444159"/>
-        <entry endPc="268444547" name="font" stackId="6" startPc="268444159"/>
-        <entry endPc="268444547" name="xBias" stackId="4" startPc="268444159"/>
-        <entry endPc="268444547" name="positionY" stackId="7" startPc="268444159"/>
-        <entry endPc="268444547" name="dataWidth" stackId="8" startPc="268444159"/>
-        <entry arg="true" endPc="268444548" name="dc" stackId="1" startPc="268444155"/>
-        <entry arg="true" endPc="268444548" name="showDistance" stackId="3" startPc="268444155"/>
-        <entry arg="true" endPc="268444548" name="isHideIcons" stackId="2" startPc="268444155"/>
-        <entry endPc="268445538" name="positionXMinutes" stackId="5" startPc="268444552"/>
-        <entry endPc="268445538" name="clockTime" stackId="7" startPc="268444552"/>
-        <entry endPc="268445538" name="timeFormat" stackId="6" startPc="268444552"/>
-        <entry endPc="268445538" name="sepWidth" stackId="11" startPc="268444552"/>
-        <entry endPc="268445538" name="hourWidth" stackId="9" startPc="268444552"/>
-        <entry endPc="268445538" name="xBias" stackId="2" startPc="268444552"/>
-        <entry endPc="268445538" name="timeWidth" stackId="12" startPc="268444552"/>
-        <entry endPc="268445538" name="positionXSep" stackId="4" startPc="268444552"/>
-        <entry endPc="268445538" name="positionXHours" stackId="3" startPc="268444552"/>
-        <entry endPc="268445538" name="hours" stackId="8" startPc="268444552"/>
-        <entry endPc="268445538" name="minutesWidth" stackId="10" startPc="268444552"/>
-        <entry arg="true" endPc="268445539" name="dc" stackId="1" startPc="268444548"/>
-        <entry endPc="268446283" name="timeFontHeight" stackId="13" startPc="268445543"/>
-        <entry endPc="268446283" name="positionXMinutes" stackId="5" startPc="268445543"/>
-        <entry endPc="268446283" name="clockTime" stackId="7" startPc="268445543"/>
-        <entry endPc="268446283" name="timeFormat" stackId="6" startPc="268445543"/>
-        <entry endPc="268446283" name="sepWidth" stackId="11" startPc="268445543"/>
-        <entry endPc="268446283" name="hourWidth" stackId="9" startPc="268445543"/>
-        <entry endPc="268446283" name="xBias" stackId="2" startPc="268445543"/>
-        <entry endPc="268446283" name="timeWidth" stackId="12" startPc="268445543"/>
-        <entry endPc="268446283" name="positionXSep" stackId="4" startPc="268445543"/>
-        <entry endPc="268446283" name="positionXHours" stackId="3" startPc="268445543"/>
-        <entry endPc="268446283" name="y" stackId="14" startPc="268445543"/>
-        <entry endPc="268446283" name="hours" stackId="8" startPc="268445543"/>
-        <entry endPc="268446283" name="minutesWidth" stackId="10" startPc="268445543"/>
-        <entry arg="true" endPc="268446284" name="dc" stackId="1" startPc="268445539"/>
-        <entry endPc="268447155" name="monthName" stackId="3" startPc="268446288"/>
-        <entry endPc="268447155" name="today" stackId="1" startPc="268446288"/>
-        <entry endPc="268447155" name="dateString" stackId="4" startPc="268446288"/>
-        <entry endPc="268447155" name="dayOfTheWeek" stackId="2" startPc="268446288"/>
-        <entry arg="true" endPc="268447483" name="number" stackId="1" startPc="268447156"/>
-        <entry arg="true" endPc="268447810" name="number" stackId="1" startPc="268447483"/>
-        <entry endPc="268447860" name="battery" stackId="1" startPc="268447814"/>
-        <entry endPc="268448118" name="battery" stackId="1" startPc="268447865"/>
-        <entry endPc="268448312" name="activityInfo" stackId="2" startPc="268448123"/>
-        <entry endPc="268448312" name="sample" stackId="3" startPc="268448123"/>
-        <entry endPc="268448312" name="value" stackId="1" startPc="268448123"/>
-        <entry endPc="268448413" name="weekNumber" stackId="2" startPc="268448317"/>
-        <entry endPc="268448413" name="today" stackId="1" startPc="268448317"/>
-        <entry endPc="268448532" name="m" stackId="6" startPc="268448418"/>
-        <entry endPc="268448532" name="a" stackId="4" startPc="268448418"/>
-        <entry endPc="268448532" name="y" stackId="5" startPc="268448418"/>
-        <entry arg="true" endPc="268448533" name="day" stackId="3" startPc="268448414"/>
-        <entry arg="true" endPc="268448533" name="year" stackId="1" startPc="268448414"/>
-        <entry arg="true" endPc="268448533" name="month" stackId="2" startPc="268448414"/>
-        <entry arg="true" endPc="268448610" name="year" stackId="1" startPc="268448533"/>
-        <entry endPc="268448854" name="day_of_week" stackId="6" startPc="268448614"/>
-        <entry endPc="268448854" name="week_of_year" stackId="7" startPc="268448614"/>
-        <entry endPc="268448854" name="first_day_of_year" stackId="4" startPc="268448614"/>
-        <entry endPc="268448854" name="given_day_of_year" stackId="5" startPc="268448614"/>
-        <entry arg="true" endPc="268448855" name="day" stackId="3" startPc="268448610"/>
-        <entry arg="true" endPc="268448855" name="year" stackId="1" startPc="268448610"/>
-        <entry arg="true" endPc="268448855" name="month" stackId="2" startPc="268448610"/>
-        <entry endPc="268449030" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268448867"/>
-        <entry arg="true" endPc="268449031" name="dc" stackId="1" startPc="268448855"/>
+        <entry endPc="268444174" name="widthOfDistance" stackId="8" startPc="268443908"/>
+        <entry endPc="268444174" name="font" stackId="5" startPc="268443908"/>
+        <entry endPc="268444174" name="biasXLeft" stackId="6" startPc="268443908"/>
+        <entry endPc="268444174" name="positionY" stackId="4" startPc="268443908"/>
+        <entry endPc="268444174" name="distanceField" stackId="7" startPc="268443908"/>
+        <entry arg="true" endPc="268444175" name="stepField" stackId="3" startPc="268443904"/>
+        <entry arg="true" endPc="268444175" name="dc" stackId="1" startPc="268443904"/>
+        <entry arg="true" endPc="268444175" name="isHideIcons" stackId="2" startPc="268443904"/>
+        <entry endPc="268444733" name="batteryLevel" stackId="5" startPc="268444179"/>
+        <entry endPc="268444733" name="font" stackId="6" startPc="268444179"/>
+        <entry endPc="268444733" name="xBias" stackId="4" startPc="268444179"/>
+        <entry endPc="268444733" name="positionY" stackId="7" startPc="268444179"/>
+        <entry endPc="268444733" name="dataWidth" stackId="8" startPc="268444179"/>
+        <entry arg="true" endPc="268444734" name="dc" stackId="1" startPc="268444175"/>
+        <entry arg="true" endPc="268444734" name="showDistance" stackId="3" startPc="268444175"/>
+        <entry arg="true" endPc="268444734" name="isHideIcons" stackId="2" startPc="268444175"/>
+        <entry endPc="268445724" name="positionXMinutes" stackId="5" startPc="268444738"/>
+        <entry endPc="268445724" name="clockTime" stackId="7" startPc="268444738"/>
+        <entry endPc="268445724" name="timeFormat" stackId="6" startPc="268444738"/>
+        <entry endPc="268445724" name="sepWidth" stackId="11" startPc="268444738"/>
+        <entry endPc="268445724" name="hourWidth" stackId="9" startPc="268444738"/>
+        <entry endPc="268445724" name="xBias" stackId="2" startPc="268444738"/>
+        <entry endPc="268445724" name="timeWidth" stackId="12" startPc="268444738"/>
+        <entry endPc="268445724" name="positionXSep" stackId="4" startPc="268444738"/>
+        <entry endPc="268445724" name="positionXHours" stackId="3" startPc="268444738"/>
+        <entry endPc="268445724" name="hours" stackId="8" startPc="268444738"/>
+        <entry endPc="268445724" name="minutesWidth" stackId="10" startPc="268444738"/>
+        <entry arg="true" endPc="268445725" name="dc" stackId="1" startPc="268444734"/>
+        <entry endPc="268446469" name="timeFontHeight" stackId="13" startPc="268445729"/>
+        <entry endPc="268446469" name="positionXMinutes" stackId="5" startPc="268445729"/>
+        <entry endPc="268446469" name="clockTime" stackId="7" startPc="268445729"/>
+        <entry endPc="268446469" name="timeFormat" stackId="6" startPc="268445729"/>
+        <entry endPc="268446469" name="sepWidth" stackId="11" startPc="268445729"/>
+        <entry endPc="268446469" name="hourWidth" stackId="9" startPc="268445729"/>
+        <entry endPc="268446469" name="xBias" stackId="2" startPc="268445729"/>
+        <entry endPc="268446469" name="timeWidth" stackId="12" startPc="268445729"/>
+        <entry endPc="268446469" name="positionXSep" stackId="4" startPc="268445729"/>
+        <entry endPc="268446469" name="positionXHours" stackId="3" startPc="268445729"/>
+        <entry endPc="268446469" name="y" stackId="14" startPc="268445729"/>
+        <entry endPc="268446469" name="hours" stackId="8" startPc="268445729"/>
+        <entry endPc="268446469" name="minutesWidth" stackId="10" startPc="268445729"/>
+        <entry arg="true" endPc="268446470" name="dc" stackId="1" startPc="268445725"/>
+        <entry endPc="268447341" name="monthName" stackId="3" startPc="268446474"/>
+        <entry endPc="268447341" name="today" stackId="1" startPc="268446474"/>
+        <entry endPc="268447341" name="dateString" stackId="4" startPc="268446474"/>
+        <entry endPc="268447341" name="dayOfTheWeek" stackId="2" startPc="268446474"/>
+        <entry arg="true" endPc="268447669" name="number" stackId="1" startPc="268447342"/>
+        <entry arg="true" endPc="268447996" name="number" stackId="1" startPc="268447669"/>
+        <entry endPc="268448046" name="battery" stackId="1" startPc="268448000"/>
+        <entry endPc="268448304" name="battery" stackId="1" startPc="268448051"/>
+        <entry endPc="268448498" name="activityInfo" stackId="2" startPc="268448309"/>
+        <entry endPc="268448498" name="sample" stackId="3" startPc="268448309"/>
+        <entry endPc="268448498" name="value" stackId="1" startPc="268448309"/>
+        <entry endPc="268448599" name="weekNumber" stackId="2" startPc="268448503"/>
+        <entry endPc="268448599" name="today" stackId="1" startPc="268448503"/>
+        <entry endPc="268448718" name="m" stackId="6" startPc="268448604"/>
+        <entry endPc="268448718" name="a" stackId="4" startPc="268448604"/>
+        <entry endPc="268448718" name="y" stackId="5" startPc="268448604"/>
+        <entry arg="true" endPc="268448719" name="day" stackId="3" startPc="268448600"/>
+        <entry arg="true" endPc="268448719" name="year" stackId="1" startPc="268448600"/>
+        <entry arg="true" endPc="268448719" name="month" stackId="2" startPc="268448600"/>
+        <entry arg="true" endPc="268448796" name="year" stackId="1" startPc="268448719"/>
+        <entry endPc="268449040" name="day_of_week" stackId="6" startPc="268448800"/>
+        <entry endPc="268449040" name="week_of_year" stackId="7" startPc="268448800"/>
+        <entry endPc="268449040" name="first_day_of_year" stackId="4" startPc="268448800"/>
+        <entry endPc="268449040" name="given_day_of_year" stackId="5" startPc="268448800"/>
+        <entry arg="true" endPc="268449041" name="day" stackId="3" startPc="268448796"/>
+        <entry arg="true" endPc="268449041" name="year" stackId="1" startPc="268448796"/>
+        <entry arg="true" endPc="268449041" name="month" stackId="2" startPc="268448796"/>
+        <entry endPc="268449216" name="rez_cmp_local_text_DateDisplay" stackId="2" startPc="268449053"/>
+        <entry arg="true" endPc="268449217" name="dc" stackId="1" startPc="268449041"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
