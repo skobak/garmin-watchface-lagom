@@ -99,9 +99,19 @@ class skobFaceView extends WatchUi.WatchFace {
     "JANUAR", "FEBRUAR", "MAREC", "APRIL", "MAJ", "JUN", "JUL", "AUGUST",
     "SEPTEMBER", "OKTOBER", "NOVEMBER", "DECEMBER"
   ];
+  var monthFR = [
+    "JANVIER", "FEVRIER", "MARS", "AVRIL", "MAI", "JUIN", "JUILLET", "AOUT",
+    "SEPTEMBRE", "OCTOBRE", "NOVEMBRE", "DECEMBRE"
+  ];
+  var monthCZ = [
+    "LEDEN", "UNOR", "BREZEN", "DUBEN", "KVETEN", "CERVEN", "CERVENEC", "SRPEN",
+    "ZARI", "RIJEN", "LISTOPAD", "PROSINEC"
+  ];
 
-  var WeekWord =
-      [ "Week", "Uke", "Settimana", "Semana", "Vecka", "Woche", "Tyzden" ];
+  var WeekWord = [
+    "Week", "Uke", "Settimana", "Semana", "Vecka", "Woche", "Tyzden", "Semaine",
+    "Tyden"
+  ];
 
   var weekdayArr = [
     "SUN",
@@ -117,8 +127,10 @@ class skobFaceView extends WatchUi.WatchFace {
   var weekdayArrNor = [ "SO", "MAN", "TIR", "ONS", "TOR", "FRE", "LOR" ];
   var weekdayArrIT = [ "DOM", "LUN", "MAR", "MER", "GIO", "VEN", "SAB" ];
   var weekdayArrSpanish = [ "DOM", "LUN", "MAR", "MIE", "JUE", "VIE", "SAB" ];
-  var weekdayArrGerman = [ "SON", "MON", "DIE", "MIT", "DON", "FRE", "SAM" ];
+  var weekdayArrGerman = [ "SO", "MO", "DI", "MI", "DO", "FR", "SA" ];
   var weekdayArrSlovak = [ "NED", "PON", "UTO", "STR", "STV", "PIA", "SOB" ];
+  var weekdayArrFrench = [ "DIM", "LUN", "MAR", "MER", "JEU", "VEN", "SAM" ];
+  var weekdayArrCzech = [ "NED", "PON", "UTE", "STR", "CTV", "PAT", "SOB" ];
 
   var lang = 0;
 
@@ -471,7 +483,7 @@ class skobFaceView extends WatchUi.WatchFace {
   }
 
  private
-  funtion setSettings() {
+  function setSettings() {
     hourColor = Application.getApp().getProperty("HoursColor");
     minutesColor = Application.getApp().getProperty("MinutesColor");
     restColor = Application.getApp().getProperty("RestColor");
@@ -1027,6 +1039,12 @@ class skobFaceView extends WatchUi.WatchFace {
     if (lang == 6) {
       return weekdayArrSlovak[number - 1];
     }
+    if (lang == 7) {
+      return weekdayArrFrench[number - 1];
+    }
+    if (lang == 8) {
+      return weekdayArrCzech[number - 1];
+    }
     return weekdayArrNor[number - 1];
   }
 
@@ -1049,6 +1067,12 @@ class skobFaceView extends WatchUi.WatchFace {
     }
     if (lang == 6) {
       return monthSL[number - 1];
+    }
+    if (lang == 7) {
+      return monthFR[number - 1];
+    }
+    if (lang == 8) {
+      return monthCZ[number - 1];
     }
     return monthNor[number - 1];
   }

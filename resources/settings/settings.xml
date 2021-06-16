@@ -48,6 +48,8 @@
             <listEntry value="4">@Strings.Ln5</listEntry>
             <listEntry value="5">@Strings.Ln6</listEntry>
             <listEntry value="6">@Strings.Ln7</listEntry>
+            <listEntry value="7">@Strings.Ln8</listEntry>
+            <listEntry value="8">@Strings.Ln9</listEntry>
         </settingConfig>
     </setting>
 
