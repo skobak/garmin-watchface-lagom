@@ -63,6 +63,7 @@
             <listEntry value="5">@Strings.Date6</listEntry>
             <listEntry value="6">@Strings.Date7</listEntry>
             <listEntry value="7">@Strings.Date8</listEntry>
+            <listEntry value="8">@Strings.Date9</listEntry>
         </settingConfig>
     </setting>
             <setting propertyKey="@Properties.ShowWeek" title="@Strings.ShowWeekTitle">

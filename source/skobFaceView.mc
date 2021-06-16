@@ -1009,12 +1009,14 @@ class skobFaceView extends WatchUi.WatchFace {
       dateString = Lang.format("$1$", [
         today.day,
       ]) + " " + monthName.substring(0, 3);
-    }
-
-    else if (dateFormat == 7) {
+    } else if (dateFormat == 7) {
       dateString = Lang.format("$1$", [
         today.day,
       ]) + " " + monthName;
+    } else if (dateFormat == 8) {
+      dateString = dayOfTheWeek + " " + Lang.format("$1$", [
+        today.day,
+      ]);
     }
     return dateString;
   }

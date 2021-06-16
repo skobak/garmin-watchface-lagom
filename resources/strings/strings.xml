@@ -76,6 +76,7 @@
             <string id="Date6">DD/MM/YY</string>
             <string id="Date7">DD MON</string>
             <string id="Date8">DD MONTH</string>
+            <string id="Date9">DAY dd</string>
              <string id="LanguageTitle">Language</string>
              <string id="Ln1">English</string>
              <string id="Ln2">Nordic</string>
