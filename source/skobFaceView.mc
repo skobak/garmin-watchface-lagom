@@ -107,10 +107,18 @@ class skobFaceView extends WatchUi.WatchFace {
     "LEDEN", "UNOR", "BREZEN", "DUBEN", "KVETEN", "CERVEN", "CERVENEC", "SRPEN",
     "ZARI", "RIJEN", "LISTOPAD", "PROSINEC"
   ];
+  var monthPT = [
+    "JANEIRO", "FEVEREIRO", "MARCO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO",
+    "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"
+  ];
+  var monthPO = [
+    "STYCZEN", "LUTY", "MARZEC", "KWIECIEN", "MAJ", "CZERWIEC", "LIPIEC", "SIERPIEN",
+    "WRZESIEN", "PAŹDZIERNIK", "LISTOPAD", "GRUDZIEN"
+  ];
 
   var WeekWord = [
     "Week", "Uke", "Settimana", "Semana", "Vecka", "Woche", "Tyzden", "Semaine",
-    "Tyden"
+    "Tyden","Semana","Tydzien"
   ];
 
   var weekdayArr = [
@@ -131,6 +139,8 @@ class skobFaceView extends WatchUi.WatchFace {
   var weekdayArrSlovak = [ "NED", "PON", "UTO", "STR", "STV", "PIA", "SOB" ];
   var weekdayArrFrench = [ "DIM", "LUN", "MAR", "MER", "JEU", "VEN", "SAM" ];
   var weekdayArrCzech = [ "NED", "PON", "UTE", "STR", "CTV", "PAT", "SOB" ];
+  var weekdayArrPort = [ "DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB" ];
+  var weekdayArrPolish = [ "NIE", "PON", "WTO", "SRO", "CZW", "PIA", "SOB" ];
 
   var lang = 0;
 
@@ -198,8 +208,11 @@ class skobFaceView extends WatchUi.WatchFace {
     if (x > 230 && x <= 240) {
       screenSize = 0;  // small forenummer
     }
-    if (x > 240 && x < 360) {
+    if (x > 240 && x < 280) {
       screenSize = 1;  // big fenix
+    }
+    if (x>=280 && x < 360){ // 280 fenix 6x
+      screenSize=6;
     }
     if (x >= 360 && x < 390) {
       screenSize = 2;  // custom 360 Venu 2S
@@ -301,6 +314,37 @@ class skobFaceView extends WatchUi.WatchFace {
       layer3Ybias = -3;
       layer4Ybias = 0;
     }
+    if (screenSize == 6) {
+      customFont = WatchUi.loadResource(Rez.Fonts.customFont280);
+      customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
+      customFontMiddle = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
+
+      customFontSmall = WatchUi.loadResource(Rez.Fonts.customFontSmall);
+      customFontSuperSmall =
+          WatchUi.loadResource(Rez.Fonts.customFontSuperSmallBig);
+      customIconsMaterial =
+          WatchUi.loadResource(Rez.Fonts.customIconMaterialBig);
+      customIconsSmallMaterial =
+          WatchUi.loadResource(Rez.Fonts.customIconSmallMaterialBig);
+      customIcons = WatchUi.loadResource(Rez.Fonts.customIconBig);
+      customIconsSmall = WatchUi.loadResource(Rez.Fonts.customIconSmallBig);
+      // This is a area around font, so we should keep it in mind for the right
+      // calculation
+      customFontSmallPadding = 5;
+      customFontMiddlePadding = 14;
+      customFontDatePadding = 30;
+      customFontTimePadding = 0;
+      batteryPadding = 11;
+      customLayour2Padding = 30;
+      smallIconBias = -7;
+
+      smallIconXBias = 25;
+      layer0Ybias = 5;
+      layer1Ybias = 7;
+      layer2Ybias = 0;
+      layer3Ybias = -3;
+      layer4Ybias = 0;
+    }
     if (screenSize == 2) {  // 360
       customFont = WatchUi.loadResource(Rez.Fonts.customFont360);
       customFontDate = WatchUi.loadResource(Rez.Fonts.customFontDateBig);
@@ -361,6 +405,11 @@ class skobFaceView extends WatchUi.WatchFace {
       layer2Ybias = 0;
       layer3Ybias = 0;
       layer4Ybias = -2;
+
+      // xMessagesBias=3; // TODO: maybe use it for amount unread messages
+      // yMessagesBias=-6; // TODO: maybe use it for amount unread messages
+      // xMessagesBiasBigIcon=-10; // TODO: maybe use it for amount unread messages
+      // yMessagesBiasBigIcon=-10; // TODO: maybe use it for amount unread messages
     }
   }
 
@@ -593,7 +642,7 @@ class skobFaceView extends WatchUi.WatchFace {
 
     if (showDistance && isHideIcons != 1) {
       var HRwidth = dc.getTextWidthInPixels(hr, font);
-      biasXRight = biasXRight + HRwidth;
+      biasXRight = biasXRight + HRwidth+3;
     }
 
     dc.drawText(dc.getWidth() / 2 + biasXRight, positionY, font, hr,
@@ -679,8 +728,23 @@ class skobFaceView extends WatchUi.WatchFace {
     } else if (iconNum == 2) {
       if (notificationCount > 0) {
         var messageIcon = 'E';
+        var iconWidth = dc.getTextWidthInPixels(messageIcon+"", font);
+        var numberHeight = dc.getFontHeight(customFontSuperSmall);
+        var numberWidth = dc.getTextWidthInPixels(notificationCount+"", customFontSuperSmall);
+        var iconHeight = dc.getFontHeight(font);
         dc.setColor(restColor, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, y, font, messageIcon, Graphics.TEXT_JUSTIFY_CENTER);
+        
+        if(screenSize!=5){
+        var center = dc.getWidth()/2;
+        var biasX=0;
+        if(x>center){
+          biasX=iconWidth/2+numberWidth/2+4;
+        }else{
+          biasX=0-iconWidth/2-numberWidth/2-4;
+        }
+        dc.drawText(x+biasX, y-numberHeight/4, customFontSuperSmall, notificationCount+"", Graphics.TEXT_JUSTIFY_CENTER);
+        }
       }
     } else if (iconNum == 3) {  // Connectivity
       if (isBTConnected) {
@@ -1057,6 +1121,12 @@ class skobFaceView extends WatchUi.WatchFace {
     if (lang == 8) {
       return weekdayArrCzech[number - 1];
     }
+    if (lang == 9) {
+      return weekdayArrPort[number - 1];
+    }
+    if (lang == 10) {
+      return weekdayArrPolish[number - 1];
+    }
     return weekdayArrNor[number - 1];
   }
 
@@ -1085,6 +1155,12 @@ class skobFaceView extends WatchUi.WatchFace {
     }
     if (lang == 8) {
       return monthCZ[number - 1];
+    }
+    if (lang == 9) {
+      return monthPT[number - 1];
+    }
+    if (lang == 10) {
+      return monthPO[number - 1];
     }
     return monthNor[number - 1];
   }
