@@ -47,6 +47,7 @@ class skobFaceView extends WatchUi.WatchFace {
   var hourColor = 0x00FF00;
   var minutesColor = 0xFFFFFF;
   var restColor = 0xFFFFFF;
+  var HRColor = 0xFFFFFF;
   var redColor = 0xFF0000;
   var orangeColor = 0xFF5500;
   var greenColor = 0x00FF00;
@@ -536,6 +537,7 @@ class skobFaceView extends WatchUi.WatchFace {
     hourColor = Application.getApp().getProperty("HoursColor");
     minutesColor = Application.getApp().getProperty("MinutesColor");
     restColor = Application.getApp().getProperty("RestColor");
+    HRColor = Application.getApp().getProperty("HRColor");
     accentColor = Application.getApp().getProperty("AccentColor");
     dateColor = Application.getApp().getProperty("DateColor");
     bgColor = Application.getApp().getProperty("BackgroundColor");
@@ -562,8 +564,12 @@ class skobFaceView extends WatchUi.WatchFace {
     isBTConnected = Sys.getDeviceSettings().phoneConnected;
     notificationCount = Sys.getDeviceSettings().notificationCount;
   }
+   function onPartialUpdate(dc){
+     System.println("sec");
+   }
   // Update the view
   function onUpdate(dc) {
+ 
     setSettings();
     storeWeeklyDistance();
 
@@ -653,17 +659,17 @@ class skobFaceView extends WatchUi.WatchFace {
   function getHRColorByValue(hr) {
     var max = 220 - age;
     if (hr.equals("")) {
-      return restColor;
+      return HRColor;
     }
 
     if (HRColoring == false) {
-      return restColor;
+      return HRColor;
     }
 
     hr = hr.toNumber();
     // zone 1
     if (hr <= max * 0.7) {
-      return 0xFFFFFF;
+      return HRColor;
     }
     // zone 2
     if (hr > max * 0.7 && hr <= max * 0.8) {
@@ -681,7 +687,7 @@ class skobFaceView extends WatchUi.WatchFace {
     if (hr > max) {
       return 0xFF0000;
     }
-    return restColor;
+    return HRColor;
   }
 
  private
